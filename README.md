@@ -19,7 +19,7 @@ This repository is the public home of the vision, architecture, and roadmap. ðŸš
 | Vision, identity, design system | Published |
 | Architecture specification | Published |
 | Roadmap | Published |
-| Backend, Core, Agents, Memory, Apps, Automation, Security | In development |
+| Backend, Core, Agents, Memory, Apps, Automation, Security | ðŸš¨ Alpha Published |
 
 ## Respect Engine
 
@@ -32,3 +32,4 @@ See docs/roadmap.md. Next: v0.2 - first runnable vertical slice.
 ## License
 
 Apache-2.0 (see LICENSE). Name, logo, identity reserved (see TRADEMARK.md).
+
