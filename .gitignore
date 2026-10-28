@@ -18,3 +18,7 @@ build/
 *.bak
 .DS_Store
 Thumbs.db
+*.bak*
+*backup*
+*broken*
+*.bak

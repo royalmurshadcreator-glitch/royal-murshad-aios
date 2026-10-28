@@ -1,0 +1,298 @@
+﻿from fastapi import APIRouter
+from pathlib import Path
+from datetime import datetime, timezone
+import json
+import socket
+import time
+
+import psutil
+import requests
+
+router = APIRouter()
+ROOT = Path(r"D:\\01_PROJECTS\\AIOS")
+API_STARTED = time.time()
+OLLAMA_URL = "http://127.0.0.1:11434"
+
+
+def port_open(port: int) -> bool:
+    try:
+        with socket.create_connection(("127.0.0.1", port), timeout=0.25):
+            return True
+    except OSError:
+        return False
+
+
+def read_tasks():
+    candidates = [
+        ROOT / "data" / "orchestrator" / "tasks.json",
+        ROOT / "data" / "tasks.json",
+        ROOT / "App" / "data" / "tasks.json",
+    ]
+
+    for path in candidates:
+        if not path.exists():
+            continue
+
+        try:
+            raw = json.loads(path.read_text(encoding="utf-8-sig"))
+            tasks = raw.get("tasks", []) if isinstance(raw, dict) else raw
+
+            if not isinstance(tasks, list):
+                tasks = []
+
+            today = datetime.now(timezone.utc).date().isoformat()
+            counts = {}
+
+            for task in tasks:
+                status = str(task.get("status", "UNKNOWN")).upper()
+                counts[status] = counts.get(status, 0) + 1
+
+            return {
+                "total": len(tasks),
+                "today": sum(
+                    1 for task in tasks
+                    if str(task.get("created_at", "")).startswith(today)
+                ),
+                "running": counts.get("RUNNING", 0),
+                "queued": counts.get("QUEUED", 0),
+                "completed": counts.get("COMPLETED", 0),
+                "failed": counts.get("FAILED", 0),
+                "waiting_confirmation": counts.get("WAITING_CONFIRMATION", 0),
+                "source": str(path.relative_to(ROOT)),
+            }
+        except Exception as exc:
+            return {
+                "total": 0,
+                "today": 0,
+                "running": 0,
+                "queued": 0,
+                "completed": 0,
+                "failed": 0,
+                "waiting_confirmation": 0,
+                "source": str(path.relative_to(ROOT)),
+                "error": str(exc),
+            }
+
+    return {
+        "total": 0,
+        "today": 0,
+        "running": 0,
+        "queued": 0,
+        "completed": 0,
+        "failed": 0,
+        "waiting_confirmation": 0,
+        "source": None,
+    }
+
+
+def read_agents():
+    """Read real agents: ASG (120 employees) + SaaS (10 workers)."""
+    names = []
+
+    asg_file = ROOT / "03_AGENTS" / "asg" / "asg_core" / "aios_asg_structure.json"
+    if asg_file.exists():
+        try:
+            data = json.loads(asg_file.read_text(encoding="utf-8-sig"))
+            for sc in data.get("sub_companies", []):
+                for emp in sc.get("employees", []):
+                    n = emp.get("name") or emp.get("id")
+                    if n:
+                        names.append(n)
+        except Exception:
+            pass
+
+    manifest = ROOT / "03_AGENTS" / "aios_saas_agents" / "agents-manifest.json"
+    if manifest.exists():
+        try:
+            mdata = json.loads(manifest.read_text(encoding="utf-8-sig"))
+            for a in mdata.get("agents", []):
+                if a.get("id"):
+                    names.append(a["id"])
+        except Exception:
+            pass
+
+    src = ROOT / "02_CORE" / "aios_orchestrator_js" / "royal_jarvis" / "src"
+    if src.exists():
+        for f in sorted(src.glob("*-agent.cjs")):
+            n = f.stem.removesuffix("-agent").replace("-", "_")
+            if n not in names:
+                names.append(n)
+
+    return {
+        "available": len(names),
+        "active": len(names),
+        "names": names[:200],
+        "note": f"{len(names)} agents available (ASG + SaaS + capability modules).",
+    }
+
+
+def read_ollama():
+    started = time.perf_counter()
+
+    try:
+        response = requests.get(f"{OLLAMA_URL}/api/tags", timeout=3)
+        response.raise_for_status()
+
+        elapsed = round((time.perf_counter() - started) * 1000, 1)
+        raw_models = response.json().get("models", [])
+
+        models = [
+            {
+                "name": model.get("name", ""),
+                "size": model.get("size", 0),
+                "modified_at": model.get("modified_at"),
+            }
+            for model in raw_models
+        ]
+
+        return {
+            "online": True,
+            "ready": len(models) > 0,
+            "models": models,
+            # Prefer the actual chat model if available; fall back to first model
+            "selected_model": (
+                next((m["name"] for m in models if m["name"] == "qwen2.5:3b"), None)
+                or next((m["name"] for m in models if "qwen2.5:3b" in m["name"]), None)
+                or (models[0]["name"] if models else None)
+            ),
+            "api_latency_ms": elapsed,
+        }
+    except Exception as exc:
+        return {
+            "online": False,
+            "ready": False,
+            "models": [],
+            "selected_model": None,
+            "api_latency_ms": 0,
+            "error": str(exc),
+        }
+
+
+
+# ---------------------------------------------------------------------------
+# Full agent registry: workforce manifest (curated) + capability modules (glob)
+# ---------------------------------------------------------------------------
+
+MANIFEST_PATH = ROOT / "03_AGENTS" / "aios_saas_agents" / "agents-manifest.json"
+
+
+def read_agents_full():
+    """
+    Return all agents in the system, categorized:
+      - category "workforce":  deployed, in the manifest, with py+node paths
+      - category "capability": all other *-agent.cjs files in the orchestrator
+    """
+    # 1) Load workforce manifest (curated list of 10)
+    workforce = []
+    workforce_ids = set()
+    if MANIFEST_PATH.exists():
+        try:
+            manifest = json.loads(MANIFEST_PATH.read_text(encoding="utf-8-sig"))
+            for a in manifest.get("agents", []):
+                agent_id = a.get("id") or ""
+                workforce_ids.add(agent_id)
+                workforce.append({
+                    "name": agent_id,
+                    "title": a.get("title") or agent_id,
+                    "category": "workforce",
+                    "engine_fn": a.get("engine_fn") or agent_id,
+                    "python": a.get("python"),
+                    "node": a.get("node"),
+                    "status": a.get("status") or "connected",
+                })
+        except Exception as exc:
+            workforce = [{"error": str(exc), "category": "workforce"}]
+
+    # 2) Glob every *-agent.cjs in the orchestrator src
+    agent_dir = ROOT / "RoyalJarvisOrchestrator" / "src"
+    capability = []
+    if agent_dir.exists():
+        for f in sorted(agent_dir.glob("*-agent.cjs")):
+            name = f.stem.removesuffix("-agent")
+            if name in workforce_ids:
+                continue
+            capability.append({
+                "name": name,
+                "title": name.replace("_", " ").replace("-", " ").title(),
+                "category": "capability",
+                "engine_fn": None,
+                "python": None,
+                "node": str(f),
+                "status": "available",
+            })
+
+    return {
+        "ok": True,
+        "total": len(workforce) + len(capability),
+        "workforce_count": len(workforce),
+        "capability_count": len(capability),
+        "workforce": workforce,
+        "capability": capability,
+    }
+
+
+@router.get("/api/agents/all")
+def agents_all():
+    return read_agents_full()
+
+
+def _read_security():
+    """Read threats from aios_security_store if available."""
+    try:
+        import aios_security_store as _sec
+        s = _sec.get_status()
+        return {
+            "threats_blocked": s.get("resolved", 0) + s.get("critical", 0),
+            "active": s.get("active", 0),
+            "total": s.get("total", 0),
+            "status": s.get("status", "NORMAL"),
+            "note": f"{s.get('active', 0)} active threats, {s.get('total', 0)} total",
+        }
+    except Exception as e:
+        return {"threats_blocked": None, "note": f"IDS unavailable: {e}"}
+
+@router.get("/api/dashboard/live")
+def dashboard_live():
+    memory = psutil.virtual_memory()
+    disk = psutil.disk_usage(str(ROOT.anchor))
+    ollama = read_ollama()
+
+    service_items = {
+        "ollama": {"port": 11434, "online": port_open(11434)},
+        "master": {"port": 9000, "online": True},
+        "dashboard": {"port": 5174, "online": port_open(5174)},
+        "orchestrator": {"port": 9180, "online": port_open(9180)},
+    }
+
+    online_count = sum(
+        1 for service in service_items.values() if service["online"]
+    )
+    total_count = len(service_items)
+
+    status = "READY" if ollama["ready"] else "DEGRADED"
+
+    return {
+        "status": status,
+        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "api_uptime_seconds": int(time.time() - API_STARTED),
+        "system": {
+            "cpu_percent": psutil.cpu_percent(interval=0.15),
+            "ram_percent": memory.percent,
+            "ram_used_gb": round(memory.used / (1024 ** 3), 2),
+            "ram_total_gb": round(memory.total / (1024 ** 3), 2),
+            "disk_percent": disk.percent,
+            "gpu_percent": None,
+        },
+        "ollama": ollama,
+        "agents": read_agents(),
+        "tasks": read_tasks(),
+        "services": {
+            "items": service_items,
+            "online": online_count,
+            "total": total_count,
+            "availability_percent": round(
+                online_count / total_count * 100, 1
+            ),
+        },
+                "security": _read_security(),
+    }

@@ -1,0 +1,1087 @@
+﻿{
+    "generated_at":  "2026-10-15T18:48:28.2431978+07:00",
+    "backend_base":  "http://127.0.0.1:9000",
+    "version":  "1.0.0",
+    "apps":  [
+                 {
+                     "api_base":  "/api/apps/agents",
+                     "api_endpoints":  {
+                                           "stats":  "/api/apps/agents/stats",
+                                           "create":  "/api/apps/agents/records",
+                                           "get":  "/api/apps/agents/records/{id}",
+                                           "health":  "/api/apps/agents/health",
+                                           "list":  "/api/apps/agents/records",
+                                           "delete":  "/api/apps/agents/records/{id}",
+                                           "update":  "/api/apps/agents/records/{id}"
+                                       },
+                     "db_table":  "aios_app_agents",
+                     "name":  "Royal Agents",
+                     "slug":  "agents",
+                     "port":  8790,
+                     "html":  "Royal Murshad AIOS - index.html",
+                     "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-agents"
+                 },
+                 {
+                     "api_base":  "/api/apps/architect",
+                     "api_endpoints":  {
+                                           "stats":  "/api/apps/architect/stats",
+                                           "create":  "/api/apps/architect/records",
+                                           "get":  "/api/apps/architect/records/{id}",
+                                           "health":  "/api/apps/architect/health",
+                                           "list":  "/api/apps/architect/records",
+                                           "delete":  "/api/apps/architect/records/{id}",
+                                           "update":  "/api/apps/architect/records/{id}"
+                                       },
+                     "db_table":  "aios_app_architect",
+                     "name":  "Royal Architect",
+                     "slug":  "architect",
+                     "port":  8791,
+                     "html":  "Royal Murshad AIOS - index.html",
+                     "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-architect"
+                 },
+                 {
+                     "api_base":  "/api/apps/audit",
+                     "api_endpoints":  {
+                                           "stats":  "/api/apps/audit/stats",
+                                           "create":  "/api/apps/audit/records",
+                                           "get":  "/api/apps/audit/records/{id}",
+                                           "health":  "/api/apps/audit/health",
+                                           "list":  "/api/apps/audit/records",
+                                           "delete":  "/api/apps/audit/records/{id}",
+                                           "update":  "/api/apps/audit/records/{id}"
+                                       },
+                     "db_table":  "aios_app_audit",
+                     "name":  "Royal Audit",
+                     "slug":  "audit",
+                     "port":  8792,
+                     "html":  "Royal Murshad AIOS - index.html",
+                     "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-audit"
+                 },
+                 {
+                     "api_base":  "/api/apps/bi",
+                     "api_endpoints":  {
+                                           "stats":  "/api/apps/bi/stats",
+                                           "create":  "/api/apps/bi/records",
+                                           "get":  "/api/apps/bi/records/{id}",
+                                           "health":  "/api/apps/bi/health",
+                                           "list":  "/api/apps/bi/records",
+                                           "delete":  "/api/apps/bi/records/{id}",
+                                           "update":  "/api/apps/bi/records/{id}"
+                                       },
+                     "db_table":  "aios_app_bi",
+                     "name":  "Royal Bi",
+                     "slug":  "bi",
+                     "port":  8793,
+                     "html":  "Royal Murshad AIOS - index.html",
+                     "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-bi"
+                 },
+                 {
+                     "api_base":  "/api/apps/booking",
+                     "api_endpoints":  {
+                                           "stats":  "/api/apps/booking/stats",
+                                           "create":  "/api/apps/booking/records",
+                                           "get":  "/api/apps/booking/records/{id}",
+                                           "health":  "/api/apps/booking/health",
+                                           "list":  "/api/apps/booking/records",
+                                           "delete":  "/api/apps/booking/records/{id}",
+                                           "update":  "/api/apps/booking/records/{id}"
+                                       },
+                     "db_table":  "aios_app_booking",
+                     "name":  "Royal Booking",
+                     "slug":  "booking",
+                     "port":  8794,
+                     "html":  "Royal Murshad AIOS - index.html",
+                     "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-booking"
+                 },
+                 {
+                     "api_base":  "/api/apps/books",
+                     "api_endpoints":  {
+                                           "stats":  "/api/apps/books/stats",
+                                           "create":  "/api/apps/books/records",
+                                           "get":  "/api/apps/books/records/{id}",
+                                           "health":  "/api/apps/books/health",
+                                           "list":  "/api/apps/books/records",
+                                           "delete":  "/api/apps/books/records/{id}",
+                                           "update":  "/api/apps/books/records/{id}"
+                                       },
+                     "db_table":  "aios_app_books",
+                     "name":  "Royal Books",
+                     "slug":  "books",
+                     "port":  8795,
+                     "html":  "Royal Murshad AIOS - index.html",
+                     "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-books"
+                 },
+                 {
+                     "api_base":  "/api/apps/business",
+                     "api_endpoints":  {
+                                           "stats":  "/api/apps/business/stats",
+                                           "create":  "/api/apps/business/records",
+                                           "get":  "/api/apps/business/records/{id}",
+                                           "health":  "/api/apps/business/health",
+                                           "list":  "/api/apps/business/records",
+                                           "delete":  "/api/apps/business/records/{id}",
+                                           "update":  "/api/apps/business/records/{id}"
+                                       },
+                     "db_table":  "aios_app_business",
+                     "name":  "Royal Business",
+                     "slug":  "business",
+                     "port":  8796,
+                     "html":  "Royal Murshad AIOS - index.html",
+                     "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-business"
+                 },
+                 {
+                     "api_base":  "/api/apps/care",
+                     "api_endpoints":  {
+                                           "stats":  "/api/apps/care/stats",
+                                           "create":  "/api/apps/care/records",
+                                           "get":  "/api/apps/care/records/{id}",
+                                           "health":  "/api/apps/care/health",
+                                           "list":  "/api/apps/care/records",
+                                           "delete":  "/api/apps/care/records/{id}",
+                                           "update":  "/api/apps/care/records/{id}"
+                                       },
+                     "db_table":  "aios_app_care",
+                     "name":  "Royal Care",
+                     "slug":  "care",
+                     "port":  8797,
+                     "html":  "Royal Murshad AIOS - index.html",
+                     "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-care"
+                 },
+                 {
+                     "api_base":  "/api/apps/chat",
+                     "api_endpoints":  {
+                                           "stats":  "/api/apps/chat/stats",
+                                           "create":  "/api/apps/chat/records",
+                                           "get":  "/api/apps/chat/records/{id}",
+                                           "health":  "/api/apps/chat/health",
+                                           "list":  "/api/apps/chat/records",
+                                           "delete":  "/api/apps/chat/records/{id}",
+                                           "update":  "/api/apps/chat/records/{id}"
+                                       },
+                     "db_table":  "aios_app_chat",
+                     "name":  "Royal Chat",
+                     "slug":  "chat",
+                     "port":  8798,
+                     "html":  "Royal Murshad AIOS - index.html",
+                     "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-chat"
+                 },
+                 {
+                     "api_base":  "/api/apps/classroom",
+                     "api_endpoints":  {
+                                           "stats":  "/api/apps/classroom/stats",
+                                           "create":  "/api/apps/classroom/records",
+                                           "get":  "/api/apps/classroom/records/{id}",
+                                           "health":  "/api/apps/classroom/health",
+                                           "list":  "/api/apps/classroom/records",
+                                           "delete":  "/api/apps/classroom/records/{id}",
+                                           "update":  "/api/apps/classroom/records/{id}"
+                                       },
+                     "db_table":  "aios_app_classroom",
+                     "name":  "Royal Classroom",
+                     "slug":  "classroom",
+                     "port":  8799,
+                     "html":  "Royal Murshad AIOS - index.html",
+                     "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-classroom"
+                 },
+                 {
+                     "api_base":  "/api/apps/clinic",
+                     "api_endpoints":  {
+                                           "stats":  "/api/apps/clinic/stats",
+                                           "create":  "/api/apps/clinic/records",
+                                           "get":  "/api/apps/clinic/records/{id}",
+                                           "health":  "/api/apps/clinic/health",
+                                           "list":  "/api/apps/clinic/records",
+                                           "delete":  "/api/apps/clinic/records/{id}",
+                                           "update":  "/api/apps/clinic/records/{id}"
+                                       },
+                     "db_table":  "aios_app_clinic",
+                     "name":  "Royal Clinic",
+                     "slug":  "clinic",
+                     "port":  8800,
+                     "html":  "Royal Murshad AIOS - index.html",
+                     "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-clinic"
+                 },
+                 {
+                     "api_base":  "/api/apps/code",
+                     "api_endpoints":  {
+                                           "stats":  "/api/apps/code/stats",
+                                           "create":  "/api/apps/code/records",
+                                           "get":  "/api/apps/code/records/{id}",
+                                           "health":  "/api/apps/code/health",
+                                           "list":  "/api/apps/code/records",
+                                           "delete":  "/api/apps/code/records/{id}",
+                                           "update":  "/api/apps/code/records/{id}"
+                                       },
+                     "db_table":  "aios_app_code",
+                     "name":  "Royal Code",
+                     "slug":  "code",
+                     "port":  8801,
+                     "html":  "Royal Murshad AIOS - index.html",
+                     "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-code"
+                 },
+                 {
+                     "api_base":  "/api/apps/commerce",
+                     "api_endpoints":  {
+                                           "stats":  "/api/apps/commerce/stats",
+                                           "create":  "/api/apps/commerce/records",
+                                           "get":  "/api/apps/commerce/records/{id}",
+                                           "health":  "/api/apps/commerce/health",
+                                           "list":  "/api/apps/commerce/records",
+                                           "delete":  "/api/apps/commerce/records/{id}",
+                                           "update":  "/api/apps/commerce/records/{id}"
+                                       },
+                     "db_table":  "aios_app_commerce",
+                     "name":  "Royal Commerce",
+                     "slug":  "commerce",
+                     "port":  8802,
+                     "html":  "Royal Murshad AIOS - index.html",
+                     "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-commerce"
+                 },
+                 {
+                     "api_base":  "/api/apps/connect",
+                     "api_endpoints":  {
+                                           "stats":  "/api/apps/connect/stats",
+                                           "create":  "/api/apps/connect/records",
+                                           "get":  "/api/apps/connect/records/{id}",
+                                           "health":  "/api/apps/connect/health",
+                                           "list":  "/api/apps/connect/records",
+                                           "delete":  "/api/apps/connect/records/{id}",
+                                           "update":  "/api/apps/connect/records/{id}"
+                                       },
+                     "db_table":  "aios_app_connect",
+                     "name":  "Royal Connect",
+                     "slug":  "connect",
+                     "port":  8803,
+                     "html":  "Royal Murshad AIOS - index.html",
+                     "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-connect"
+                 },
+                 {
+                     "api_base":  "/api/apps/creator",
+                     "api_endpoints":  {
+                                           "stats":  "/api/apps/creator/stats",
+                                           "create":  "/api/apps/creator/records",
+                                           "get":  "/api/apps/creator/records/{id}",
+                                           "health":  "/api/apps/creator/health",
+                                           "list":  "/api/apps/creator/records",
+                                           "delete":  "/api/apps/creator/records/{id}",
+                                           "update":  "/api/apps/creator/records/{id}"
+                                       },
+                     "db_table":  "aios_app_creator",
+                     "name":  "Royal Creator",
+                     "slug":  "creator",
+                     "port":  8804,
+                     "html":  "Royal Murshad AIOS - index.html",
+                     "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-creator"
+                 },
+                 {
+                     "api_base":  "/api/apps/crm",
+                     "api_endpoints":  {
+                                           "stats":  "/api/apps/crm/stats",
+                                           "create":  "/api/apps/crm/records",
+                                           "get":  "/api/apps/crm/records/{id}",
+                                           "health":  "/api/apps/crm/health",
+                                           "list":  "/api/apps/crm/records",
+                                           "delete":  "/api/apps/crm/records/{id}",
+                                           "update":  "/api/apps/crm/records/{id}"
+                                       },
+                     "db_table":  "aios_app_crm",
+                     "name":  "Royal Crm",
+                     "slug":  "crm",
+                     "port":  8805,
+                     "html":  "Royal Murshad AIOS - index.html",
+                     "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-crm"
+                 },
+                 {
+                     "api_base":  "/api/apps/crop",
+                     "api_endpoints":  {
+                                           "stats":  "/api/apps/crop/stats",
+                                           "create":  "/api/apps/crop/records",
+                                           "get":  "/api/apps/crop/records/{id}",
+                                           "health":  "/api/apps/crop/health",
+                                           "list":  "/api/apps/crop/records",
+                                           "delete":  "/api/apps/crop/records/{id}",
+                                           "update":  "/api/apps/crop/records/{id}"
+                                       },
+                     "db_table":  "aios_app_crop",
+                     "name":  "Royal Crop",
+                     "slug":  "crop",
+                     "port":  8806,
+                     "html":  "Royal Murshad AIOS - index.html",
+                     "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-crop"
+                 },
+                 {
+                     "api_base":  "/api/apps/data",
+                     "api_endpoints":  {
+                                           "stats":  "/api/apps/data/stats",
+                                           "create":  "/api/apps/data/records",
+                                           "get":  "/api/apps/data/records/{id}",
+                                           "health":  "/api/apps/data/health",
+                                           "list":  "/api/apps/data/records",
+                                           "delete":  "/api/apps/data/records/{id}",
+                                           "update":  "/api/apps/data/records/{id}"
+                                       },
+                     "db_table":  "aios_app_data",
+                     "name":  "Royal Data",
+                     "slug":  "data",
+                     "port":  8807,
+                     "html":  "Royal Murshad AIOS - index.html",
+                     "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-data"
+                 },
+                 {
+                     "api_base":  "/api/apps/dental",
+                     "api_endpoints":  {
+                                           "stats":  "/api/apps/dental/stats",
+                                           "create":  "/api/apps/dental/records",
+                                           "get":  "/api/apps/dental/records/{id}",
+                                           "health":  "/api/apps/dental/health",
+                                           "list":  "/api/apps/dental/records",
+                                           "delete":  "/api/apps/dental/records/{id}",
+                                           "update":  "/api/apps/dental/records/{id}"
+                                       },
+                     "db_table":  "aios_app_dental",
+                     "name":  "Royal Dental",
+                     "slug":  "dental",
+                     "port":  8808,
+                     "html":  "Royal Murshad AIOS - index.html",
+                     "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-dental"
+                 },
+                 {
+                     "api_base":  "/api/apps/devops",
+                     "api_endpoints":  {
+                                           "stats":  "/api/apps/devops/stats",
+                                           "create":  "/api/apps/devops/records",
+                                           "get":  "/api/apps/devops/records/{id}",
+                                           "health":  "/api/apps/devops/health",
+                                           "list":  "/api/apps/devops/records",
+                                           "delete":  "/api/apps/devops/records/{id}",
+                                           "update":  "/api/apps/devops/records/{id}"
+                                       },
+                     "db_table":  "aios_app_devops",
+                     "name":  "Royal Devops",
+                     "slug":  "devops",
+                     "port":  8809,
+                     "html":  "Royal Murshad AIOS - index.html",
+                     "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-devops"
+                 },
+                 {
+                     "api_base":  "/api/apps/factory",
+                     "api_endpoints":  {
+                                           "stats":  "/api/apps/factory/stats",
+                                           "create":  "/api/apps/factory/records",
+                                           "get":  "/api/apps/factory/records/{id}",
+                                           "health":  "/api/apps/factory/health",
+                                           "list":  "/api/apps/factory/records",
+                                           "delete":  "/api/apps/factory/records/{id}",
+                                           "update":  "/api/apps/factory/records/{id}"
+                                       },
+                     "db_table":  "aios_app_factory",
+                     "name":  "Royal Factory",
+                     "slug":  "factory",
+                     "port":  8810,
+                     "html":  "Royal Murshad AIOS - index.html",
+                     "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-factory"
+                 },
+                 {
+                     "api_base":  "/api/apps/farm",
+                     "api_endpoints":  {
+                                           "stats":  "/api/apps/farm/stats",
+                                           "create":  "/api/apps/farm/records",
+                                           "get":  "/api/apps/farm/records/{id}",
+                                           "health":  "/api/apps/farm/health",
+                                           "list":  "/api/apps/farm/records",
+                                           "delete":  "/api/apps/farm/records/{id}",
+                                           "update":  "/api/apps/farm/records/{id}"
+                                       },
+                     "db_table":  "aios_app_farm",
+                     "name":  "Royal Farm",
+                     "slug":  "farm",
+                     "port":  8811,
+                     "html":  "Royal Murshad AIOS - index.html",
+                     "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-farm"
+                 },
+                 {
+                     "api_base":  "/api/apps/field",
+                     "api_endpoints":  {
+                                           "stats":  "/api/apps/field/stats",
+                                           "create":  "/api/apps/field/records",
+                                           "get":  "/api/apps/field/records/{id}",
+                                           "health":  "/api/apps/field/health",
+                                           "list":  "/api/apps/field/records",
+                                           "delete":  "/api/apps/field/records/{id}",
+                                           "update":  "/api/apps/field/records/{id}"
+                                       },
+                     "db_table":  "aios_app_field",
+                     "name":  "Royal Field",
+                     "slug":  "field",
+                     "port":  8812,
+                     "html":  "Royal Murshad AIOS - index.html",
+                     "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-field"
+                 },
+                 {
+                     "api_base":  "/api/apps/finance",
+                     "api_endpoints":  {
+                                           "stats":  "/api/apps/finance/stats",
+                                           "create":  "/api/apps/finance/records",
+                                           "get":  "/api/apps/finance/records/{id}",
+                                           "health":  "/api/apps/finance/health",
+                                           "list":  "/api/apps/finance/records",
+                                           "delete":  "/api/apps/finance/records/{id}",
+                                           "update":  "/api/apps/finance/records/{id}"
+                                       },
+                     "db_table":  "aios_app_finance",
+                     "name":  "Royal Finance",
+                     "slug":  "finance",
+                     "port":  8813,
+                     "html":  "Royal Murshad AIOS - index.html",
+                     "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-finance"
+                 },
+                 {
+                     "api_base":  "/api/apps/flow",
+                     "api_endpoints":  {
+                                           "stats":  "/api/apps/flow/stats",
+                                           "create":  "/api/apps/flow/records",
+                                           "get":  "/api/apps/flow/records/{id}",
+                                           "health":  "/api/apps/flow/health",
+                                           "list":  "/api/apps/flow/records",
+                                           "delete":  "/api/apps/flow/records/{id}",
+                                           "update":  "/api/apps/flow/records/{id}"
+                                       },
+                     "db_table":  "aios_app_flow",
+                     "name":  "Royal Flow",
+                     "slug":  "flow",
+                     "port":  8814,
+                     "html":  "Royal Murshad AIOS - index.html",
+                     "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-flow"
+                 },
+                 {
+                     "api_base":  "/api/apps/gov",
+                     "api_endpoints":  {
+                                           "stats":  "/api/apps/gov/stats",
+                                           "create":  "/api/apps/gov/records",
+                                           "get":  "/api/apps/gov/records/{id}",
+                                           "health":  "/api/apps/gov/health",
+                                           "list":  "/api/apps/gov/records",
+                                           "delete":  "/api/apps/gov/records/{id}",
+                                           "update":  "/api/apps/gov/records/{id}"
+                                       },
+                     "db_table":  "aios_app_gov",
+                     "name":  "Royal Gov",
+                     "slug":  "gov",
+                     "port":  8815,
+                     "html":  "Royal Murshad AIOS - index.html",
+                     "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-gov"
+                 },
+                 {
+                     "api_base":  "/api/apps/green",
+                     "api_endpoints":  {
+                                           "stats":  "/api/apps/green/stats",
+                                           "create":  "/api/apps/green/records",
+                                           "get":  "/api/apps/green/records/{id}",
+                                           "health":  "/api/apps/green/health",
+                                           "list":  "/api/apps/green/records",
+                                           "delete":  "/api/apps/green/records/{id}",
+                                           "update":  "/api/apps/green/records/{id}"
+                                       },
+                     "db_table":  "aios_app_green",
+                     "name":  "Royal Green",
+                     "slug":  "green",
+                     "port":  8816,
+                     "html":  "Royal Murshad AIOS - index.html",
+                     "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-green"
+                 },
+                 {
+                     "api_base":  "/api/apps/hotel",
+                     "api_endpoints":  {
+                                           "stats":  "/api/apps/hotel/stats",
+                                           "create":  "/api/apps/hotel/records",
+                                           "get":  "/api/apps/hotel/records/{id}",
+                                           "health":  "/api/apps/hotel/health",
+                                           "list":  "/api/apps/hotel/records",
+                                           "delete":  "/api/apps/hotel/records/{id}",
+                                           "update":  "/api/apps/hotel/records/{id}"
+                                       },
+                     "db_table":  "aios_app_hotel",
+                     "name":  "Royal Hotel",
+                     "slug":  "hotel",
+                     "port":  8817,
+                     "html":  "Royal Murshad AIOS - index.html",
+                     "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-hotel"
+                 },
+                 {
+                     "api_base":  "/api/apps/hr",
+                     "api_endpoints":  {
+                                           "stats":  "/api/apps/hr/stats",
+                                           "create":  "/api/apps/hr/records",
+                                           "get":  "/api/apps/hr/records/{id}",
+                                           "health":  "/api/apps/hr/health",
+                                           "list":  "/api/apps/hr/records",
+                                           "delete":  "/api/apps/hr/records/{id}",
+                                           "update":  "/api/apps/hr/records/{id}"
+                                       },
+                     "db_table":  "aios_app_hr",
+                     "name":  "Royal Hr",
+                     "slug":  "hr",
+                     "port":  8818,
+                     "html":  "Royal Murshad AIOS - index.html",
+                     "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-hr"
+                 },
+                 {
+                     "api_base":  "/api/apps/inventory",
+                     "api_endpoints":  {
+                                           "stats":  "/api/apps/inventory/stats",
+                                           "create":  "/api/apps/inventory/records",
+                                           "get":  "/api/apps/inventory/records/{id}",
+                                           "health":  "/api/apps/inventory/health",
+                                           "list":  "/api/apps/inventory/records",
+                                           "delete":  "/api/apps/inventory/records/{id}",
+                                           "update":  "/api/apps/inventory/records/{id}"
+                                       },
+                     "db_table":  "aios_app_inventory",
+                     "name":  "Royal Inventory",
+                     "slug":  "inventory",
+                     "port":  8819,
+                     "html":  "Royal Murshad AIOS - index.html",
+                     "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-inventory"
+                 },
+                 {
+                     "api_base":  "/api/apps/invoice",
+                     "api_endpoints":  {
+                                           "stats":  "/api/apps/invoice/stats",
+                                           "create":  "/api/apps/invoice/records",
+                                           "get":  "/api/apps/invoice/records/{id}",
+                                           "health":  "/api/apps/invoice/health",
+                                           "list":  "/api/apps/invoice/records",
+                                           "delete":  "/api/apps/invoice/records/{id}",
+                                           "update":  "/api/apps/invoice/records/{id}"
+                                       },
+                     "db_table":  "aios_app_invoice",
+                     "name":  "Royal Invoice",
+                     "slug":  "invoice",
+                     "port":  8820,
+                     "html":  "Royal Murshad AIOS - index.html",
+                     "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-invoice"
+                 },
+                 {
+                     "api_base":  "/api/apps/knowledge",
+                     "api_endpoints":  {
+                                           "stats":  "/api/apps/knowledge/stats",
+                                           "create":  "/api/apps/knowledge/records",
+                                           "get":  "/api/apps/knowledge/records/{id}",
+                                           "health":  "/api/apps/knowledge/health",
+                                           "list":  "/api/apps/knowledge/records",
+                                           "delete":  "/api/apps/knowledge/records/{id}",
+                                           "update":  "/api/apps/knowledge/records/{id}"
+                                       },
+                     "db_table":  "aios_app_knowledge",
+                     "name":  "Royal Knowledge",
+                     "slug":  "knowledge",
+                     "port":  8821,
+                     "html":  "Royal Murshad AIOS - index.html",
+                     "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-knowledge"
+                 },
+                 {
+                     "api_base":  "/api/apps/learning",
+                     "api_endpoints":  {
+                                           "stats":  "/api/apps/learning/stats",
+                                           "create":  "/api/apps/learning/records",
+                                           "get":  "/api/apps/learning/records/{id}",
+                                           "health":  "/api/apps/learning/health",
+                                           "list":  "/api/apps/learning/records",
+                                           "delete":  "/api/apps/learning/records/{id}",
+                                           "update":  "/api/apps/learning/records/{id}"
+                                       },
+                     "db_table":  "aios_app_learning",
+                     "name":  "Royal Learning",
+                     "slug":  "learning",
+                     "port":  8822,
+                     "html":  "Royal Murshad AIOS - index.html",
+                     "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-learning"
+                 },
+                 {
+                     "api_base":  "/api/apps/legal",
+                     "api_endpoints":  {
+                                           "stats":  "/api/apps/legal/stats",
+                                           "create":  "/api/apps/legal/records",
+                                           "get":  "/api/apps/legal/records/{id}",
+                                           "health":  "/api/apps/legal/health",
+                                           "list":  "/api/apps/legal/records",
+                                           "delete":  "/api/apps/legal/records/{id}",
+                                           "update":  "/api/apps/legal/records/{id}"
+                                       },
+                     "db_table":  "aios_app_legal",
+                     "name":  "Royal Legal",
+                     "slug":  "legal",
+                     "port":  8823,
+                     "html":  "Royal Murshad AIOS - index.html",
+                     "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-legal"
+                 },
+                 {
+                     "api_base":  "/api/apps/livestock",
+                     "api_endpoints":  {
+                                           "stats":  "/api/apps/livestock/stats",
+                                           "create":  "/api/apps/livestock/records",
+                                           "get":  "/api/apps/livestock/records/{id}",
+                                           "health":  "/api/apps/livestock/health",
+                                           "list":  "/api/apps/livestock/records",
+                                           "delete":  "/api/apps/livestock/records/{id}",
+                                           "update":  "/api/apps/livestock/records/{id}"
+                                       },
+                     "db_table":  "aios_app_livestock",
+                     "name":  "Royal Livestock",
+                     "slug":  "livestock",
+                     "port":  8824,
+                     "html":  "Royal Murshad AIOS - index.html",
+                     "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-livestock"
+                 },
+                 {
+                     "api_base":  "/api/apps/logistics",
+                     "api_endpoints":  {
+                                           "stats":  "/api/apps/logistics/stats",
+                                           "create":  "/api/apps/logistics/records",
+                                           "get":  "/api/apps/logistics/records/{id}",
+                                           "health":  "/api/apps/logistics/health",
+                                           "list":  "/api/apps/logistics/records",
+                                           "delete":  "/api/apps/logistics/records/{id}",
+                                           "update":  "/api/apps/logistics/records/{id}"
+                                       },
+                     "db_table":  "aios_app_logistics",
+                     "name":  "Royal Logistics",
+                     "slug":  "logistics",
+                     "port":  8825,
+                     "html":  "Royal Murshad AIOS - index.html",
+                     "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-logistics"
+                 },
+                 {
+                     "api_base":  "/api/apps/marketing",
+                     "api_endpoints":  {
+                                           "stats":  "/api/apps/marketing/stats",
+                                           "create":  "/api/apps/marketing/records",
+                                           "get":  "/api/apps/marketing/records/{id}",
+                                           "health":  "/api/apps/marketing/health",
+                                           "list":  "/api/apps/marketing/records",
+                                           "delete":  "/api/apps/marketing/records/{id}",
+                                           "update":  "/api/apps/marketing/records/{id}"
+                                       },
+                     "db_table":  "aios_app_marketing",
+                     "name":  "Royal Marketing",
+                     "slug":  "marketing",
+                     "port":  8826,
+                     "html":  "Royal Murshad AIOS - index.html",
+                     "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-marketing"
+                 },
+                 {
+                     "api_base":  "/api/apps/media",
+                     "api_endpoints":  {
+                                           "stats":  "/api/apps/media/stats",
+                                           "create":  "/api/apps/media/records",
+                                           "get":  "/api/apps/media/records/{id}",
+                                           "health":  "/api/apps/media/health",
+                                           "list":  "/api/apps/media/records",
+                                           "delete":  "/api/apps/media/records/{id}",
+                                           "update":  "/api/apps/media/records/{id}"
+                                       },
+                     "db_table":  "aios_app_media",
+                     "name":  "Royal Media",
+                     "slug":  "media",
+                     "port":  8827,
+                     "html":  "Royal Murshad AIOS - index.html",
+                     "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-media"
+                 },
+                 {
+                     "api_base":  "/api/apps/pharmacy",
+                     "api_endpoints":  {
+                                           "stats":  "/api/apps/pharmacy/stats",
+                                           "create":  "/api/apps/pharmacy/records",
+                                           "get":  "/api/apps/pharmacy/records/{id}",
+                                           "health":  "/api/apps/pharmacy/health",
+                                           "list":  "/api/apps/pharmacy/records",
+                                           "delete":  "/api/apps/pharmacy/records/{id}",
+                                           "update":  "/api/apps/pharmacy/records/{id}"
+                                       },
+                     "db_table":  "aios_app_pharmacy",
+                     "name":  "Royal Pharmacy",
+                     "slug":  "pharmacy",
+                     "port":  8828,
+                     "html":  "Royal Murshad AIOS - index.html",
+                     "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-pharmacy"
+                 },
+                 {
+                     "api_base":  "/api/apps/projects",
+                     "api_endpoints":  {
+                                           "stats":  "/api/apps/projects/stats",
+                                           "create":  "/api/apps/projects/records",
+                                           "get":  "/api/apps/projects/records/{id}",
+                                           "health":  "/api/apps/projects/health",
+                                           "list":  "/api/apps/projects/records",
+                                           "delete":  "/api/apps/projects/records/{id}",
+                                           "update":  "/api/apps/projects/records/{id}"
+                                       },
+                     "db_table":  "aios_app_projects",
+                     "name":  "Royal Projects",
+                     "slug":  "projects",
+                     "port":  8829,
+                     "html":  "Royal Murshad AIOS - index.html",
+                     "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-projects"
+                 },
+                 {
+                     "api_base":  "/api/apps/property",
+                     "api_endpoints":  {
+                                           "stats":  "/api/apps/property/stats",
+                                           "create":  "/api/apps/property/records",
+                                           "get":  "/api/apps/property/records/{id}",
+                                           "health":  "/api/apps/property/health",
+                                           "list":  "/api/apps/property/records",
+                                           "delete":  "/api/apps/property/records/{id}",
+                                           "update":  "/api/apps/property/records/{id}"
+                                       },
+                     "db_table":  "aios_app_property",
+                     "name":  "Royal Property",
+                     "slug":  "property",
+                     "port":  8830,
+                     "html":  "Royal Murshad AIOS - index.html",
+                     "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-property"
+                 },
+                 {
+                     "api_base":  "/api/apps/qa",
+                     "api_endpoints":  {
+                                           "stats":  "/api/apps/qa/stats",
+                                           "create":  "/api/apps/qa/records",
+                                           "get":  "/api/apps/qa/records/{id}",
+                                           "health":  "/api/apps/qa/health",
+                                           "list":  "/api/apps/qa/records",
+                                           "delete":  "/api/apps/qa/records/{id}",
+                                           "update":  "/api/apps/qa/records/{id}"
+                                       },
+                     "db_table":  "aios_app_qa",
+                     "name":  "Royal Qa",
+                     "slug":  "qa",
+                     "port":  8831,
+                     "html":  "Royal Murshad AIOS - index.html",
+                     "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-qa"
+                 },
+                 {
+                     "api_base":  "/api/apps/research",
+                     "api_endpoints":  {
+                                           "stats":  "/api/apps/research/stats",
+                                           "create":  "/api/apps/research/records",
+                                           "get":  "/api/apps/research/records/{id}",
+                                           "health":  "/api/apps/research/health",
+                                           "list":  "/api/apps/research/records",
+                                           "delete":  "/api/apps/research/records/{id}",
+                                           "update":  "/api/apps/research/records/{id}"
+                                       },
+                     "db_table":  "aios_app_research",
+                     "name":  "Royal Research",
+                     "slug":  "research",
+                     "port":  8832,
+                     "html":  "Royal Murshad AIOS - index.html",
+                     "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-research"
+                 },
+                 {
+                     "api_base":  "/api/apps/restaurant",
+                     "api_endpoints":  {
+                                           "stats":  "/api/apps/restaurant/stats",
+                                           "create":  "/api/apps/restaurant/records",
+                                           "get":  "/api/apps/restaurant/records/{id}",
+                                           "health":  "/api/apps/restaurant/health",
+                                           "list":  "/api/apps/restaurant/records",
+                                           "delete":  "/api/apps/restaurant/records/{id}",
+                                           "update":  "/api/apps/restaurant/records/{id}"
+                                       },
+                     "db_table":  "aios_app_restaurant",
+                     "name":  "Royal Restaurant",
+                     "slug":  "restaurant",
+                     "port":  8833,
+                     "html":  "Royal Murshad AIOS - index.html",
+                     "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-restaurant"
+                 },
+                 {
+                     "api_base":  "/api/apps/risk",
+                     "api_endpoints":  {
+                                           "stats":  "/api/apps/risk/stats",
+                                           "create":  "/api/apps/risk/records",
+                                           "get":  "/api/apps/risk/records/{id}",
+                                           "health":  "/api/apps/risk/health",
+                                           "list":  "/api/apps/risk/records",
+                                           "delete":  "/api/apps/risk/records/{id}",
+                                           "update":  "/api/apps/risk/records/{id}"
+                                       },
+                     "db_table":  "aios_app_risk",
+                     "name":  "Royal Risk",
+                     "slug":  "risk",
+                     "port":  8834,
+                     "html":  "Royal Murshad AIOS - index.html",
+                     "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-risk"
+                 },
+                 {
+                     "api_base":  "/api/apps/sales",
+                     "api_endpoints":  {
+                                           "stats":  "/api/apps/sales/stats",
+                                           "create":  "/api/apps/sales/records",
+                                           "get":  "/api/apps/sales/records/{id}",
+                                           "health":  "/api/apps/sales/health",
+                                           "list":  "/api/apps/sales/records",
+                                           "delete":  "/api/apps/sales/records/{id}",
+                                           "update":  "/api/apps/sales/records/{id}"
+                                       },
+                     "db_table":  "aios_app_sales",
+                     "name":  "Royal Sales",
+                     "slug":  "sales",
+                     "port":  8835,
+                     "html":  "Royal Murshad AIOS - index.html",
+                     "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-sales"
+                 },
+                 {
+                     "api_base":  "/api/apps/secure",
+                     "api_endpoints":  {
+                                           "stats":  "/api/apps/secure/stats",
+                                           "create":  "/api/apps/secure/records",
+                                           "get":  "/api/apps/secure/records/{id}",
+                                           "health":  "/api/apps/secure/health",
+                                           "list":  "/api/apps/secure/records",
+                                           "delete":  "/api/apps/secure/records/{id}",
+                                           "update":  "/api/apps/secure/records/{id}"
+                                       },
+                     "db_table":  "aios_app_secure",
+                     "name":  "Royal Secure",
+                     "slug":  "secure",
+                     "port":  8836,
+                     "html":  "Royal Murshad AIOS - index.html",
+                     "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-secure"
+                 },
+                 {
+                     "api_base":  "/api/apps/spend",
+                     "api_endpoints":  {
+                                           "stats":  "/api/apps/spend/stats",
+                                           "create":  "/api/apps/spend/records",
+                                           "get":  "/api/apps/spend/records/{id}",
+                                           "health":  "/api/apps/spend/health",
+                                           "list":  "/api/apps/spend/records",
+                                           "delete":  "/api/apps/spend/records/{id}",
+                                           "update":  "/api/apps/spend/records/{id}"
+                                       },
+                     "db_table":  "aios_app_spend",
+                     "name":  "Royal Spend",
+                     "slug":  "spend",
+                     "port":  8837,
+                     "html":  "Royal Murshad AIOS - index.html",
+                     "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-spend"
+                 },
+                 {
+                     "api_base":  "/api/apps/studio",
+                     "api_endpoints":  {
+                                           "stats":  "/api/apps/studio/stats",
+                                           "create":  "/api/apps/studio/records",
+                                           "get":  "/api/apps/studio/records/{id}",
+                                           "health":  "/api/apps/studio/health",
+                                           "list":  "/api/apps/studio/records",
+                                           "delete":  "/api/apps/studio/records/{id}",
+                                           "update":  "/api/apps/studio/records/{id}"
+                                       },
+                     "db_table":  "aios_app_studio",
+                     "name":  "Royal Studio",
+                     "slug":  "studio",
+                     "port":  8838,
+                     "html":  "Royal Murshad AIOS - index.html",
+                     "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-studio"
+                 },
+                 {
+                     "api_base":  "/api/apps/supply",
+                     "api_endpoints":  {
+                                           "stats":  "/api/apps/supply/stats",
+                                           "create":  "/api/apps/supply/records",
+                                           "get":  "/api/apps/supply/records/{id}",
+                                           "health":  "/api/apps/supply/health",
+                                           "list":  "/api/apps/supply/records",
+                                           "delete":  "/api/apps/supply/records/{id}",
+                                           "update":  "/api/apps/supply/records/{id}"
+                                       },
+                     "db_table":  "aios_app_supply",
+                     "name":  "Royal Supply",
+                     "slug":  "supply",
+                     "port":  8839,
+                     "html":  "Royal Murshad AIOS - index.html",
+                     "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-supply"
+                 },
+                 {
+                     "api_base":  "/api/apps/support",
+                     "api_endpoints":  {
+                                           "stats":  "/api/apps/support/stats",
+                                           "create":  "/api/apps/support/records",
+                                           "get":  "/api/apps/support/records/{id}",
+                                           "health":  "/api/apps/support/health",
+                                           "list":  "/api/apps/support/records",
+                                           "delete":  "/api/apps/support/records/{id}",
+                                           "update":  "/api/apps/support/records/{id}"
+                                       },
+                     "db_table":  "aios_app_support",
+                     "name":  "Royal Support",
+                     "slug":  "support",
+                     "port":  8840,
+                     "html":  "Royal Murshad AIOS - index.html",
+                     "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-support"
+                 },
+                 {
+                     "api_base":  "/api/apps/talent",
+                     "api_endpoints":  {
+                                           "stats":  "/api/apps/talent/stats",
+                                           "create":  "/api/apps/talent/records",
+                                           "get":  "/api/apps/talent/records/{id}",
+                                           "health":  "/api/apps/talent/health",
+                                           "list":  "/api/apps/talent/records",
+                                           "delete":  "/api/apps/talent/records/{id}",
+                                           "update":  "/api/apps/talent/records/{id}"
+                                       },
+                     "db_table":  "aios_app_talent",
+                     "name":  "Royal Talent",
+                     "slug":  "talent",
+                     "port":  8841,
+                     "html":  "Royal Murshad AIOS - index.html",
+                     "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-talent"
+                 },
+                 {
+                     "api_base":  "/api/apps/team",
+                     "api_endpoints":  {
+                                           "stats":  "/api/apps/team/stats",
+                                           "create":  "/api/apps/team/records",
+                                           "get":  "/api/apps/team/records/{id}",
+                                           "health":  "/api/apps/team/health",
+                                           "list":  "/api/apps/team/records",
+                                           "delete":  "/api/apps/team/records/{id}",
+                                           "update":  "/api/apps/team/records/{id}"
+                                       },
+                     "db_table":  "aios_app_team",
+                     "name":  "Royal Team",
+                     "slug":  "team",
+                     "port":  8842,
+                     "html":  "Royal Murshad AIOS - index.html",
+                     "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-team"
+                 },
+                 {
+                     "api_base":  "/api/apps/trade",
+                     "api_endpoints":  {
+                                           "stats":  "/api/apps/trade/stats",
+                                           "create":  "/api/apps/trade/records",
+                                           "get":  "/api/apps/trade/records/{id}",
+                                           "health":  "/api/apps/trade/health",
+                                           "list":  "/api/apps/trade/records",
+                                           "delete":  "/api/apps/trade/records/{id}",
+                                           "update":  "/api/apps/trade/records/{id}"
+                                       },
+                     "db_table":  "aios_app_trade",
+                     "name":  "Royal Trade",
+                     "slug":  "trade",
+                     "port":  8843,
+                     "html":  "Royal Murshad AIOS - index.html",
+                     "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-trade"
+                 },
+                 {
+                     "api_base":  "/api/apps/translate",
+                     "api_endpoints":  {
+                                           "stats":  "/api/apps/translate/stats",
+                                           "create":  "/api/apps/translate/records",
+                                           "get":  "/api/apps/translate/records/{id}",
+                                           "health":  "/api/apps/translate/health",
+                                           "list":  "/api/apps/translate/records",
+                                           "delete":  "/api/apps/translate/records/{id}",
+                                           "update":  "/api/apps/translate/records/{id}"
+                                       },
+                     "db_table":  "aios_app_translate",
+                     "name":  "Royal Translate",
+                     "slug":  "translate",
+                     "port":  8844,
+                     "html":  "Royal Murshad AIOS - index.html",
+                     "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-translate"
+                 },
+                 {
+                     "api_base":  "/api/apps/travel",
+                     "api_endpoints":  {
+                                           "stats":  "/api/apps/travel/stats",
+                                           "create":  "/api/apps/travel/records",
+                                           "get":  "/api/apps/travel/records/{id}",
+                                           "health":  "/api/apps/travel/health",
+                                           "list":  "/api/apps/travel/records",
+                                           "delete":  "/api/apps/travel/records/{id}",
+                                           "update":  "/api/apps/travel/records/{id}"
+                                       },
+                     "db_table":  "aios_app_travel",
+                     "name":  "Royal Travel",
+                     "slug":  "travel",
+                     "port":  8845,
+                     "html":  "Royal Murshad AIOS - index.html",
+                     "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-travel"
+                 },
+                 {
+                     "api_base":  "/api/apps/tutor",
+                     "api_endpoints":  {
+                                           "stats":  "/api/apps/tutor/stats",
+                                           "create":  "/api/apps/tutor/records",
+                                           "get":  "/api/apps/tutor/records/{id}",
+                                           "health":  "/api/apps/tutor/health",
+                                           "list":  "/api/apps/tutor/records",
+                                           "delete":  "/api/apps/tutor/records/{id}",
+                                           "update":  "/api/apps/tutor/records/{id}"
+                                       },
+                     "db_table":  "aios_app_tutor",
+                     "name":  "Royal Tutor",
+                     "slug":  "tutor",
+                     "port":  8846,
+                     "html":  "Royal Murshad AIOS - index.html",
+                     "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-tutor"
+                 },
+                 {
+                     "api_base":  "/api/apps/venue",
+                     "api_endpoints":  {
+                                           "stats":  "/api/apps/venue/stats",
+                                           "create":  "/api/apps/venue/records",
+                                           "get":  "/api/apps/venue/records/{id}",
+                                           "health":  "/api/apps/venue/health",
+                                           "list":  "/api/apps/venue/records",
+                                           "delete":  "/api/apps/venue/records/{id}",
+                                           "update":  "/api/apps/venue/records/{id}"
+                                       },
+                     "db_table":  "aios_app_venue",
+                     "name":  "Royal Venue",
+                     "slug":  "venue",
+                     "port":  8847,
+                     "html":  "Royal Murshad AIOS - index.html",
+                     "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-venue"
+                 },
+                 {
+                     "api_base":  "/api/apps/wellness",
+                     "api_endpoints":  {
+                                           "stats":  "/api/apps/wellness/stats",
+                                           "create":  "/api/apps/wellness/records",
+                                           "get":  "/api/apps/wellness/records/{id}",
+                                           "health":  "/api/apps/wellness/health",
+                                           "list":  "/api/apps/wellness/records",
+                                           "delete":  "/api/apps/wellness/records/{id}",
+                                           "update":  "/api/apps/wellness/records/{id}"
+                                       },
+                     "db_table":  "aios_app_wellness",
+                     "name":  "Royal Wellness",
+                     "slug":  "wellness",
+                     "port":  8848,
+                     "html":  "Royal Murshad AIOS - index.html",
+                     "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-wellness"
+                 },
+                 {
+                     "api_base":  "/api/apps/writer",
+                     "api_endpoints":  {
+                                           "stats":  "/api/apps/writer/stats",
+                                           "create":  "/api/apps/writer/records",
+                                           "get":  "/api/apps/writer/records/{id}",
+                                           "health":  "/api/apps/writer/health",
+                                           "list":  "/api/apps/writer/records",
+                                           "delete":  "/api/apps/writer/records/{id}",
+                                           "update":  "/api/apps/writer/records/{id}"
+                                       },
+                     "db_table":  "aios_app_writer",
+                     "name":  "Royal Writer",
+                     "slug":  "writer",
+                     "port":  8849,
+                     "html":  "Royal Murshad AIOS - index.html",
+                     "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-writer"
+                 }
+             ]
+}

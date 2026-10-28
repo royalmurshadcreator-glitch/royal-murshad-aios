@@ -1,0 +1,1418 @@
+{
+    "ollama":  {
+                   "url":  "http://127.0.0.1:11434",
+                   "models":  [
+                                  "qwen2.5:3b",
+                                  "nomic-embed-text:latest",
+                                  "qwen2.5-coder:7b"
+                              ],
+                   "tags":  "http://127.0.0.1:11434/api/tags"
+               },
+    "other_endpoints":  [
+                            {
+                                "port":  8788,
+                                "title":  "Royal Murshad â Independent AI Systems Builder",
+                                "url":  "http://127.0.0.1:8788/",
+                                "folder":  "D:\\Downloads",
+                                "slug":  "downloads"
+                            }
+                        ],
+    "public_apps":  [
+                        {
+                            "url":  "http://127.0.0.1:8790/",
+                            "slug":  "agents",
+                            "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-agents",
+                            "api_base":  "/api/apps/agents",
+                            "health_url":  "http://127.0.0.1:8790/",
+                            "http":  200,
+                            "name":  "Royal Murshad AIOS - royal-agents",
+                            "port":  8790,
+                            "title":  "Royal Murshad-Agents"
+                        },
+                        {
+                            "url":  "http://127.0.0.1:8791/",
+                            "slug":  "architect",
+                            "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-architect",
+                            "api_base":  "/api/apps/architect",
+                            "health_url":  "http://127.0.0.1:8791/",
+                            "http":  200,
+                            "name":  "Royal Murshad AIOS - royal-architect",
+                            "port":  8791,
+                            "title":  "Royal Murshad-Architect"
+                        },
+                        {
+                            "url":  "http://127.0.0.1:8792/",
+                            "slug":  "audit",
+                            "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-audit",
+                            "api_base":  "/api/apps/audit",
+                            "health_url":  "http://127.0.0.1:8792/",
+                            "http":  200,
+                            "name":  "Royal Murshad AIOS - royal-audit",
+                            "port":  8792,
+                            "title":  "Royal Murshad-Audit"
+                        },
+                        {
+                            "url":  "http://127.0.0.1:8793/",
+                            "slug":  "bi",
+                            "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-bi",
+                            "api_base":  "/api/apps/bi",
+                            "health_url":  "http://127.0.0.1:8793/",
+                            "http":  200,
+                            "name":  "Royal Murshad AIOS - royal-bi",
+                            "port":  8793,
+                            "title":  "Royal Murshad-Bi"
+                        },
+                        {
+                            "url":  "http://127.0.0.1:8794/",
+                            "slug":  "booking",
+                            "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-booking",
+                            "api_base":  "/api/apps/booking",
+                            "health_url":  "http://127.0.0.1:8794/",
+                            "http":  200,
+                            "name":  "Royal Murshad AIOS - royal-booking",
+                            "port":  8794,
+                            "title":  "Royal Murshad-Booking"
+                        },
+                        {
+                            "url":  "http://127.0.0.1:8795/",
+                            "slug":  "books",
+                            "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-books",
+                            "api_base":  "/api/apps/books",
+                            "health_url":  "http://127.0.0.1:8795/",
+                            "http":  200,
+                            "name":  "Royal Murshad AIOS - royal-books",
+                            "port":  8795,
+                            "title":  "Royal Murshad-Books"
+                        },
+                        {
+                            "url":  "http://127.0.0.1:8796/",
+                            "slug":  "business",
+                            "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-business",
+                            "api_base":  "/api/apps/business",
+                            "health_url":  "http://127.0.0.1:8796/",
+                            "http":  200,
+                            "name":  "Royal Murshad AIOS - royal-business",
+                            "port":  8796,
+                            "title":  "Royal Murshad-Business"
+                        },
+                        {
+                            "url":  "http://127.0.0.1:8797/",
+                            "slug":  "care",
+                            "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-care",
+                            "api_base":  "/api/apps/care",
+                            "health_url":  "http://127.0.0.1:8797/",
+                            "http":  200,
+                            "name":  "Royal Murshad AIOS - royal-care",
+                            "port":  8797,
+                            "title":  "Royal Murshad-Care"
+                        },
+                        {
+                            "url":  "http://127.0.0.1:8798/",
+                            "slug":  "chat",
+                            "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-chat",
+                            "api_base":  "/api/apps/chat",
+                            "health_url":  "http://127.0.0.1:8798/",
+                            "http":  200,
+                            "name":  "Royal Murshad AIOS - royal-chat",
+                            "port":  8798,
+                            "title":  "Royal Murshad-Chat"
+                        },
+                        {
+                            "url":  "http://127.0.0.1:8799/",
+                            "slug":  "classroom",
+                            "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-classroom",
+                            "api_base":  "/api/apps/classroom",
+                            "health_url":  "http://127.0.0.1:8799/",
+                            "http":  200,
+                            "name":  "Royal Murshad AIOS - royal-classroom",
+                            "port":  8799,
+                            "title":  "Royal Murshad-Classroom"
+                        },
+                        {
+                            "url":  "http://127.0.0.1:8800/",
+                            "slug":  "clinic",
+                            "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-clinic",
+                            "api_base":  "/api/apps/clinic",
+                            "health_url":  "http://127.0.0.1:8800/",
+                            "http":  200,
+                            "name":  "Royal Murshad AIOS - royal-clinic",
+                            "port":  8800,
+                            "title":  "Royal Murshad-Clinic"
+                        },
+                        {
+                            "url":  "http://127.0.0.1:8801/",
+                            "slug":  "code",
+                            "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-code",
+                            "api_base":  "/api/apps/code",
+                            "health_url":  "http://127.0.0.1:8801/",
+                            "http":  200,
+                            "name":  "Royal Murshad AIOS - royal-code",
+                            "port":  8801,
+                            "title":  "Royal Murshad-Code"
+                        },
+                        {
+                            "url":  "http://127.0.0.1:8802/",
+                            "slug":  "commerce",
+                            "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-commerce",
+                            "api_base":  "/api/apps/commerce",
+                            "health_url":  "http://127.0.0.1:8802/",
+                            "http":  200,
+                            "name":  "Royal Murshad AIOS - royal-commerce",
+                            "port":  8802,
+                            "title":  "Royal Murshad-Commerce"
+                        },
+                        {
+                            "url":  "http://127.0.0.1:8803/",
+                            "slug":  "connect",
+                            "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-connect",
+                            "api_base":  "/api/apps/connect",
+                            "health_url":  "http://127.0.0.1:8803/",
+                            "http":  200,
+                            "name":  "Royal Murshad AIOS - royal-connect",
+                            "port":  8803,
+                            "title":  "Royal Murshad-Connect"
+                        },
+                        {
+                            "url":  "http://127.0.0.1:8804/",
+                            "slug":  "creator",
+                            "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-creator",
+                            "api_base":  "/api/apps/creator",
+                            "health_url":  "http://127.0.0.1:8804/",
+                            "http":  200,
+                            "name":  "Royal Murshad AIOS - royal-creator",
+                            "port":  8804,
+                            "title":  "Royal Murshad-Creator"
+                        },
+                        {
+                            "url":  "http://127.0.0.1:8805/",
+                            "slug":  "crm",
+                            "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-crm",
+                            "api_base":  "/api/apps/crm",
+                            "health_url":  "http://127.0.0.1:8805/",
+                            "http":  200,
+                            "name":  "Royal Murshad AIOS - royal-crm",
+                            "port":  8805,
+                            "title":  "Royal Murshad-Crm"
+                        },
+                        {
+                            "url":  "http://127.0.0.1:8806/",
+                            "slug":  "crop",
+                            "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-crop",
+                            "api_base":  "/api/apps/crop",
+                            "health_url":  "http://127.0.0.1:8806/",
+                            "http":  200,
+                            "name":  "Royal Murshad AIOS - royal-crop",
+                            "port":  8806,
+                            "title":  "Royal Murshad-Crop"
+                        },
+                        {
+                            "url":  "http://127.0.0.1:8807/",
+                            "slug":  "data",
+                            "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-data",
+                            "api_base":  "/api/apps/data",
+                            "health_url":  "http://127.0.0.1:8807/",
+                            "http":  200,
+                            "name":  "Royal Murshad AIOS - royal-data",
+                            "port":  8807,
+                            "title":  "Royal Murshad-Data"
+                        },
+                        {
+                            "url":  "http://127.0.0.1:8808/",
+                            "slug":  "dental",
+                            "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-dental",
+                            "api_base":  "/api/apps/dental",
+                            "health_url":  "http://127.0.0.1:8808/",
+                            "http":  200,
+                            "name":  "Royal Murshad AIOS - royal-dental",
+                            "port":  8808,
+                            "title":  "Royal Murshad-Dental"
+                        },
+                        {
+                            "url":  "http://127.0.0.1:8809/",
+                            "slug":  "devops",
+                            "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-devops",
+                            "api_base":  "/api/apps/devops",
+                            "health_url":  "http://127.0.0.1:8809/",
+                            "http":  200,
+                            "name":  "Royal Murshad AIOS - royal-devops",
+                            "port":  8809,
+                            "title":  "Royal Murshad-Devops"
+                        },
+                        {
+                            "url":  "http://127.0.0.1:8810/",
+                            "slug":  "factory",
+                            "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-factory",
+                            "api_base":  "/api/apps/factory",
+                            "health_url":  "http://127.0.0.1:8810/",
+                            "http":  200,
+                            "name":  "Royal Murshad AIOS - royal-factory",
+                            "port":  8810,
+                            "title":  "Royal Murshad-Factory"
+                        },
+                        {
+                            "url":  "http://127.0.0.1:8811/",
+                            "slug":  "farm",
+                            "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-farm",
+                            "api_base":  "/api/apps/farm",
+                            "health_url":  "http://127.0.0.1:8811/",
+                            "http":  200,
+                            "name":  "Royal Murshad AIOS - royal-farm",
+                            "port":  8811,
+                            "title":  "Royal Murshad-Farm"
+                        },
+                        {
+                            "url":  "http://127.0.0.1:8812/",
+                            "slug":  "field",
+                            "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-field",
+                            "api_base":  "/api/apps/field",
+                            "health_url":  "http://127.0.0.1:8812/",
+                            "http":  200,
+                            "name":  "Royal Murshad AIOS - royal-field",
+                            "port":  8812,
+                            "title":  "Royal Murshad-Field"
+                        },
+                        {
+                            "url":  "http://127.0.0.1:8813/",
+                            "slug":  "finance",
+                            "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-finance",
+                            "api_base":  "/api/apps/finance",
+                            "health_url":  "http://127.0.0.1:8813/",
+                            "http":  200,
+                            "name":  "Royal Murshad AIOS - royal-finance",
+                            "port":  8813,
+                            "title":  "Royal Murshad-Finance"
+                        },
+                        {
+                            "url":  "http://127.0.0.1:8814/",
+                            "slug":  "flow",
+                            "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-flow",
+                            "api_base":  "/api/apps/flow",
+                            "health_url":  "http://127.0.0.1:8814/",
+                            "http":  200,
+                            "name":  "Royal Murshad AIOS - royal-flow",
+                            "port":  8814,
+                            "title":  "Royal Murshad-Flow"
+                        },
+                        {
+                            "url":  "http://127.0.0.1:8815/",
+                            "slug":  "gov",
+                            "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-gov",
+                            "api_base":  "/api/apps/gov",
+                            "health_url":  "http://127.0.0.1:8815/",
+                            "http":  200,
+                            "name":  "Royal Murshad AIOS - royal-gov",
+                            "port":  8815,
+                            "title":  "Royal Murshad-Gov"
+                        },
+                        {
+                            "url":  "http://127.0.0.1:8816/",
+                            "slug":  "green",
+                            "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-green",
+                            "api_base":  "/api/apps/green",
+                            "health_url":  "http://127.0.0.1:8816/",
+                            "http":  200,
+                            "name":  "Royal Murshad AIOS - royal-green",
+                            "port":  8816,
+                            "title":  "Royal Murshad-Green"
+                        },
+                        {
+                            "url":  "http://127.0.0.1:8817/",
+                            "slug":  "hotel",
+                            "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-hotel",
+                            "api_base":  "/api/apps/hotel",
+                            "health_url":  "http://127.0.0.1:8817/",
+                            "http":  200,
+                            "name":  "Royal Murshad AIOS - royal-hotel",
+                            "port":  8817,
+                            "title":  "Royal Murshad-Hotel"
+                        },
+                        {
+                            "url":  "http://127.0.0.1:8818/",
+                            "slug":  "hr",
+                            "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-hr",
+                            "api_base":  "/api/apps/hr",
+                            "health_url":  "http://127.0.0.1:8818/",
+                            "http":  200,
+                            "name":  "Royal Murshad AIOS - royal-hr",
+                            "port":  8818,
+                            "title":  "Royal Murshad-Hr"
+                        },
+                        {
+                            "url":  "http://127.0.0.1:8819/",
+                            "slug":  "inventory",
+                            "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-inventory",
+                            "api_base":  "/api/apps/inventory",
+                            "health_url":  "http://127.0.0.1:8819/",
+                            "http":  200,
+                            "name":  "Royal Murshad AIOS - royal-inventory",
+                            "port":  8819,
+                            "title":  "Royal Murshad-Inventory"
+                        },
+                        {
+                            "url":  "http://127.0.0.1:8820/",
+                            "slug":  "invoice",
+                            "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-invoice",
+                            "api_base":  "/api/apps/invoice",
+                            "health_url":  "http://127.0.0.1:8820/",
+                            "http":  200,
+                            "name":  "Royal Murshad AIOS - royal-invoice",
+                            "port":  8820,
+                            "title":  "Royal Murshad-Invoice"
+                        },
+                        {
+                            "url":  "http://127.0.0.1:8821/",
+                            "slug":  "knowledge",
+                            "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-knowledge",
+                            "api_base":  "/api/apps/knowledge",
+                            "health_url":  "http://127.0.0.1:8821/",
+                            "http":  200,
+                            "name":  "Royal Murshad AIOS - royal-knowledge",
+                            "port":  8821,
+                            "title":  "Royal Murshad-Knowledge"
+                        },
+                        {
+                            "url":  "http://127.0.0.1:8822/",
+                            "slug":  "learning",
+                            "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-learning",
+                            "api_base":  "/api/apps/learning",
+                            "health_url":  "http://127.0.0.1:8822/",
+                            "http":  200,
+                            "name":  "Royal Murshad AIOS - royal-learning",
+                            "port":  8822,
+                            "title":  "Royal Murshad-Learning"
+                        },
+                        {
+                            "url":  "http://127.0.0.1:8823/",
+                            "slug":  "legal",
+                            "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-legal",
+                            "api_base":  "/api/apps/legal",
+                            "health_url":  "http://127.0.0.1:8823/",
+                            "http":  200,
+                            "name":  "Royal Murshad AIOS - royal-legal",
+                            "port":  8823,
+                            "title":  "Royal Murshad-Legal"
+                        },
+                        {
+                            "url":  "http://127.0.0.1:8824/",
+                            "slug":  "livestock",
+                            "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-livestock",
+                            "api_base":  "/api/apps/livestock",
+                            "health_url":  "http://127.0.0.1:8824/",
+                            "http":  200,
+                            "name":  "Royal Murshad AIOS - royal-livestock",
+                            "port":  8824,
+                            "title":  "Royal Murshad-Livestock"
+                        },
+                        {
+                            "url":  "http://127.0.0.1:8825/",
+                            "slug":  "logistics",
+                            "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-logistics",
+                            "api_base":  "/api/apps/logistics",
+                            "health_url":  "http://127.0.0.1:8825/",
+                            "http":  200,
+                            "name":  "Royal Murshad AIOS - royal-logistics",
+                            "port":  8825,
+                            "title":  "Royal Murshad-Logistics"
+                        },
+                        {
+                            "url":  "http://127.0.0.1:8826/",
+                            "slug":  "marketing",
+                            "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-marketing",
+                            "api_base":  "/api/apps/marketing",
+                            "health_url":  "http://127.0.0.1:8826/",
+                            "http":  200,
+                            "name":  "Royal Murshad AIOS - royal-marketing",
+                            "port":  8826,
+                            "title":  "Royal Murshad-Marketing"
+                        },
+                        {
+                            "url":  "http://127.0.0.1:8827/",
+                            "slug":  "media",
+                            "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-media",
+                            "api_base":  "/api/apps/media",
+                            "health_url":  "http://127.0.0.1:8827/",
+                            "http":  200,
+                            "name":  "Royal Murshad AIOS - royal-media",
+                            "port":  8827,
+                            "title":  "Royal Murshad-Media"
+                        },
+                        {
+                            "url":  "http://127.0.0.1:8828/",
+                            "slug":  "pharmacy",
+                            "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-pharmacy",
+                            "api_base":  "/api/apps/pharmacy",
+                            "health_url":  "http://127.0.0.1:8828/",
+                            "http":  200,
+                            "name":  "Royal Murshad AIOS - royal-pharmacy",
+                            "port":  8828,
+                            "title":  "Royal Murshad-Pharmacy"
+                        },
+                        {
+                            "url":  "http://127.0.0.1:8829/",
+                            "slug":  "projects",
+                            "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-projects",
+                            "api_base":  "/api/apps/projects",
+                            "health_url":  "http://127.0.0.1:8829/",
+                            "http":  200,
+                            "name":  "Royal Murshad AIOS - royal-projects",
+                            "port":  8829,
+                            "title":  "Royal Murshad-Projects"
+                        },
+                        {
+                            "url":  "http://127.0.0.1:8830/",
+                            "slug":  "property",
+                            "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-property",
+                            "api_base":  "/api/apps/property",
+                            "health_url":  "http://127.0.0.1:8830/",
+                            "http":  200,
+                            "name":  "Royal Murshad AIOS - royal-property",
+                            "port":  8830,
+                            "title":  "Royal Murshad-Property"
+                        },
+                        {
+                            "url":  "http://127.0.0.1:8831/",
+                            "slug":  "qa",
+                            "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-qa",
+                            "api_base":  "/api/apps/qa",
+                            "health_url":  "http://127.0.0.1:8831/",
+                            "http":  200,
+                            "name":  "Royal Murshad AIOS - royal-qa",
+                            "port":  8831,
+                            "title":  "Royal Murshad-Qa"
+                        },
+                        {
+                            "url":  "http://127.0.0.1:8832/",
+                            "slug":  "research",
+                            "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-research",
+                            "api_base":  "/api/apps/research",
+                            "health_url":  "http://127.0.0.1:8832/",
+                            "http":  200,
+                            "name":  "Royal Murshad AIOS - royal-research",
+                            "port":  8832,
+                            "title":  "Royal Murshad-Research"
+                        },
+                        {
+                            "url":  "http://127.0.0.1:8833/",
+                            "slug":  "restaurant",
+                            "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-restaurant",
+                            "api_base":  "/api/apps/restaurant",
+                            "health_url":  "http://127.0.0.1:8833/",
+                            "http":  200,
+                            "name":  "Royal Murshad AIOS - royal-restaurant",
+                            "port":  8833,
+                            "title":  "Royal Murshad-Restaurant"
+                        },
+                        {
+                            "url":  "http://127.0.0.1:8834/",
+                            "slug":  "risk",
+                            "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-risk",
+                            "api_base":  "/api/apps/risk",
+                            "health_url":  "http://127.0.0.1:8834/",
+                            "http":  200,
+                            "name":  "Royal Murshad AIOS - royal-risk",
+                            "port":  8834,
+                            "title":  "Royal Murshad-Risk"
+                        },
+                        {
+                            "url":  "http://127.0.0.1:8835/",
+                            "slug":  "sales",
+                            "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-sales",
+                            "api_base":  "/api/apps/sales",
+                            "health_url":  "http://127.0.0.1:8835/",
+                            "http":  200,
+                            "name":  "Royal Murshad AIOS - royal-sales",
+                            "port":  8835,
+                            "title":  "Royal Murshad-Sales"
+                        },
+                        {
+                            "url":  "http://127.0.0.1:8836/",
+                            "slug":  "secure",
+                            "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-secure",
+                            "api_base":  "/api/apps/secure",
+                            "health_url":  "http://127.0.0.1:8836/",
+                            "http":  200,
+                            "name":  "Royal Murshad AIOS - royal-secure",
+                            "port":  8836,
+                            "title":  "Royal Murshad-Secure"
+                        },
+                        {
+                            "url":  "http://127.0.0.1:8837/",
+                            "slug":  "spend",
+                            "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-spend",
+                            "api_base":  "/api/apps/spend",
+                            "health_url":  "http://127.0.0.1:8837/",
+                            "http":  200,
+                            "name":  "Royal Murshad AIOS - royal-spend",
+                            "port":  8837,
+                            "title":  "Royal Murshad-Spend"
+                        },
+                        {
+                            "url":  "http://127.0.0.1:8838/",
+                            "slug":  "studio",
+                            "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-studio",
+                            "api_base":  "/api/apps/studio",
+                            "health_url":  "http://127.0.0.1:8838/",
+                            "http":  200,
+                            "name":  "Royal Murshad AIOS - royal-studio",
+                            "port":  8838,
+                            "title":  "Royal Murshad-Studio"
+                        },
+                        {
+                            "url":  "http://127.0.0.1:8839/",
+                            "slug":  "supply",
+                            "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-supply",
+                            "api_base":  "/api/apps/supply",
+                            "health_url":  "http://127.0.0.1:8839/",
+                            "http":  200,
+                            "name":  "Royal Murshad AIOS - royal-supply",
+                            "port":  8839,
+                            "title":  "Royal Murshad-Supply"
+                        },
+                        {
+                            "url":  "http://127.0.0.1:8840/",
+                            "slug":  "support",
+                            "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-support",
+                            "api_base":  "/api/apps/support",
+                            "health_url":  "http://127.0.0.1:8840/",
+                            "http":  200,
+                            "name":  "Royal Murshad AIOS - royal-support",
+                            "port":  8840,
+                            "title":  "Royal Murshad-Support"
+                        },
+                        {
+                            "url":  "http://127.0.0.1:8841/",
+                            "slug":  "talent",
+                            "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-talent",
+                            "api_base":  "/api/apps/talent",
+                            "health_url":  "http://127.0.0.1:8841/",
+                            "http":  200,
+                            "name":  "Royal Murshad AIOS - royal-talent",
+                            "port":  8841,
+                            "title":  "Royal Murshad-Talent"
+                        },
+                        {
+                            "url":  "http://127.0.0.1:8842/",
+                            "slug":  "team",
+                            "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-team",
+                            "api_base":  "/api/apps/team",
+                            "health_url":  "http://127.0.0.1:8842/",
+                            "http":  200,
+                            "name":  "Royal Murshad AIOS - royal-team",
+                            "port":  8842,
+                            "title":  "Royal Murshad-Team"
+                        },
+                        {
+                            "url":  "http://127.0.0.1:8843/",
+                            "slug":  "trade",
+                            "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-trade",
+                            "api_base":  "/api/apps/trade",
+                            "health_url":  "http://127.0.0.1:8843/",
+                            "http":  200,
+                            "name":  "Royal Murshad AIOS - royal-trade",
+                            "port":  8843,
+                            "title":  "Royal Murshad-Trade"
+                        },
+                        {
+                            "url":  "http://127.0.0.1:8844/",
+                            "slug":  "translate",
+                            "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-translate",
+                            "api_base":  "/api/apps/translate",
+                            "health_url":  "http://127.0.0.1:8844/",
+                            "http":  200,
+                            "name":  "Royal Murshad AIOS - royal-translate",
+                            "port":  8844,
+                            "title":  "Royal Murshad-Translate"
+                        },
+                        {
+                            "url":  "http://127.0.0.1:8845/",
+                            "slug":  "travel",
+                            "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-travel",
+                            "api_base":  "/api/apps/travel",
+                            "health_url":  "http://127.0.0.1:8845/",
+                            "http":  200,
+                            "name":  "Royal Murshad AIOS - royal-travel",
+                            "port":  8845,
+                            "title":  "Royal Murshad-Travel"
+                        },
+                        {
+                            "url":  "http://127.0.0.1:8846/",
+                            "slug":  "tutor",
+                            "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-tutor",
+                            "api_base":  "/api/apps/tutor",
+                            "health_url":  "http://127.0.0.1:8846/",
+                            "http":  200,
+                            "name":  "Royal Murshad AIOS - royal-tutor",
+                            "port":  8846,
+                            "title":  "Royal Murshad-Tutor"
+                        },
+                        {
+                            "url":  "http://127.0.0.1:8847/",
+                            "slug":  "venue",
+                            "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-venue",
+                            "api_base":  "/api/apps/venue",
+                            "health_url":  "http://127.0.0.1:8847/",
+                            "http":  200,
+                            "name":  "Royal Murshad AIOS - royal-venue",
+                            "port":  8847,
+                            "title":  "Royal Murshad-Venue"
+                        },
+                        {
+                            "url":  "http://127.0.0.1:8848/",
+                            "slug":  "wellness",
+                            "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-wellness",
+                            "api_base":  "/api/apps/wellness",
+                            "health_url":  "http://127.0.0.1:8848/",
+                            "http":  200,
+                            "name":  "Royal Murshad AIOS - royal-wellness",
+                            "port":  8848,
+                            "title":  "Royal Murshad-Wellness"
+                        },
+                        {
+                            "url":  "http://127.0.0.1:8849/",
+                            "slug":  "writer",
+                            "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS DEPLOYMENT 20261015\\Royal Murshad AIOS - royal-writer",
+                            "api_base":  "/api/apps/writer",
+                            "health_url":  "http://127.0.0.1:8849/",
+                            "http":  200,
+                            "name":  "Royal Murshad AIOS - royal-writer",
+                            "port":  8849,
+                            "title":  "Royal Murshad-Writer"
+                        }
+                    ],
+    "backend":  {
+                    "summary":  "http://127.0.0.1:9000/api/apps/summary",
+                    "docs":  "http://127.0.0.1:9000/docs",
+                    "url":  "http://127.0.0.1:9000",
+                    "registry":  "http://127.0.0.1:9000/api/registry/apps",
+                    "health":  "http://127.0.0.1:9000/api/registry/health"
+                },
+    "version":  "2.0.0",
+    "personal_dashboards":  [
+                                {
+                                    "port":  8789,
+                                    "slug":  "60-apps-launch",
+                                    "http":  200,
+                                    "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS LAUNCH",
+                                    "name":  "Royal Murshad AIOS - 60 APPS LAUNCH",
+                                    "url":  "http://127.0.0.1:8789/",
+                                    "title":  "Royal Murshad Store | 60 AI Apps"
+                                },
+                                {
+                                    "port":  8850,
+                                    "slug":  "jarvis-live",
+                                    "http":  200,
+                                    "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - UI\\Royal Murshad AIOS - jarvis_live",
+                                    "name":  "Royal Murshad AIOS - jarvis_live",
+                                    "url":  "http://127.0.0.1:8850/",
+                                    "title":  "JARVIS LIVE \\u2014 AIOS"
+                                },
+                                {
+                                    "port":  8851,
+                                    "slug":  "landing",
+                                    "http":  200,
+                                    "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - UI\\Royal Murshad AIOS - landing",
+                                    "name":  "Royal Murshad AIOS - landing",
+                                    "url":  "http://127.0.0.1:8851/",
+                                    "title":  "Royal Jarvis AIOS â Read-only public profile reading"
+                                },
+                                {
+                                    "port":  8852,
+                                    "slug":  "royal-jarvis-studio",
+                                    "http":  200,
+                                    "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - UI\\Royal Murshad AIOS - royal_jarvis_studio",
+                                    "name":  "Royal Murshad AIOS - royal_jarvis_studio",
+                                    "url":  "http://127.0.0.1:8852/",
+                                    "title":  "Royal Jarvis Studio"
+                                },
+                                {
+                                    "port":  8853,
+                                    "slug":  "royal-mail",
+                                    "http":  200,
+                                    "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - UI\\Royal Murshad AIOS - royal_mail",
+                                    "name":  "Royal Murshad AIOS - royal_mail",
+                                    "url":  "http://127.0.0.1:8853/",
+                                    "title":  "Royal Mail â Workspace"
+                                },
+                                {
+                                    "port":  8854,
+                                    "slug":  "royal-murshad-60-apps",
+                                    "http":  200,
+                                    "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - UI\\Royal Murshad AIOS - royal_murshad_60_apps",
+                                    "name":  "Royal Murshad AIOS - royal_murshad_60_apps",
+                                    "url":  "http://127.0.0.1:8854/",
+                                    "title":  "Royal Murshad â 60 Application Workspaces"
+                                },
+                                {
+                                    "port":  8855,
+                                    "slug":  "royal-murshad-ecosystem",
+                                    "http":  200,
+                                    "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - UI\\Royal Murshad AIOS - royal_murshad_ecosystem",
+                                    "name":  "Royal Murshad AIOS - royal_murshad_ecosystem",
+                                    "url":  "http://127.0.0.1:8855/",
+                                    "title":  "Royal Murshad AIOS"
+                                },
+                                {
+                                    "port":  8856,
+                                    "slug":  "executive-dashboard-src",
+                                    "http":  200,
+                                    "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - UI\\Royal Murshad AIOS - executive_dashboard\\Royal Murshad AIOS - executive-dashboard-src",
+                                    "name":  "Royal Murshad AIOS - executive-dashboard-src",
+                                    "url":  "http://127.0.0.1:8856/",
+                                    "title":  "ROYAL JARVIS v2.0 â Executive Intelligence System"
+                                },
+                                {
+                                    "port":  8857,
+                                    "slug":  "dist",
+                                    "http":  200,
+                                    "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - UI\\Royal Murshad AIOS - executive_dashboard\\Royal Murshad AIOS - executive-dashboard-src\\Royal Murshad AIOS - dist",
+                                    "name":  "Royal Murshad AIOS - dist",
+                                    "url":  "http://127.0.0.1:8857/",
+                                    "title":  "ROYAL JARVIS v2.0 â Executive Intelligence System"
+                                },
+                                {
+                                    "port":  8858,
+                                    "slug":  "dist-launch-candidate",
+                                    "http":  200,
+                                    "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - UI\\Royal Murshad AIOS - executive_dashboard\\Royal Murshad AIOS - executive-dashboard-src\\Royal Murshad AIOS - dist-launch-candidate",
+                                    "name":  "Royal Murshad AIOS - dist-launch-candidate",
+                                    "url":  "http://127.0.0.1:8858/",
+                                    "title":  "ROYAL JARVIS v2.0 â Executive Intelligence System"
+                                },
+                                {
+                                    "port":  8859,
+                                    "slug":  "dist-owner-candidate",
+                                    "http":  200,
+                                    "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - UI\\Royal Murshad AIOS - executive_dashboard\\Royal Murshad AIOS - executive-dashboard-src\\Royal Murshad AIOS - dist-owner-candidate",
+                                    "name":  "Royal Murshad AIOS - dist-owner-candidate",
+                                    "url":  "http://127.0.0.1:8859/",
+                                    "title":  "ROYAL JARVIS v2.0 â Executive Intelligence System"
+                                },
+                                {
+                                    "port":  8860,
+                                    "slug":  "owner-control-center",
+                                    "http":  200,
+                                    "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - UI\\Royal Murshad AIOS - executive_dashboard\\Royal Murshad AIOS - executive-dashboard-src\\Royal Murshad AIOS - owner-control-center",
+                                    "name":  "Royal Murshad AIOS - owner-control-center",
+                                    "url":  "http://127.0.0.1:8860/",
+                                    "title":  "Royal â Owner Control Center"
+                                },
+                                {
+                                    "port":  8861,
+                                    "slug":  "dist",
+                                    "http":  200,
+                                    "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - UI\\Royal Murshad AIOS - executive_dashboard\\Royal Murshad AIOS - executive-dashboard-src\\Royal Murshad AIOS - owner-control-center\\Royal Murshad AIOS - dist",
+                                    "name":  "Royal Murshad AIOS - dist",
+                                    "url":  "http://127.0.0.1:8861/",
+                                    "title":  "Royal â Owner Control Center"
+                                },
+                                {
+                                    "port":  8862,
+                                    "slug":  "dist",
+                                    "http":  200,
+                                    "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - UI\\Royal Murshad AIOS - royal_mail\\Royal Murshad AIOS - dist",
+                                    "name":  "Royal Murshad AIOS - dist",
+                                    "url":  "http://127.0.0.1:8862/",
+                                    "title":  "Royal Mail â Workspace"
+                                },
+                                {
+                                    "port":  8863,
+                                    "slug":  "recovery-backup-20261015-101815",
+                                    "http":  200,
+                                    "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - UI\\Royal Murshad AIOS - royal_mail\\Royal Murshad AIOS - _recovery_backup_20261015_101815",
+                                    "name":  "Royal Murshad AIOS - _recovery_backup_20261015_101815",
+                                    "url":  "http://127.0.0.1:8863/",
+                                    "title":  "Royal Mail â Workspace"
+                                },
+                                {
+                                    "port":  8864,
+                                    "slug":  "dist",
+                                    "http":  200,
+                                    "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - UI\\Royal Murshad AIOS - royal_murshad_ecosystem\\Royal Murshad AIOS - dist",
+                                    "name":  "Royal Murshad AIOS - dist",
+                                    "url":  "http://127.0.0.1:8864/",
+                                    "title":  "Royal Murshad AIOS"
+                                },
+                                {
+                                    "port":  8865,
+                                    "slug":  "store",
+                                    "http":  200,
+                                    "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - UI\\Royal Murshad AIOS - web\\Royal Murshad AIOS - static\\Royal Murshad AIOS - store",
+                                    "name":  "Royal Murshad AIOS - store",
+                                    "url":  "http://127.0.0.1:8865/",
+                                    "title":  "AIOS Sovereign Store"
+                                },
+                                {
+                                    "port":  8866,
+                                    "slug":  "demo-workspace-20261013-173620",
+                                    "http":  200,
+                                    "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - COMMERCIAL\\Royal Murshad AIOS - customer_portal\\Royal Murshad AIOS - demo_workspace_20261013_173620",
+                                    "name":  "Royal Murshad AIOS - demo_workspace_20261013_173620",
+                                    "url":  "http://127.0.0.1:8866/",
+                                    "title":  "Customer Workspace | Royal AI"
+                                },
+                                {
+                                    "port":  8867,
+                                    "slug":  "release-candidate-20261013-174126",
+                                    "http":  200,
+                                    "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - COMMERCIAL\\Royal Murshad AIOS - owner_control_center\\Royal Murshad AIOS - release_candidate_20261013_174126",
+                                    "name":  "Royal Murshad AIOS - release_candidate_20261013_174126",
+                                    "url":  "http://127.0.0.1:8867/",
+                                    "title":  "ROYAL AIOS | Owner Control Center"
+                                },
+                                {
+                                    "port":  8868,
+                                    "slug":  "release-candidate-20261013-173207",
+                                    "http":  200,
+                                    "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - COMMERCIAL\\Royal Murshad AIOS - public_portfolio\\Royal Murshad AIOS - release_candidate_20261013_173207",
+                                    "name":  "Royal Murshad AIOS - release_candidate_20261013_173207",
+                                    "url":  "http://127.0.0.1:8868/",
+                                    "title":  "Al Syed Group | AI Automation Studio"
+                                },
+                                {
+                                    "port":  8869,
+                                    "slug":  "agents",
+                                    "http":  200,
+                                    "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS LAUNCH\\Royal Murshad AIOS - royal-agents",
+                                    "name":  "Royal Murshad AIOS - royal-agents",
+                                    "url":  "http://127.0.0.1:8869/",
+                                    "title":  "Royal App"
+                                },
+                                {
+                                    "port":  8870,
+                                    "slug":  "architect",
+                                    "http":  200,
+                                    "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS LAUNCH\\Royal Murshad AIOS - royal-architect",
+                                    "name":  "Royal Murshad AIOS - royal-architect",
+                                    "url":  "http://127.0.0.1:8870/",
+                                    "title":  "Royal App"
+                                },
+                                {
+                                    "port":  8871,
+                                    "slug":  "audit",
+                                    "http":  200,
+                                    "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS LAUNCH\\Royal Murshad AIOS - royal-audit",
+                                    "name":  "Royal Murshad AIOS - royal-audit",
+                                    "url":  "http://127.0.0.1:8871/",
+                                    "title":  "Royal App"
+                                },
+                                {
+                                    "port":  8872,
+                                    "slug":  "bi",
+                                    "http":  200,
+                                    "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS LAUNCH\\Royal Murshad AIOS - royal-bi",
+                                    "name":  "Royal Murshad AIOS - royal-bi",
+                                    "url":  "http://127.0.0.1:8872/",
+                                    "title":  "Royal App"
+                                },
+                                {
+                                    "port":  8873,
+                                    "slug":  "booking",
+                                    "http":  200,
+                                    "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS LAUNCH\\Royal Murshad AIOS - royal-booking",
+                                    "name":  "Royal Murshad AIOS - royal-booking",
+                                    "url":  "http://127.0.0.1:8873/",
+                                    "title":  "Royal App"
+                                },
+                                {
+                                    "port":  8874,
+                                    "slug":  "books",
+                                    "http":  200,
+                                    "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS LAUNCH\\Royal Murshad AIOS - royal-books",
+                                    "name":  "Royal Murshad AIOS - royal-books",
+                                    "url":  "http://127.0.0.1:8874/",
+                                    "title":  "Royal App"
+                                },
+                                {
+                                    "port":  8875,
+                                    "slug":  "business",
+                                    "http":  200,
+                                    "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS LAUNCH\\Royal Murshad AIOS - royal-business",
+                                    "name":  "Royal Murshad AIOS - royal-business",
+                                    "url":  "http://127.0.0.1:8875/",
+                                    "title":  "Royal App"
+                                },
+                                {
+                                    "port":  8876,
+                                    "slug":  "care",
+                                    "http":  200,
+                                    "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS LAUNCH\\Royal Murshad AIOS - royal-care",
+                                    "name":  "Royal Murshad AIOS - royal-care",
+                                    "url":  "http://127.0.0.1:8876/",
+                                    "title":  "Royal App"
+                                },
+                                {
+                                    "port":  8877,
+                                    "slug":  "chat",
+                                    "http":  200,
+                                    "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS LAUNCH\\Royal Murshad AIOS - royal-chat",
+                                    "name":  "Royal Murshad AIOS - royal-chat",
+                                    "url":  "http://127.0.0.1:8877/",
+                                    "title":  "Royal App"
+                                },
+                                {
+                                    "port":  8878,
+                                    "slug":  "classroom",
+                                    "http":  200,
+                                    "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS LAUNCH\\Royal Murshad AIOS - royal-classroom",
+                                    "name":  "Royal Murshad AIOS - royal-classroom",
+                                    "url":  "http://127.0.0.1:8878/",
+                                    "title":  "Royal App"
+                                },
+                                {
+                                    "port":  8879,
+                                    "slug":  "clinic",
+                                    "http":  200,
+                                    "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS LAUNCH\\Royal Murshad AIOS - royal-clinic",
+                                    "name":  "Royal Murshad AIOS - royal-clinic",
+                                    "url":  "http://127.0.0.1:8879/",
+                                    "title":  "Royal App"
+                                },
+                                {
+                                    "port":  8880,
+                                    "slug":  "code",
+                                    "http":  200,
+                                    "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS LAUNCH\\Royal Murshad AIOS - royal-code",
+                                    "name":  "Royal Murshad AIOS - royal-code",
+                                    "url":  "http://127.0.0.1:8880/",
+                                    "title":  "Royal App"
+                                },
+                                {
+                                    "port":  8881,
+                                    "slug":  "commerce",
+                                    "http":  200,
+                                    "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS LAUNCH\\Royal Murshad AIOS - royal-commerce",
+                                    "name":  "Royal Murshad AIOS - royal-commerce",
+                                    "url":  "http://127.0.0.1:8881/",
+                                    "title":  "Royal App"
+                                },
+                                {
+                                    "port":  8882,
+                                    "slug":  "connect",
+                                    "http":  200,
+                                    "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS LAUNCH\\Royal Murshad AIOS - royal-connect",
+                                    "name":  "Royal Murshad AIOS - royal-connect",
+                                    "url":  "http://127.0.0.1:8882/",
+                                    "title":  "Royal App"
+                                },
+                                {
+                                    "port":  8883,
+                                    "slug":  "creator",
+                                    "http":  200,
+                                    "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS LAUNCH\\Royal Murshad AIOS - royal-creator",
+                                    "name":  "Royal Murshad AIOS - royal-creator",
+                                    "url":  "http://127.0.0.1:8883/",
+                                    "title":  "Royal App"
+                                },
+                                {
+                                    "port":  8884,
+                                    "slug":  "crm",
+                                    "http":  200,
+                                    "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS LAUNCH\\Royal Murshad AIOS - royal-crm",
+                                    "name":  "Royal Murshad AIOS - royal-crm",
+                                    "url":  "http://127.0.0.1:8884/",
+                                    "title":  "Royal App"
+                                },
+                                {
+                                    "port":  8885,
+                                    "slug":  "crop",
+                                    "http":  200,
+                                    "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS LAUNCH\\Royal Murshad AIOS - royal-crop",
+                                    "name":  "Royal Murshad AIOS - royal-crop",
+                                    "url":  "http://127.0.0.1:8885/",
+                                    "title":  "Royal App"
+                                },
+                                {
+                                    "port":  8886,
+                                    "slug":  "data",
+                                    "http":  200,
+                                    "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS LAUNCH\\Royal Murshad AIOS - royal-data",
+                                    "name":  "Royal Murshad AIOS - royal-data",
+                                    "url":  "http://127.0.0.1:8886/",
+                                    "title":  "Royal App"
+                                },
+                                {
+                                    "port":  8887,
+                                    "slug":  "dental",
+                                    "http":  200,
+                                    "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS LAUNCH\\Royal Murshad AIOS - royal-dental",
+                                    "name":  "Royal Murshad AIOS - royal-dental",
+                                    "url":  "http://127.0.0.1:8887/",
+                                    "title":  "Royal App"
+                                },
+                                {
+                                    "port":  8888,
+                                    "slug":  "devops",
+                                    "http":  200,
+                                    "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS LAUNCH\\Royal Murshad AIOS - royal-devops",
+                                    "name":  "Royal Murshad AIOS - royal-devops",
+                                    "url":  "http://127.0.0.1:8888/",
+                                    "title":  "Royal App"
+                                },
+                                {
+                                    "port":  8889,
+                                    "slug":  "factory",
+                                    "http":  200,
+                                    "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS LAUNCH\\Royal Murshad AIOS - royal-factory",
+                                    "name":  "Royal Murshad AIOS - royal-factory",
+                                    "url":  "http://127.0.0.1:8889/",
+                                    "title":  "Royal App"
+                                },
+                                {
+                                    "port":  8890,
+                                    "slug":  "farm",
+                                    "http":  200,
+                                    "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS LAUNCH\\Royal Murshad AIOS - royal-farm",
+                                    "name":  "Royal Murshad AIOS - royal-farm",
+                                    "url":  "http://127.0.0.1:8890/",
+                                    "title":  "Royal App"
+                                },
+                                {
+                                    "port":  8891,
+                                    "slug":  "field",
+                                    "http":  200,
+                                    "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS LAUNCH\\Royal Murshad AIOS - royal-field",
+                                    "name":  "Royal Murshad AIOS - royal-field",
+                                    "url":  "http://127.0.0.1:8891/",
+                                    "title":  "Royal App"
+                                },
+                                {
+                                    "port":  8892,
+                                    "slug":  "finance",
+                                    "http":  200,
+                                    "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS LAUNCH\\Royal Murshad AIOS - royal-finance",
+                                    "name":  "Royal Murshad AIOS - royal-finance",
+                                    "url":  "http://127.0.0.1:8892/",
+                                    "title":  "Royal App"
+                                },
+                                {
+                                    "port":  8893,
+                                    "slug":  "flow",
+                                    "http":  200,
+                                    "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS LAUNCH\\Royal Murshad AIOS - royal-flow",
+                                    "name":  "Royal Murshad AIOS - royal-flow",
+                                    "url":  "http://127.0.0.1:8893/",
+                                    "title":  "Royal App"
+                                },
+                                {
+                                    "port":  8894,
+                                    "slug":  "gov",
+                                    "http":  200,
+                                    "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS LAUNCH\\Royal Murshad AIOS - royal-gov",
+                                    "name":  "Royal Murshad AIOS - royal-gov",
+                                    "url":  "http://127.0.0.1:8894/",
+                                    "title":  "Royal App"
+                                },
+                                {
+                                    "port":  8895,
+                                    "slug":  "green",
+                                    "http":  200,
+                                    "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS LAUNCH\\Royal Murshad AIOS - royal-green",
+                                    "name":  "Royal Murshad AIOS - royal-green",
+                                    "url":  "http://127.0.0.1:8895/",
+                                    "title":  "Royal App"
+                                },
+                                {
+                                    "port":  8896,
+                                    "slug":  "hotel",
+                                    "http":  200,
+                                    "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS LAUNCH\\Royal Murshad AIOS - royal-hotel",
+                                    "name":  "Royal Murshad AIOS - royal-hotel",
+                                    "url":  "http://127.0.0.1:8896/",
+                                    "title":  "Royal App"
+                                },
+                                {
+                                    "port":  8897,
+                                    "slug":  "hr",
+                                    "http":  200,
+                                    "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS LAUNCH\\Royal Murshad AIOS - royal-hr",
+                                    "name":  "Royal Murshad AIOS - royal-hr",
+                                    "url":  "http://127.0.0.1:8897/",
+                                    "title":  "Royal App"
+                                },
+                                {
+                                    "port":  8898,
+                                    "slug":  "inventory",
+                                    "http":  200,
+                                    "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS LAUNCH\\Royal Murshad AIOS - royal-inventory",
+                                    "name":  "Royal Murshad AIOS - royal-inventory",
+                                    "url":  "http://127.0.0.1:8898/",
+                                    "title":  "Royal App"
+                                },
+                                {
+                                    "port":  8899,
+                                    "slug":  "invoice",
+                                    "http":  200,
+                                    "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS LAUNCH\\Royal Murshad AIOS - royal-invoice",
+                                    "name":  "Royal Murshad AIOS - royal-invoice",
+                                    "url":  "http://127.0.0.1:8899/",
+                                    "title":  "Royal App"
+                                },
+                                {
+                                    "port":  8900,
+                                    "slug":  "knowledge",
+                                    "http":  200,
+                                    "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS LAUNCH\\Royal Murshad AIOS - royal-knowledge",
+                                    "name":  "Royal Murshad AIOS - royal-knowledge",
+                                    "url":  "http://127.0.0.1:8900/",
+                                    "title":  "Royal App"
+                                },
+                                {
+                                    "port":  8901,
+                                    "slug":  "learning",
+                                    "http":  200,
+                                    "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS LAUNCH\\Royal Murshad AIOS - royal-learning",
+                                    "name":  "Royal Murshad AIOS - royal-learning",
+                                    "url":  "http://127.0.0.1:8901/",
+                                    "title":  "Royal App"
+                                },
+                                {
+                                    "port":  8902,
+                                    "slug":  "legal",
+                                    "http":  200,
+                                    "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS LAUNCH\\Royal Murshad AIOS - royal-legal",
+                                    "name":  "Royal Murshad AIOS - royal-legal",
+                                    "url":  "http://127.0.0.1:8902/",
+                                    "title":  "Royal App"
+                                },
+                                {
+                                    "port":  8903,
+                                    "slug":  "livestock",
+                                    "http":  200,
+                                    "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS LAUNCH\\Royal Murshad AIOS - royal-livestock",
+                                    "name":  "Royal Murshad AIOS - royal-livestock",
+                                    "url":  "http://127.0.0.1:8903/",
+                                    "title":  "Royal App"
+                                },
+                                {
+                                    "port":  8904,
+                                    "slug":  "logistics",
+                                    "http":  200,
+                                    "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS LAUNCH\\Royal Murshad AIOS - royal-logistics",
+                                    "name":  "Royal Murshad AIOS - royal-logistics",
+                                    "url":  "http://127.0.0.1:8904/",
+                                    "title":  "Royal App"
+                                },
+                                {
+                                    "port":  8905,
+                                    "slug":  "marketing",
+                                    "http":  200,
+                                    "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS LAUNCH\\Royal Murshad AIOS - royal-marketing",
+                                    "name":  "Royal Murshad AIOS - royal-marketing",
+                                    "url":  "http://127.0.0.1:8905/",
+                                    "title":  "Royal App"
+                                },
+                                {
+                                    "port":  8906,
+                                    "slug":  "media",
+                                    "http":  200,
+                                    "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS LAUNCH\\Royal Murshad AIOS - royal-media",
+                                    "name":  "Royal Murshad AIOS - royal-media",
+                                    "url":  "http://127.0.0.1:8906/",
+                                    "title":  "Royal App"
+                                },
+                                {
+                                    "port":  8907,
+                                    "slug":  "pharmacy",
+                                    "http":  200,
+                                    "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS LAUNCH\\Royal Murshad AIOS - royal-pharmacy",
+                                    "name":  "Royal Murshad AIOS - royal-pharmacy",
+                                    "url":  "http://127.0.0.1:8907/",
+                                    "title":  "Royal App"
+                                },
+                                {
+                                    "port":  8908,
+                                    "slug":  "projects",
+                                    "http":  200,
+                                    "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS LAUNCH\\Royal Murshad AIOS - royal-projects",
+                                    "name":  "Royal Murshad AIOS - royal-projects",
+                                    "url":  "http://127.0.0.1:8908/",
+                                    "title":  "Royal App"
+                                },
+                                {
+                                    "port":  8909,
+                                    "slug":  "property",
+                                    "http":  200,
+                                    "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS LAUNCH\\Royal Murshad AIOS - royal-property",
+                                    "name":  "Royal Murshad AIOS - royal-property",
+                                    "url":  "http://127.0.0.1:8909/",
+                                    "title":  "Royal App"
+                                },
+                                {
+                                    "port":  8910,
+                                    "slug":  "qa",
+                                    "http":  200,
+                                    "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS LAUNCH\\Royal Murshad AIOS - royal-qa",
+                                    "name":  "Royal Murshad AIOS - royal-qa",
+                                    "url":  "http://127.0.0.1:8910/",
+                                    "title":  "Royal App"
+                                },
+                                {
+                                    "port":  8911,
+                                    "slug":  "research",
+                                    "http":  200,
+                                    "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS LAUNCH\\Royal Murshad AIOS - royal-research",
+                                    "name":  "Royal Murshad AIOS - royal-research",
+                                    "url":  "http://127.0.0.1:8911/",
+                                    "title":  "Royal App"
+                                },
+                                {
+                                    "port":  8912,
+                                    "slug":  "restaurant",
+                                    "http":  200,
+                                    "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS LAUNCH\\Royal Murshad AIOS - royal-restaurant",
+                                    "name":  "Royal Murshad AIOS - royal-restaurant",
+                                    "url":  "http://127.0.0.1:8912/",
+                                    "title":  "Royal App"
+                                },
+                                {
+                                    "port":  8913,
+                                    "slug":  "risk",
+                                    "http":  200,
+                                    "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS LAUNCH\\Royal Murshad AIOS - royal-risk",
+                                    "name":  "Royal Murshad AIOS - royal-risk",
+                                    "url":  "http://127.0.0.1:8913/",
+                                    "title":  "Royal App"
+                                },
+                                {
+                                    "port":  8914,
+                                    "slug":  "sales",
+                                    "http":  200,
+                                    "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS LAUNCH\\Royal Murshad AIOS - royal-sales",
+                                    "name":  "Royal Murshad AIOS - royal-sales",
+                                    "url":  "http://127.0.0.1:8914/",
+                                    "title":  "Royal App"
+                                },
+                                {
+                                    "port":  8915,
+                                    "slug":  "secure",
+                                    "http":  200,
+                                    "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS LAUNCH\\Royal Murshad AIOS - royal-secure",
+                                    "name":  "Royal Murshad AIOS - royal-secure",
+                                    "url":  "http://127.0.0.1:8915/",
+                                    "title":  "Royal App"
+                                },
+                                {
+                                    "port":  8916,
+                                    "slug":  "spend",
+                                    "http":  200,
+                                    "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS LAUNCH\\Royal Murshad AIOS - royal-spend",
+                                    "name":  "Royal Murshad AIOS - royal-spend",
+                                    "url":  "http://127.0.0.1:8916/",
+                                    "title":  "Royal App"
+                                },
+                                {
+                                    "port":  8917,
+                                    "slug":  "studio",
+                                    "http":  200,
+                                    "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS LAUNCH\\Royal Murshad AIOS - royal-studio",
+                                    "name":  "Royal Murshad AIOS - royal-studio",
+                                    "url":  "http://127.0.0.1:8917/",
+                                    "title":  "Royal App"
+                                },
+                                {
+                                    "port":  8918,
+                                    "slug":  "supply",
+                                    "http":  200,
+                                    "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS LAUNCH\\Royal Murshad AIOS - royal-supply",
+                                    "name":  "Royal Murshad AIOS - royal-supply",
+                                    "url":  "http://127.0.0.1:8918/",
+                                    "title":  "Royal App"
+                                },
+                                {
+                                    "port":  8919,
+                                    "slug":  "support",
+                                    "http":  200,
+                                    "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS LAUNCH\\Royal Murshad AIOS - royal-support",
+                                    "name":  "Royal Murshad AIOS - royal-support",
+                                    "url":  "http://127.0.0.1:8919/",
+                                    "title":  "Royal App"
+                                },
+                                {
+                                    "port":  8920,
+                                    "slug":  "talent",
+                                    "http":  200,
+                                    "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS LAUNCH\\Royal Murshad AIOS - royal-talent",
+                                    "name":  "Royal Murshad AIOS - royal-talent",
+                                    "url":  "http://127.0.0.1:8920/",
+                                    "title":  "Royal App"
+                                },
+                                {
+                                    "port":  8921,
+                                    "slug":  "team",
+                                    "http":  200,
+                                    "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS LAUNCH\\Royal Murshad AIOS - royal-team",
+                                    "name":  "Royal Murshad AIOS - royal-team",
+                                    "url":  "http://127.0.0.1:8921/",
+                                    "title":  "Royal App"
+                                },
+                                {
+                                    "port":  8922,
+                                    "slug":  "trade",
+                                    "http":  200,
+                                    "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS LAUNCH\\Royal Murshad AIOS - royal-trade",
+                                    "name":  "Royal Murshad AIOS - royal-trade",
+                                    "url":  "http://127.0.0.1:8922/",
+                                    "title":  "Royal App"
+                                },
+                                {
+                                    "port":  8923,
+                                    "slug":  "translate",
+                                    "http":  200,
+                                    "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS LAUNCH\\Royal Murshad AIOS - royal-translate",
+                                    "name":  "Royal Murshad AIOS - royal-translate",
+                                    "url":  "http://127.0.0.1:8923/",
+                                    "title":  "Royal App"
+                                },
+                                {
+                                    "port":  8924,
+                                    "slug":  "travel",
+                                    "http":  200,
+                                    "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS LAUNCH\\Royal Murshad AIOS - royal-travel",
+                                    "name":  "Royal Murshad AIOS - royal-travel",
+                                    "url":  "http://127.0.0.1:8924/",
+                                    "title":  "Royal App"
+                                },
+                                {
+                                    "port":  8925,
+                                    "slug":  "tutor",
+                                    "http":  200,
+                                    "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS LAUNCH\\Royal Murshad AIOS - royal-tutor",
+                                    "name":  "Royal Murshad AIOS - royal-tutor",
+                                    "url":  "http://127.0.0.1:8925/",
+                                    "title":  "Royal App"
+                                },
+                                {
+                                    "port":  8926,
+                                    "slug":  "venue",
+                                    "http":  200,
+                                    "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS LAUNCH\\Royal Murshad AIOS - royal-venue",
+                                    "name":  "Royal Murshad AIOS - royal-venue",
+                                    "url":  "http://127.0.0.1:8926/",
+                                    "title":  "Royal App"
+                                },
+                                {
+                                    "port":  8927,
+                                    "slug":  "wellness",
+                                    "http":  200,
+                                    "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS LAUNCH\\Royal Murshad AIOS - royal-wellness",
+                                    "name":  "Royal Murshad AIOS - royal-wellness",
+                                    "url":  "http://127.0.0.1:8927/",
+                                    "title":  "Royal App"
+                                },
+                                {
+                                    "port":  8928,
+                                    "slug":  "writer",
+                                    "http":  200,
+                                    "folder":  "D:\\01_PROJECTS\\Royal Murshad AIOS\\Royal Murshad AIOS - 60 APPS LAUNCH\\Royal Murshad AIOS - royal-writer",
+                                    "name":  "Royal Murshad AIOS - royal-writer",
+                                    "url":  "http://127.0.0.1:8928/",
+                                    "title":  "Royal App"
+                                }
+                            ],
+    "jarvis":  {
+                   "telegram":  "https://t.me/aios_jarvis_01_bot",
+                   "chat_id":  "6655136333"
+               },
+    "total_live":  141,
+    "generated_at":  "2026-10-15T18:57:43.2609950+07:00"
+}

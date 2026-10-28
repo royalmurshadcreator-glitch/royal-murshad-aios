@@ -12,7 +12,7 @@ Self-owned, locally controlled artificial intelligence operating system initiati
 
 ## Status
 
-This repository is the public home of the vision, architecture, and roadmap. No runnable code yet. Releases ship in vertical slices.
+This repository is the public home of the vision, architecture, and roadmap. 🚨 **ALPHA SOURCE CODE RELEASED.** The core engine (`launchers`, `api`, `servers`) is now published in the `/engine` directory. Please note: Alpha code requires manual path configuration (`AIOS_ROOT`) to run on your local machine. Apps will be released in vertical slices.
 
 | Layer | Status |
 |---|---|

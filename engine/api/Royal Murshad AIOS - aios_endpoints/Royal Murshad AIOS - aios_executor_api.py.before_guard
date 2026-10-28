@@ -1,0 +1,97 @@
+﻿"""
+Royal Jarvis â€” Executor API
+===========================
+Exposes the executor + audit through HTTP so the dashboard can use them.
+Endpoints:
+  POST /api/executor/command    â€” submit a command
+  GET  /api/executor/status     â€” executor alive?
+  GET  /api/executor/log        â€” read audit log
+  GET  /api/executor/apps       â€” list whitelisted apps
+"""
+from __future__ import annotations
+
+import sys
+from pathlib import Path
+from typing import Any
+
+from fastapi import APIRouter, HTTPException
+from pydantic import BaseModel
+
+# Add the executor folder to sys.path so we can import guard/executor/audit
+EXEC_DIR = Path(r"D:\AIOS\12_WORKSPACE\executor")
+if str(EXEC_DIR) not in sys.path:
+    sys.path.insert(0, str(EXEC_DIR))
+
+import aios_executor as exec_mod
+import audit as audit_mod
+import guard as guard_mod
+
+router = APIRouter(prefix="/api/executor", tags=["executor"])
+
+
+class CommandBody(BaseModel):
+    action: str
+    app: str | None = None
+    path: str | None = None
+    content: str | None = None
+    text: str | None = None
+    command: str | None = None
+    approve: bool = False
+
+
+def _filter_kwargs(body: CommandBody) -> dict[str, Any]:
+    kw: dict[str, Any] = {}
+    if body.app:     kw["app"] = body.app
+    if body.path:    kw["path"] = body.path
+    if body.content is not None: kw["content"] = body.content
+    if body.text is not None:    kw["text"] = body.text
+    if body.command: kw["command"] = body.command
+    kw["approve"] = body.approve
+    return kw
+
+
+@router.post("/command")
+def submit_command(body: CommandBody):
+    """Submit a command. Goes through guard.check() first. Never bypasses safety."""
+    kw = _filter_kwargs(body)
+    try:
+        result = exec_mod.run(body.action, **kw)
+    except Exception as e:
+        raise HTTPException(500, f"executor error: {e}")
+    return result
+
+
+@router.get("/status")
+def executor_status():
+    """Is the executor alive? What state is it in?"""
+    return {
+        "ok": True,
+        "executor": "online",
+        "audit_entries": audit_mod.count(),
+        "log_file": str(audit_mod.LOG_FILE),
+        "allowed_apps": sorted(guard_mod.ALLOWED_APPS),
+        "allowed_roots": [str(p) for p in guard_mod.ALLOWED_ROOT_DIRS],
+        "safe_mode": True,
+        "max_commands_per_hour": guard_mod.MAX_COMMANDS_PER_HOUR,
+        "max_writes_per_minute": guard_mod.MAX_WRITES_PER_MINUTE,
+    }
+
+
+@router.get("/log")
+def read_log(limit: int = 100):
+    """Read the last N audit entries."""
+    return {
+        "ok": True,
+        "count": audit_mod.count(),
+        "entries": audit_mod.tail(limit),
+    }
+
+
+@router.get("/apps")
+def list_apps():
+    """Return the current whitelist."""
+    return {
+        "ok": True,
+        "apps": sorted(guard_mod.ALLOWED_APPS),
+        "roots": [str(p) for p in guard_mod.ALLOWED_ROOT_DIRS],
+    }
