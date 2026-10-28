@@ -22,3 +22,12 @@ Thumbs.db
 *backup*
 *broken*
 *.bak
+
+*.bak*
+*.broken*
+*.candidate
+*.tmp
+*.pid
+*.log
+test_*.py
+test_*.cjs
