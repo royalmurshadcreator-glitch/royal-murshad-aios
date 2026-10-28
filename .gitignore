@@ -31,3 +31,6 @@ Thumbs.db
 *.log
 test_*.py
 test_*.cjs
+
+__pycache__/
+*_backup*/
