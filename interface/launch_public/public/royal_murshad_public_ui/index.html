@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#05080d"><meta name="description" content="Explore Royal Murshad AIOS — one kingdom for intelligent apps, agents, and automation.">
+<title>Royal Murshad AIOS — One Kingdom. Every Kind of Mind.</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar" id="sidebar">
+    <a class="brand" href="#home" aria-label="Royal Murshad AIOS home"><span class="brand-mark">♛</span><span><b>ROYAL MURSHAD</b><strong>AIOS</strong><small>AI OPERATING SYSTEM</small></span></a>
+    <div class="side-label">EXPLORE THE ECOSYSTEM</div>
+    <nav id="appNav" aria-label="Main navigation"></nav>
+    <div class="sidebar-bottom"><span class="live-dot"></span><span>Public experience</span><button id="aboutBtn" class="icon-button" aria-label="About this demo">ⓘ</button></div>
+  </aside>
+  <main class="main">
+    <header class="topbar"><button id="menuBtn" class="icon-button mobile-only" aria-label="Toggle menu">☰</button><div class="search-wrap"><span>⌕</span><input id="globalSearch" placeholder="Search apps, capabilities, solutions…" aria-label="Search apps and capabilities"><kbd>Ctrl K</kbd></div><button class="outline-btn" id="connectBtn">Connect backend</button><button class="gold-btn" id="demoBtn">Explore demo ↗</button></header>
+    <div class="page" id="page">
+      <section class="hero" id="home">
+        <div class="hero-copy"><div class="eyebrow"><span class="live-dot"></span> THE SOVEREIGN AI WORKSPACE</div><h1>One Kingdom.<br><em>Every Kind of Mind.</em></h1><p class="hero-lead">Meet a unified AI operating system for intelligent work, creative production, and connected automation — designed to bring your digital world together.</p><div class="hero-actions"><button class="gold-btn large" id="exploreApps">Explore the ecosystem <span>→</span></button><button class="outline-btn large" id="watchDemo">See interactive demo ▶</button></div><div class="hero-proof"><span>✦ Local-first architecture</span><span>✦ One connected workspace</span><span>✦ Human-controlled automation</span></div></div>
+        <div class="hero-art"><div class="art-glow"></div><img src="assets/royal-lion.png" alt="Golden lion emblem representing Royal Murshad AIOS"><div class="art-caption"><span class="live-dot"></span><div><b>ROYAL INTELLIGENCE</b><small>Built to orchestrate your digital kingdom</small></div></div><div class="floating-chip chip-one">♛ <span>Intelligence</span></div><div class="floating-chip chip-two">✧ <span>Automation</span></div></div>
+      </section>
+      <section class="metrics" aria-label="Platform overview"><article><span class="metric-icon">▦</span><div><strong>60+</strong><span>App experiences planned</span></div></article><article><span class="metric-icon cyan">⌘</span><div><strong>AI-native</strong><span>Agents & assistants</span></div></article><article><span class="metric-icon purple">⟲</span><div><strong>Connected</strong><span>Workflows & tools</span></div></article><article><span class="metric-icon green">◈</span><div><strong>Human-led</strong><span>Control & approvals</span></div></article></section>
+      <section class="section-heading" id="ecosystem"><div><div class="eyebrow">YOUR DIGITAL KINGDOM</div><h2>One workspace. <em>Many possibilities.</em></h2><p>Explore the product ecosystem by capability. These cards are public-facing previews, not claims that every service is live.</p></div><div class="filter-pills" id="filters"><button class="active" data-filter="All">All</button><button data-filter="AI">AI</button><button data-filter="Work">Work</button><button data-filter="Automation">Automation</button><button data-filter="Business">Business</button></div></section>
+      <section class="app-grid" id="appGrid" aria-live="polite"></section>
+      <section class="command-section" id="interactive"><div class="command-intro"><div class="eyebrow">TRY THE EXPERIENCE</div><h2>Your command.<br><em>Your workflow.</em></h2><p>Test a safe, local interface preview. It does not execute operating-system commands or send data to a backend unless you explicitly connect one.</p><div class="privacy-note">♙ <span><b>Human in control</b><small>Demo actions stay in this browser session.</small></span></div></div><div class="command-card"><div class="command-top"><div class="assistant-avatar">♛</div><div><b>Royal Assistant</b><small><span class="live-dot"></span> Interactive preview</small></div><button class="icon-button" id="clearChat" aria-label="Clear conversation">↺</button></div><div class="chat-messages" id="chatMessages"><div class="message assistant">Welcome to Royal Murshad AIOS. Choose a sample command or tell me what you want to explore.</div></div><div class="suggestions"><button data-prompt="Show me the AI tools">Explore AI tools</button><button data-prompt="Help me plan a workflow">Plan a workflow</button><button data-prompt="What is Royal Murshad AIOS?">About AIOS</button></div><form id="chatForm" class="chat-input"><input id="chatInput" placeholder="Ask about apps, agents, or workflows…" autocomplete="off" aria-label="Message Royal Assistant"><button class="send-btn" type="submit" aria-label="Send message">➤</button></form><div class="chat-foot">Demo mode · No commands are executed</div></div></section>
+      <section class="cta-section"><div><div class="eyebrow">BUILD WITH PURPOSE</div><h2>Bring your digital world <em>into one kingdom.</em></h2><p>Explore the ecosystem, review the architecture, and discover what fits your workflow.</p></div><div class="cta-actions"><button class="gold-btn large" id="ctaExplore">Explore applications →</button><button class="outline-btn large" id="contactBtn">Contact / request a demo</button></div></section>
+      <footer><a class="footer-brand" href="#home">♛ ROYAL MURSHAD AIOS</a><span>One Kingdom. Every Kind of Mind.</span><span id="backendStatus"><i class="status-dot"></i> Backend not connected</span><span>© <span id="year"></span> Royal Murshad</span></footer>
+    </div>
+  </main>
+</div>
+<div class="modal-backdrop" id="modal" hidden><section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><button class="icon-button modal-close" id="modalClose" aria-label="Close">✕</button><div class="eyebrow">ROYAL MURSHAD AIOS</div><h2 id="modalTitle">Explore</h2><div id="modalBody"></div><div class="modal-actions"><button class="outline-btn" id="modalCancel">Close</button><button class="gold-btn" id="modalPrimary">Continue</button></div></section></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="app.js"></script>
+<script src="chat_client.js"></script>
+</body></html>

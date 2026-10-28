@@ -1,0 +1,362 @@
+﻿[
+    {
+        "App":  "royal-agents",
+        "Port":  8788,
+        "URL":  "http://127.0.0.1:8788/",
+        "Directory":  "D:\\01_PROJECTS\\AIOS\\ROYAL_MURSHAD_60_APPS_DEPLOY_20261015_115007\\royal-agents"
+    },
+    {
+        "App":  "royal-architect",
+        "Port":  8789,
+        "URL":  "http://127.0.0.1:8789/",
+        "Directory":  "D:\\01_PROJECTS\\AIOS\\ROYAL_MURSHAD_60_APPS_DEPLOY_20261015_115007\\royal-architect"
+    },
+    {
+        "App":  "royal-audit",
+        "Port":  8790,
+        "URL":  "http://127.0.0.1:8790/",
+        "Directory":  "D:\\01_PROJECTS\\AIOS\\ROYAL_MURSHAD_60_APPS_DEPLOY_20261015_115007\\royal-audit"
+    },
+    {
+        "App":  "royal-bi",
+        "Port":  8791,
+        "URL":  "http://127.0.0.1:8791/",
+        "Directory":  "D:\\01_PROJECTS\\AIOS\\ROYAL_MURSHAD_60_APPS_DEPLOY_20261015_115007\\royal-bi"
+    },
+    {
+        "App":  "royal-booking",
+        "Port":  8792,
+        "URL":  "http://127.0.0.1:8792/",
+        "Directory":  "D:\\01_PROJECTS\\AIOS\\ROYAL_MURSHAD_60_APPS_DEPLOY_20261015_115007\\royal-booking"
+    },
+    {
+        "App":  "royal-books",
+        "Port":  8793,
+        "URL":  "http://127.0.0.1:8793/",
+        "Directory":  "D:\\01_PROJECTS\\AIOS\\ROYAL_MURSHAD_60_APPS_DEPLOY_20261015_115007\\royal-books"
+    },
+    {
+        "App":  "royal-business",
+        "Port":  8794,
+        "URL":  "http://127.0.0.1:8794/",
+        "Directory":  "D:\\01_PROJECTS\\AIOS\\ROYAL_MURSHAD_60_APPS_DEPLOY_20261015_115007\\royal-business"
+    },
+    {
+        "App":  "royal-care",
+        "Port":  8795,
+        "URL":  "http://127.0.0.1:8795/",
+        "Directory":  "D:\\01_PROJECTS\\AIOS\\ROYAL_MURSHAD_60_APPS_DEPLOY_20261015_115007\\royal-care"
+    },
+    {
+        "App":  "royal-chat",
+        "Port":  8796,
+        "URL":  "http://127.0.0.1:8796/",
+        "Directory":  "D:\\01_PROJECTS\\AIOS\\ROYAL_MURSHAD_60_APPS_DEPLOY_20261015_115007\\royal-chat"
+    },
+    {
+        "App":  "royal-classroom",
+        "Port":  8797,
+        "URL":  "http://127.0.0.1:8797/",
+        "Directory":  "D:\\01_PROJECTS\\AIOS\\ROYAL_MURSHAD_60_APPS_DEPLOY_20261015_115007\\royal-classroom"
+    },
+    {
+        "App":  "royal-clinic",
+        "Port":  8798,
+        "URL":  "http://127.0.0.1:8798/",
+        "Directory":  "D:\\01_PROJECTS\\AIOS\\ROYAL_MURSHAD_60_APPS_DEPLOY_20261015_115007\\royal-clinic"
+    },
+    {
+        "App":  "royal-code",
+        "Port":  8799,
+        "URL":  "http://127.0.0.1:8799/",
+        "Directory":  "D:\\01_PROJECTS\\AIOS\\ROYAL_MURSHAD_60_APPS_DEPLOY_20261015_115007\\royal-code"
+    },
+    {
+        "App":  "royal-commerce",
+        "Port":  8800,
+        "URL":  "http://127.0.0.1:8800/",
+        "Directory":  "D:\\01_PROJECTS\\AIOS\\ROYAL_MURSHAD_60_APPS_DEPLOY_20261015_115007\\royal-commerce"
+    },
+    {
+        "App":  "royal-connect",
+        "Port":  8801,
+        "URL":  "http://127.0.0.1:8801/",
+        "Directory":  "D:\\01_PROJECTS\\AIOS\\ROYAL_MURSHAD_60_APPS_DEPLOY_20261015_115007\\royal-connect"
+    },
+    {
+        "App":  "royal-creator",
+        "Port":  8802,
+        "URL":  "http://127.0.0.1:8802/",
+        "Directory":  "D:\\01_PROJECTS\\AIOS\\ROYAL_MURSHAD_60_APPS_DEPLOY_20261015_115007\\royal-creator"
+    },
+    {
+        "App":  "royal-crm",
+        "Port":  8803,
+        "URL":  "http://127.0.0.1:8803/",
+        "Directory":  "D:\\01_PROJECTS\\AIOS\\ROYAL_MURSHAD_60_APPS_DEPLOY_20261015_115007\\royal-crm"
+    },
+    {
+        "App":  "royal-crop",
+        "Port":  8804,
+        "URL":  "http://127.0.0.1:8804/",
+        "Directory":  "D:\\01_PROJECTS\\AIOS\\ROYAL_MURSHAD_60_APPS_DEPLOY_20261015_115007\\royal-crop"
+    },
+    {
+        "App":  "royal-data",
+        "Port":  8805,
+        "URL":  "http://127.0.0.1:8805/",
+        "Directory":  "D:\\01_PROJECTS\\AIOS\\ROYAL_MURSHAD_60_APPS_DEPLOY_20261015_115007\\royal-data"
+    },
+    {
+        "App":  "royal-dental",
+        "Port":  8806,
+        "URL":  "http://127.0.0.1:8806/",
+        "Directory":  "D:\\01_PROJECTS\\AIOS\\ROYAL_MURSHAD_60_APPS_DEPLOY_20261015_115007\\royal-dental"
+    },
+    {
+        "App":  "royal-devops",
+        "Port":  8807,
+        "URL":  "http://127.0.0.1:8807/",
+        "Directory":  "D:\\01_PROJECTS\\AIOS\\ROYAL_MURSHAD_60_APPS_DEPLOY_20261015_115007\\royal-devops"
+    },
+    {
+        "App":  "royal-factory",
+        "Port":  8808,
+        "URL":  "http://127.0.0.1:8808/",
+        "Directory":  "D:\\01_PROJECTS\\AIOS\\ROYAL_MURSHAD_60_APPS_DEPLOY_20261015_115007\\royal-factory"
+    },
+    {
+        "App":  "royal-farm",
+        "Port":  8809,
+        "URL":  "http://127.0.0.1:8809/",
+        "Directory":  "D:\\01_PROJECTS\\AIOS\\ROYAL_MURSHAD_60_APPS_DEPLOY_20261015_115007\\royal-farm"
+    },
+    {
+        "App":  "royal-field",
+        "Port":  8810,
+        "URL":  "http://127.0.0.1:8810/",
+        "Directory":  "D:\\01_PROJECTS\\AIOS\\ROYAL_MURSHAD_60_APPS_DEPLOY_20261015_115007\\royal-field"
+    },
+    {
+        "App":  "royal-finance",
+        "Port":  8811,
+        "URL":  "http://127.0.0.1:8811/",
+        "Directory":  "D:\\01_PROJECTS\\AIOS\\ROYAL_MURSHAD_60_APPS_DEPLOY_20261015_115007\\royal-finance"
+    },
+    {
+        "App":  "royal-flow",
+        "Port":  8812,
+        "URL":  "http://127.0.0.1:8812/",
+        "Directory":  "D:\\01_PROJECTS\\AIOS\\ROYAL_MURSHAD_60_APPS_DEPLOY_20261015_115007\\royal-flow"
+    },
+    {
+        "App":  "royal-gov",
+        "Port":  8813,
+        "URL":  "http://127.0.0.1:8813/",
+        "Directory":  "D:\\01_PROJECTS\\AIOS\\ROYAL_MURSHAD_60_APPS_DEPLOY_20261015_115007\\royal-gov"
+    },
+    {
+        "App":  "royal-green",
+        "Port":  8814,
+        "URL":  "http://127.0.0.1:8814/",
+        "Directory":  "D:\\01_PROJECTS\\AIOS\\ROYAL_MURSHAD_60_APPS_DEPLOY_20261015_115007\\royal-green"
+    },
+    {
+        "App":  "royal-hotel",
+        "Port":  8815,
+        "URL":  "http://127.0.0.1:8815/",
+        "Directory":  "D:\\01_PROJECTS\\AIOS\\ROYAL_MURSHAD_60_APPS_DEPLOY_20261015_115007\\royal-hotel"
+    },
+    {
+        "App":  "royal-hr",
+        "Port":  8816,
+        "URL":  "http://127.0.0.1:8816/",
+        "Directory":  "D:\\01_PROJECTS\\AIOS\\ROYAL_MURSHAD_60_APPS_DEPLOY_20261015_115007\\royal-hr"
+    },
+    {
+        "App":  "royal-inventory",
+        "Port":  8817,
+        "URL":  "http://127.0.0.1:8817/",
+        "Directory":  "D:\\01_PROJECTS\\AIOS\\ROYAL_MURSHAD_60_APPS_DEPLOY_20261015_115007\\royal-inventory"
+    },
+    {
+        "App":  "royal-invoice",
+        "Port":  8818,
+        "URL":  "http://127.0.0.1:8818/",
+        "Directory":  "D:\\01_PROJECTS\\AIOS\\ROYAL_MURSHAD_60_APPS_DEPLOY_20261015_115007\\royal-invoice"
+    },
+    {
+        "App":  "royal-knowledge",
+        "Port":  8819,
+        "URL":  "http://127.0.0.1:8819/",
+        "Directory":  "D:\\01_PROJECTS\\AIOS\\ROYAL_MURSHAD_60_APPS_DEPLOY_20261015_115007\\royal-knowledge"
+    },
+    {
+        "App":  "royal-learning",
+        "Port":  8820,
+        "URL":  "http://127.0.0.1:8820/",
+        "Directory":  "D:\\01_PROJECTS\\AIOS\\ROYAL_MURSHAD_60_APPS_DEPLOY_20261015_115007\\royal-learning"
+    },
+    {
+        "App":  "royal-legal",
+        "Port":  8821,
+        "URL":  "http://127.0.0.1:8821/",
+        "Directory":  "D:\\01_PROJECTS\\AIOS\\ROYAL_MURSHAD_60_APPS_DEPLOY_20261015_115007\\royal-legal"
+    },
+    {
+        "App":  "royal-livestock",
+        "Port":  8822,
+        "URL":  "http://127.0.0.1:8822/",
+        "Directory":  "D:\\01_PROJECTS\\AIOS\\ROYAL_MURSHAD_60_APPS_DEPLOY_20261015_115007\\royal-livestock"
+    },
+    {
+        "App":  "royal-logistics",
+        "Port":  8823,
+        "URL":  "http://127.0.0.1:8823/",
+        "Directory":  "D:\\01_PROJECTS\\AIOS\\ROYAL_MURSHAD_60_APPS_DEPLOY_20261015_115007\\royal-logistics"
+    },
+    {
+        "App":  "royal-marketing",
+        "Port":  8824,
+        "URL":  "http://127.0.0.1:8824/",
+        "Directory":  "D:\\01_PROJECTS\\AIOS\\ROYAL_MURSHAD_60_APPS_DEPLOY_20261015_115007\\royal-marketing"
+    },
+    {
+        "App":  "royal-media",
+        "Port":  8825,
+        "URL":  "http://127.0.0.1:8825/",
+        "Directory":  "D:\\01_PROJECTS\\AIOS\\ROYAL_MURSHAD_60_APPS_DEPLOY_20261015_115007\\royal-media"
+    },
+    {
+        "App":  "royal-pharmacy",
+        "Port":  8826,
+        "URL":  "http://127.0.0.1:8826/",
+        "Directory":  "D:\\01_PROJECTS\\AIOS\\ROYAL_MURSHAD_60_APPS_DEPLOY_20261015_115007\\royal-pharmacy"
+    },
+    {
+        "App":  "royal-projects",
+        "Port":  8827,
+        "URL":  "http://127.0.0.1:8827/",
+        "Directory":  "D:\\01_PROJECTS\\AIOS\\ROYAL_MURSHAD_60_APPS_DEPLOY_20261015_115007\\royal-projects"
+    },
+    {
+        "App":  "royal-property",
+        "Port":  8828,
+        "URL":  "http://127.0.0.1:8828/",
+        "Directory":  "D:\\01_PROJECTS\\AIOS\\ROYAL_MURSHAD_60_APPS_DEPLOY_20261015_115007\\royal-property"
+    },
+    {
+        "App":  "royal-qa",
+        "Port":  8829,
+        "URL":  "http://127.0.0.1:8829/",
+        "Directory":  "D:\\01_PROJECTS\\AIOS\\ROYAL_MURSHAD_60_APPS_DEPLOY_20261015_115007\\royal-qa"
+    },
+    {
+        "App":  "royal-research",
+        "Port":  8830,
+        "URL":  "http://127.0.0.1:8830/",
+        "Directory":  "D:\\01_PROJECTS\\AIOS\\ROYAL_MURSHAD_60_APPS_DEPLOY_20261015_115007\\royal-research"
+    },
+    {
+        "App":  "royal-restaurant",
+        "Port":  8831,
+        "URL":  "http://127.0.0.1:8831/",
+        "Directory":  "D:\\01_PROJECTS\\AIOS\\ROYAL_MURSHAD_60_APPS_DEPLOY_20261015_115007\\royal-restaurant"
+    },
+    {
+        "App":  "royal-risk",
+        "Port":  8832,
+        "URL":  "http://127.0.0.1:8832/",
+        "Directory":  "D:\\01_PROJECTS\\AIOS\\ROYAL_MURSHAD_60_APPS_DEPLOY_20261015_115007\\royal-risk"
+    },
+    {
+        "App":  "royal-sales",
+        "Port":  8833,
+        "URL":  "http://127.0.0.1:8833/",
+        "Directory":  "D:\\01_PROJECTS\\AIOS\\ROYAL_MURSHAD_60_APPS_DEPLOY_20261015_115007\\royal-sales"
+    },
+    {
+        "App":  "royal-secure",
+        "Port":  8834,
+        "URL":  "http://127.0.0.1:8834/",
+        "Directory":  "D:\\01_PROJECTS\\AIOS\\ROYAL_MURSHAD_60_APPS_DEPLOY_20261015_115007\\royal-secure"
+    },
+    {
+        "App":  "royal-spend",
+        "Port":  8835,
+        "URL":  "http://127.0.0.1:8835/",
+        "Directory":  "D:\\01_PROJECTS\\AIOS\\ROYAL_MURSHAD_60_APPS_DEPLOY_20261015_115007\\royal-spend"
+    },
+    {
+        "App":  "royal-studio",
+        "Port":  8836,
+        "URL":  "http://127.0.0.1:8836/",
+        "Directory":  "D:\\01_PROJECTS\\AIOS\\ROYAL_MURSHAD_60_APPS_DEPLOY_20261015_115007\\royal-studio"
+    },
+    {
+        "App":  "royal-supply",
+        "Port":  8837,
+        "URL":  "http://127.0.0.1:8837/",
+        "Directory":  "D:\\01_PROJECTS\\AIOS\\ROYAL_MURSHAD_60_APPS_DEPLOY_20261015_115007\\royal-supply"
+    },
+    {
+        "App":  "royal-support",
+        "Port":  8838,
+        "URL":  "http://127.0.0.1:8838/",
+        "Directory":  "D:\\01_PROJECTS\\AIOS\\ROYAL_MURSHAD_60_APPS_DEPLOY_20261015_115007\\royal-support"
+    },
+    {
+        "App":  "royal-talent",
+        "Port":  8839,
+        "URL":  "http://127.0.0.1:8839/",
+        "Directory":  "D:\\01_PROJECTS\\AIOS\\ROYAL_MURSHAD_60_APPS_DEPLOY_20261015_115007\\royal-talent"
+    },
+    {
+        "App":  "royal-team",
+        "Port":  8840,
+        "URL":  "http://127.0.0.1:8840/",
+        "Directory":  "D:\\01_PROJECTS\\AIOS\\ROYAL_MURSHAD_60_APPS_DEPLOY_20261015_115007\\royal-team"
+    },
+    {
+        "App":  "royal-trade",
+        "Port":  8841,
+        "URL":  "http://127.0.0.1:8841/",
+        "Directory":  "D:\\01_PROJECTS\\AIOS\\ROYAL_MURSHAD_60_APPS_DEPLOY_20261015_115007\\royal-trade"
+    },
+    {
+        "App":  "royal-translate",
+        "Port":  8842,
+        "URL":  "http://127.0.0.1:8842/",
+        "Directory":  "D:\\01_PROJECTS\\AIOS\\ROYAL_MURSHAD_60_APPS_DEPLOY_20261015_115007\\royal-translate"
+    },
+    {
+        "App":  "royal-travel",
+        "Port":  8843,
+        "URL":  "http://127.0.0.1:8843/",
+        "Directory":  "D:\\01_PROJECTS\\AIOS\\ROYAL_MURSHAD_60_APPS_DEPLOY_20261015_115007\\royal-travel"
+    },
+    {
+        "App":  "royal-tutor",
+        "Port":  8844,
+        "URL":  "http://127.0.0.1:8844/",
+        "Directory":  "D:\\01_PROJECTS\\AIOS\\ROYAL_MURSHAD_60_APPS_DEPLOY_20261015_115007\\royal-tutor"
+    },
+    {
+        "App":  "royal-venue",
+        "Port":  8845,
+        "URL":  "http://127.0.0.1:8845/",
+        "Directory":  "D:\\01_PROJECTS\\AIOS\\ROYAL_MURSHAD_60_APPS_DEPLOY_20261015_115007\\royal-venue"
+    },
+    {
+        "App":  "royal-wellness",
+        "Port":  8846,
+        "URL":  "http://127.0.0.1:8846/",
+        "Directory":  "D:\\01_PROJECTS\\AIOS\\ROYAL_MURSHAD_60_APPS_DEPLOY_20261015_115007\\royal-wellness"
+    },
+    {
+        "App":  "royal-writer",
+        "Port":  8847,
+        "URL":  "http://127.0.0.1:8847/",
+        "Directory":  "D:\\01_PROJECTS\\AIOS\\ROYAL_MURSHAD_60_APPS_DEPLOY_20261015_115007\\royal-writer"
+    }
+]

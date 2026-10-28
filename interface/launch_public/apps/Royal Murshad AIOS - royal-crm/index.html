@@ -1,0 +1,154 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0a0c10"><title>Royal Murshad-Crm</title><link rel="stylesheet" href="../assets/royal.css"><meta name="application-name" content="Royal Murshad-Crm">
+<link rel="icon" type="image/jpeg" href="/royal-murshad-logo.jpg">
+<script>window.AIOS_APP_SLUG='crm';</script>
+<script src='http://127.0.0.1:9000/static/aios_client.js'></script>
+</head><body>
+<div class="shell"><header class="top"><a class="brand" href="../"><img src="/royal-murshad-logo.jpg" alt="Royal Murshad" style="width:48px;height:48px;object-fit:contain;border-radius:8px"><span><strong>ROYAL MURSHAD</strong><small>AI BUSINESS ECOSYSTEM</small></span></a><div class="row"><a class="btn secondary" href="../">← All apps</a><span class="pill">Frontend starter</span></div></header><section class="hero"><div class="eyebrow" id="family"></div><h1 id="app-name">Royal Murshad-Crm</h1><p id="app-desc"></p><div class="row"><span class="pill" id="app-tag"></span><button id="copy-link" class="secondary">Copy app link</button></div><div id="link-status" class="muted" style="margin-top:8px"></div></section><div class="stats"><div class="stat"><b>01</b><span class="muted">Dedicated interface</span></div><div class="stat"><b>Local</b><span class="muted">Browser-hosted demo</span></div><div class="stat"><b>Pending</b><span class="muted">Backend integration</span></div></div><div class="layout"><aside class="panel"><h3>Workspace</h3><nav class="nav"><a class="active" href="#overview">Overview</a><a href="#capabilities">Capabilities</a><a href="#assistant">AI workbench</a><a href="#integration">Integration status</a><a href="../">All 60 apps</a></nav><div class="notice" style="margin-top:18px">Demo mode. Do not enter sensitive customer, financial, health or credential data.</div></aside><main><section id="overview" class="panel"><div class="eyebrow">Product workspace</div><h2>Work overview</h2><p class="muted">This interface is specific to this app's proposed workflow. Connect it to the approved backend contract before using it for live business records.</p><div id="feature-list" class="featurelist"></div></section><section id="assistant" class="panel" style="margin-top:16px"><div class="eyebrow">Task workbench</div><h2>AI-assisted task</h2><div class="field"><label id="task-label" for="task">Describe your task</label><textarea id="task" placeholder="Describe a task…"></textarea></div><button id="run">Prepare demo result</button><div id="result" class="result" style="margin-top:14px">Your demo result will appear here. This does not execute a real backend action.</div></section><section id="capabilities" class="panel" style="margin-top:16px"><h2>Planned capabilities</h2><p class="muted">These are product intentions, not a certification that the capabilities are implemented.</p><div id="feature-list-copy" class="muted"></div></section><section id="integration" class="panel" style="margin-top:16px"><h2>Integration status</h2><div class="notice">Frontend generated successfully. Backend endpoint, authentication, data persistence, tool permissions and end-to-end behavior have not been verified for this app.</div><p class="muted">Next step: map this product to real endpoints in the Royal Jarvis API, validate request/response schemas, and test one safe workflow end to end.</p></section></main></div><footer class="foot">ROYAL MURSHAD · <span id="app-mark">R</span> · Local frontend starter</footer></div><script>window.ROYAL_APP={"id":"royal-crm","name":"Royal Murshad-Crm","family":"People \u0026 Customer Relationships","features":["Contact records","Company records","Interaction history","Next action"],"tag":"Customer relationship management","desc":"Track contacts, companies, interactions and customer follow-ups."};</script><script src="../assets/royal-app.js"></script><script>document.getElementById('feature-list-copy').textContent=(window.ROYAL_APP.features||[]).join(' · ');</script><!-- ROYAL AIOS LIVE PANEL (auto-injected) -->
+<style id="aios-panel-css">
+#aios-panel{position:fixed;top:0;left:0;right:0;background:#0d1117;color:#e6edf3;font-family:system-ui,sans-serif;font-size:13px;z-index:999999;border-bottom:2px solid #58a6ff;box-shadow:0 2px 12px #0008}
+#aios-panel .bar{display:flex;align-items:center;gap:12px;padding:8px 16px}
+#aios-panel .slug{background:#1f6feb;color:#fff;padding:3px 10px;border-radius:12px;font-weight:700;font-size:11px}
+#aios-panel .status{padding:3px 10px;border-radius:12px;font-size:11px;font-weight:600}
+#aios-panel .ok{background:#238636;color:#fff}
+#aios-panel .bad{background:#da3633;color:#fff}
+#aios-panel .count{color:#8b949e;font-size:12px}
+#aios-panel button{background:#21262d;color:#e6edf3;border:1px solid #30363d;padding:5px 12px;border-radius:6px;cursor:pointer;font-size:12px;font-weight:600}
+#aios-panel button:hover{background:#30363d;border-color:#58a6ff}
+#aios-panel button.primary{background:#1f6feb;border-color:#1f6feb;color:#fff}
+#aios-panel button.primary:hover{background:#388bfd}
+#aios-panel .spacer{flex:1}
+#aios-body{padding-top:56px}
+#aios-drawer{position:fixed;top:48px;right:0;width:520px;max-width:95vw;height:calc(100vh - 48px);background:#0d1117;border-left:2px solid #58a6ff;color:#e6edf3;font-family:system-ui,sans-serif;font-size:13px;z-index:999998;overflow:auto;padding:16px;display:none;box-shadow:-4px 0 20px #000}
+#aios-drawer.open{display:block}
+#aios-drawer h3{margin:12px 0 8px;color:#58a6ff;font-size:14px}
+#aios-drawer pre{background:#161b22;border:1px solid #21262d;border-radius:6px;padding:10px;overflow:auto;max-height:280px;font-size:11px;white-space:pre-wrap;word-break:break-all}
+#aios-drawer input,#aios-drawer textarea{width:100%;background:#161b22;border:1px solid #30363d;border-radius:6px;color:#e6edf3;padding:8px;font-family:inherit;font-size:12px;margin-bottom:8px}
+#aios-drawer .close{float:right;background:#da3633;color:#fff;border:none;padding:4px 10px;border-radius:6px;cursor:pointer;font-size:12px}
+#aios-toast{position:fixed;bottom:20px;right:20px;background:#238636;color:#fff;padding:12px 18px;border-radius:8px;font-family:system-ui;font-size:13px;z-index:9999999;display:none;box-shadow:0 4px 12px #0008}
+</style>
+<div id="aios-panel">
+  <div class="bar">
+    <span class="slug" id="aios-slug">loading</span>
+    <span class="status" id="aios-status">connecting...</span>
+    <span class="count" id="aios-count"></span>
+    <span class="spacer"></span>
+    <button class="primary" onclick="AIOS_PANEL.open()">📊 Live Data</button>
+    <button onclick="AIOS_PANEL.refresh()">🔄 Refresh</button>
+    <button onclick="AIOS_PANEL.toggleApi()">🔗 API Info</button>
+  </div>
+</div>
+<div id="aios-drawer">
+  <button class="close" onclick="AIOS_PANEL.close()">✕ Close</button>
+  <h3>📊 Live Records</h3>
+  <div id="aios-records">Loading...</div>
+  <h3>➕ Create Record</h3>
+  <input id="aios-title" placeholder="Title" />
+  <textarea id="aios-desc" placeholder="Description" rows="2"></textarea>
+  <button class="primary" onclick="AIOS_PANEL.create()">Save to backend</button>
+  <h3>📡 Raw Response</h3>
+  <pre id="aios-raw">-</pre>
+</div>
+<div id="aios-toast"></div>
+<script>
+(function(){
+  const SLUG = 'crm';
+  const API = 'http://127.0.0.1:9000';
+  const FEATURE = 'contact_records';
+  const BASE = API + '/api/apps/' + SLUG + '/' + FEATURE;
+  
+  document.getElementById('aios-slug').textContent = 'royal-' + SLUG;
+  
+  window.AIOS_PANEL = {
+    open: function(){
+      document.getElementById('aios-drawer').classList.add('open');
+      this.refresh();
+    },
+    close: function(){ document.getElementById('aios-drawer').classList.remove('open'); },
+    toggleApi: function(){
+      alert('API base: ' + API + '\nApp: /api/apps/' + SLUG + '/\nFeature: ' + FEATURE + '\n\nEndpoints:\nGET    ' + BASE + '\nPOST   ' + BASE + '\nGET    ' + BASE + '/{id}\nPUT    ' + BASE + '/{id}\nDELETE ' + BASE + '/{id}');
+    },
+    refresh: async function(){
+      const st = document.getElementById('aios-status');
+      try {
+        const r = await fetch(BASE, {cache:'no-store'});
+        if (!r.ok) throw new Error('HTTP ' + r.status);
+        const j = await r.json();
+        st.textContent = 'API LIVE';
+        st.className = 'status ok';
+        document.getElementById('aios-count').textContent = j.total + ' records';
+        document.getElementById('aios-raw').textContent = JSON.stringify(j, null, 2).slice(0, 2000);
+        // Render list
+        const recs = document.getElementById('aios-records');
+        if (!j.items || !j.items.length) {
+          recs.innerHTML = '<div style="color:#8b949e;padding:8px">No records yet. Create one below.</div>';
+        } else {
+          recs.innerHTML = j.items.map(function(it){
+            return '<div style="background:#161b22;border:1px solid #21262d;border-radius:6px;padding:10px;margin-bottom:8px">' +
+              '<div style="display:flex;justify-content:space-between"><b>#' + it.id + ' ' + (it.title || '(untitled)') + '</b>' +
+              '<button onclick="AIOS_PANEL.del(' + it.id + ')" style="background:#da3633;color:#fff;border:none;padding:3px 8px;border-radius:4px;cursor:pointer;font-size:11px">✕</button></div>' +
+              '<div style="color:#8b949e;font-size:11px;margin-top:4px">' + (it.description || '') + '</div>' +
+              '<div style="color:#6e7681;font-size:10px;margin-top:4px">' + it.created_at + '</div>' +
+              '</div>';
+          }).join('');
+        }
+      } catch(e) {
+        st.textContent = 'API DOWN';
+        st.className = 'status bad';
+        document.getElementById('aios-raw').textContent = 'Error: ' + e.message;
+      }
+    },
+    create: async function(){
+      const t = document.getElementById('aios-title').value;
+      const d = document.getElementById('aios-desc').value;
+      if (!t && !d) { AIOS_PANEL.toast('Enter a title or description', false); return; }
+      try {
+        const r = await fetch(BASE, {
+          method: 'POST',
+          headers: {'Content-Type':'application/json'},
+          body: JSON.stringify({title:t, description:d, data:{source:'ui-panel', slug:SLUG}, status:'open'})
+        });
+        const j = await r.json();
+        if (j.ok) {
+          AIOS_PANEL.toast('Record #' + j.id + ' created');
+          document.getElementById('aios-title').value = '';
+          document.getElementById('aios-desc').value = '';
+          AIOS_PANEL.refresh();
+        } else {
+          AIOS_PANEL.toast('Save failed: ' + JSON.stringify(j), false);
+        }
+      } catch(e) { AIOS_PANEL.toast('Error: ' + e.message, false); }
+    },
+    del: async function(id){
+      if (!confirm('Delete record #' + id + '?')) return;
+      try {
+        const r = await fetch(BASE + '/' + id, {method:'DELETE'});
+        const j = await r.json();
+        if (j.ok) { AIOS_PANEL.toast('Deleted #' + id); AIOS_PANEL.refresh(); }
+        else { AIOS_PANEL.toast('Delete failed', false); }
+      } catch(e) { AIOS_PANEL.toast('Error: ' + e.message, false); }
+    },
+    toast: function(msg, ok){
+      ok = (ok === undefined) ? true : ok;
+      const t = document.getElementById('aios-toast');
+      t.textContent = msg;
+      t.style.background = ok ? '#238636' : '#da3633';
+      t.style.display = 'block';
+      setTimeout(function(){ t.style.display = 'none'; }, 2500);
+    }
+  };
+  
+  // Push body down so panel doesn't overlap
+  document.addEventListener('DOMContentLoaded', function(){
+    if (document.body) { document.body.style.paddingTop = '56px'; }
+    AIOS_PANEL.refresh();
+  });
+  
+  // Initial refresh and periodic
+  setTimeout(function(){ AIOS_PANEL.refresh(); }, 500);
+  setInterval(function(){ AIOS_PANEL.refresh(); }, 30000);
+})();
+</script>
+</body></html>
+
+
+

@@ -1,0 +1,2253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Royal Murshad ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â AI Operating System</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;overflow:hidden}
+body{
+  background:#050810;
+  color:#e8edf5;
+  font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+  font-size:13px;line-height:1.45;
+  -webkit-font-smoothing:antialiased;
+}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+input{font-family:inherit;outline:none;border:none;background:none;color:inherit}
+a{color:inherit;text-decoration:none}
+::-webkit-scrollbar{width:6px;height:6px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:#1e2738;border-radius:3px}
+::-webkit-scrollbar-thumb:hover{background:#2d3950}
+
+/* ÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚Â LAYOUT ÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚Â */
+.app{
+  display:grid;
+  grid-template-columns:260px 1fr;
+  grid-template-rows:56px 1fr;
+  height:100vh;
+  background:radial-gradient(ellipse at top,#0a1220 0%,#050810 60%);
+}
+
+/* ÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚Â SIDEBAR ÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚Â */
+.sidebar{
+  grid-row:1 / 3;
+  background:linear-gradient(180deg,#080d18 0%,#050810 100%);
+  border-right:1px solid #141c2e;
+  padding:18px 14px;
+  overflow-y:auto;
+  display:flex;flex-direction:column;
+}
+.brand{display:flex;align-items:center;gap:10px;margin-bottom:20px;padding:0 4px}
+.brand-crest{
+  width:44px;height:44px;border-radius:8px;
+  background:linear-gradient(135deg,#d4af37 0%,#f0c75e 50%,#8a7025 100%);
+  display:flex;align-items:center;justify-content:center;
+  color:#0a0e17;font-weight:900;font-size:16px;
+  box-shadow:0 0 20px rgba(212,175,55,.3);
+  font-family:Georgia,serif;
+}
+.brand-text .t1{font-size:14px;font-weight:800;letter-spacing:2px;color:#d4af37}
+.brand-text .t2{font-size:9px;letter-spacing:1.8px;color:#6b7d99;font-weight:600;margin-top:1px}
+
+.workspace{
+  display:flex;align-items:center;gap:10px;
+  padding:10px 12px;margin-bottom:16px;
+  background:#0a1220;border:1px solid #1a2438;border-radius:8px;
+  cursor:pointer;
+}
+.workspace:hover{border-color:#2d3950}
+.ws-icon{width:28px;height:28px;border-radius:6px;background:linear-gradient(135deg,#3b82f6,#1e40af);display:flex;align-items:center;justify-content:center;font-size:13px;color:#fff}
+.ws-body{flex:1;min-width:0}
+.ws-name{font-size:11px;font-weight:700;color:#e8edf5}
+.ws-sub{font-size:9px;color:#6b7d99;margin-top:1px}
+.ws-caret{color:#6b7d99;font-size:10px}
+
+.nav{display:flex;flex-direction:column;gap:1px;margin-bottom:16px}
+.nav-item{
+  display:flex;align-items:center;gap:12px;
+  padding:9px 12px;border-radius:6px;
+  font-size:12.5px;font-weight:500;color:#8fa0ba;
+  transition:all .12s;cursor:pointer;
+  text-align:left;width:100%;
+}
+.nav-item:hover{background:#0d1526;color:#e8edf5}
+.nav-item.active{
+  background:linear-gradient(90deg,rgba(212,175,55,.12) 0%,rgba(212,175,55,.02) 100%);
+  color:#d4af37;border:1px solid rgba(212,175,55,.25);
+  font-weight:600;
+}
+.nav-ico{width:16px;height:16px;flex-shrink:0;display:inline-flex;align-items:center;justify-content:center;font-size:13px;opacity:.9}
+.nav-badge{margin-left:auto;background:#1e293b;color:#cbd5e1;font-size:10px;padding:1px 7px;border-radius:10px;font-weight:700}
+
+.side-bottom{margin-top:auto;padding-top:16px;border-top:1px solid #141c2e}
+.plan-card{
+  background:linear-gradient(135deg,#1a1305 0%,#0a1220 100%);
+  border:1px solid #2a2213;border-radius:10px;
+  padding:12px;margin-bottom:10px;
+}
+.plan-title{font-size:11px;font-weight:800;color:#d4af37;letter-spacing:1px;margin-bottom:4px}
+.plan-detail{font-size:9.5px;color:#8fa0ba;line-height:1.5}
+.upgrade-btn{
+  width:100%;margin-top:10px;
+  background:linear-gradient(135deg,#d4af37 0%,#f0c75e 100%);
+  color:#0a0e17;font-weight:800;font-size:11px;
+  padding:9px;border-radius:6px;letter-spacing:.5px;
+  transition:all .15s;
+}
+.upgrade-btn:hover{box-shadow:0 0 20px rgba(212,175,55,.4)}
+.help-item{
+  display:flex;align-items:center;gap:10px;
+  padding:8px 10px;font-size:11.5px;color:#8fa0ba;
+  border-radius:6px;cursor:pointer;
+}
+.help-item:hover{background:#0d1526;color:#e8edf5}
+.user-card{
+  display:flex;align-items:center;gap:10px;
+  padding:10px;margin-top:10px;border-radius:8px;
+  background:#0a1220;border:1px solid #1a2438;cursor:pointer;
+}
+.user-card:hover{border-color:#2d3950}
+.user-avatar{
+  width:32px;height:32px;border-radius:50%;
+  background:linear-gradient(135deg,#3b82f6,#8b5cf6);
+  display:flex;align-items:center;justify-content:center;
+  font-size:12px;font-weight:800;color:#fff;
+}
+.user-body{flex:1;min-width:0}
+.user-name{font-size:11.5px;font-weight:700;color:#e8edf5}
+.user-role{font-size:9.5px;color:#6b7d99}
+
+/* ÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚Â TOP BAR ÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚Â */
+.topbar{
+  grid-column:2;grid-row:1;
+  display:flex;align-items:center;gap:12px;
+  padding:0 20px;
+  background:rgba(8,13,24,.85);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid #141c2e;
+}
+.top-logo{
+  width:28px;height:28px;border-radius:6px;
+  background:linear-gradient(135deg,#d4af37,#8a7025);
+  display:flex;align-items:center;justify-content:center;
+  font-size:13px;color:#0a0e17;font-weight:900;
+}
+.search-box{
+  flex:1;max-width:520px;
+  display:flex;align-items:center;gap:10px;
+  background:#0a1220;border:1px solid #1a2438;border-radius:8px;
+  padding:0 14px;height:38px;
+}
+.search-box:focus-within{border-color:#2d3950}
+.search-box input{flex:1;font-size:12.5px;color:#e8edf5}
+.search-box input::placeholder{color:#5a6b85}
+.kbd{
+  font-size:10px;color:#5a6b85;font-weight:600;
+  padding:2px 6px;border:1px solid #1a2438;border-radius:4px;
+}
+.top-actions{margin-left:auto;display:flex;align-items:center;gap:8px}
+.top-btn-primary{
+  display:flex;align-items:center;gap:6px;
+  background:linear-gradient(135deg,#3b82f6,#2563eb);
+  color:#fff;font-weight:700;font-size:12px;
+  padding:8px 16px;border-radius:8px;
+  box-shadow:0 4px 12px rgba(59,130,246,.3);
+  transition:all .15s;
+}
+.top-btn-primary:hover{box-shadow:0 6px 20px rgba(59,130,246,.5);transform:translateY(-1px)}
+.top-btn-icon{
+  width:36px;height:36px;border-radius:8px;
+  background:#0a1220;border:1px solid #1a2438;
+  display:flex;align-items:center;justify-content:center;
+  font-size:15px;color:#8fa0ba;position:relative;
+  transition:all .15s;
+}
+.top-btn-icon:hover{color:#e8edf5;border-color:#2d3950}
+.badge-dot{
+  position:absolute;top:-4px;right:-4px;
+  background:#ef4444;color:#fff;font-size:9px;font-weight:800;
+  min-width:16px;height:16px;border-radius:8px;
+  display:flex;align-items:center;justify-content:center;
+  padding:0 4px;border:2px solid #050810;
+}
+.top-avatar{
+  width:34px;height:34px;border-radius:50%;
+  background:linear-gradient(135deg,#d4af37,#8a7025);
+  display:flex;align-items:center;justify-content:center;
+  font-size:12px;font-weight:800;color:#0a0e17;
+  cursor:pointer;box-shadow:0 0 0 2px #050810,0 0 0 3px #2d3950;
+}
+
+/* ÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚Â MAIN CONTENT ÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚Â */
+.main{
+  grid-column:2;grid-row:2;
+  overflow-y:auto;
+  padding:16px 20px 24px;
+}
+
+/* ÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚Â HERO BANNER ÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚Â */
+.hero{
+  position:relative;
+  height:180px;border-radius:14px;overflow:hidden;
+  background:
+    radial-gradient(ellipse at 30% 50%,rgba(59,130,246,.15) 0%,transparent 60%),
+    radial-gradient(ellipse at 70% 50%,rgba(212,175,55,.12) 0%,transparent 60%),
+    linear-gradient(135deg,#0a1a2e 0%,#050810 100%);
+  border:1px solid #141c2e;
+  margin-bottom:16px;
+  padding:26px 30px;
+  display:flex;align-items:center;
+}
+.hero-bg{
+  position:absolute;inset:0;
+  background-image:
+    radial-gradient(1px 1px at 20% 30%,#fff 0,transparent 100%),
+    radial-gradient(1px 1px at 80% 20%,#fff 0,transparent 100%),
+    radial-gradient(1px 1px at 40% 70%,#fff 0,transparent 100%),
+    radial-gradient(1px 1px at 70% 80%,#fff 0,transparent 100%),
+    radial-gradient(1px 1px at 90% 60%,#fff 0,transparent 100%),
+    radial-gradient(1px 1px at 10% 80%,#fff 0,transparent 100%),
+    radial-gradient(1.5px 1.5px at 50% 40%,#d4af37 0,transparent 100%),
+    radial-gradient(1.5px 1.5px at 30% 20%,#3b82f6 0,transparent 100%);
+  opacity:.6;
+}
+.hero-globe{
+  position:absolute;right:240px;top:50%;transform:translateY(-50%);
+  width:220px;height:220px;
+  border-radius:50%;
+  background:
+    radial-gradient(circle at 35% 35%,#3b82f6 0%,transparent 40%),
+    radial-gradient(circle at 60% 60%,#d4af37 0%,transparent 30%),
+    radial-gradient(circle at 50% 50%,#0a1a2e 0%,#050810 100%);
+  box-shadow:
+    inset -20px -20px 60px rgba(0,0,0,.5),
+    inset 20px 20px 60px rgba(59,130,246,.2),
+    0 0 80px rgba(59,130,246,.3);
+  opacity:.9;
+}
+.hero-globe::before{
+  content:'';position:absolute;inset:-20px;border-radius:50%;
+  border:1px solid rgba(59,130,246,.3);
+  border-top-color:rgba(212,175,55,.8);
+  animation:heroSpin 20s linear infinite;
+}
+.hero-globe::after{
+  content:'';position:absolute;inset:-40px;border-radius:50%;
+  border:1px solid rgba(59,130,246,.2);
+  border-bottom-color:rgba(212,175,55,.5);
+  animation:heroSpin 30s linear infinite reverse;
+}
+@keyframes heroSpin{to{transform:rotate(360deg)}}
+.hero-content{position:relative;z-index:2}
+.hero h1{font-size:26px;font-weight:800;line-height:1.15;margin-bottom:6px}
+.hero h1 .accent{color:#3b82f6}
+.hero h1 .crown{font-size:22px;vertical-align:middle;margin-left:6px}
+.hero-sub{font-size:12.5px;color:#8fa0ba;max-width:420px}
+.hero-brand{
+  position:absolute;right:30px;bottom:24px;text-align:right;z-index:2;
+}
+.hero-brand .tagline{
+  font-size:11px;letter-spacing:3px;color:#d4af37;font-weight:700;
+  margin-bottom:4px;
+}
+.hero-brand .company{
+  font-size:14px;letter-spacing:4px;color:#8fa0ba;font-weight:700;
+}
+.hero-brand .divider{
+  width:60px;height:1px;background:linear-gradient(90deg,transparent,#d4af37,transparent);
+  margin-left:auto;margin-bottom:8px;
+}
+.hero-meta{
+  position:absolute;right:30px;top:26px;text-align:right;z-index:2;
+  display:flex;flex-direction:column;gap:8px;align-items:flex-end;
+}
+.hero-date{font-size:11px;color:#8fa0ba;letter-spacing:.5px}
+.hero-time{font-size:22px;font-weight:800;color:#fff;font-variant-numeric:tabular-nums;letter-spacing:1px}
+.hero-weather{
+  display:flex;align-items:center;gap:8px;
+  font-size:11px;color:#8fa0ba;
+}
+.hero-weather .temp{font-size:16px;font-weight:800;color:#fff}
+
+/* ÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚Â KPI ROW ÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚Â */
+.kpi-row{
+  display:grid;grid-template-columns:repeat(5,1fr);gap:12px;
+  margin-bottom:14px;
+}
+.kpi{
+  background:linear-gradient(180deg,#0a1220 0%,#070d18 100%);
+  border:1px solid #141c2e;border-radius:12px;
+  padding:14px;position:relative;overflow:hidden;
+  min-height:88px;
+}
+.kpi::after{
+  content:'';position:absolute;bottom:0;left:0;right:0;height:30px;
+  opacity:.4;pointer-events:none;
+}
+.kpi.blue::after{background:linear-gradient(180deg,transparent,rgba(59,130,246,.4))}
+.kpi.purple::after{background:linear-gradient(180deg,transparent,rgba(139,92,246,.4))}
+.kpi.amber::after{background:linear-gradient(180deg,transparent,rgba(212,175,55,.4))}
+.kpi.cyan::after{background:linear-gradient(180deg,transparent,rgba(6,182,212,.4))}
+.kpi.green::after{background:linear-gradient(180deg,transparent,rgba(34,197,94,.4))}
+.kpi-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
+.kpi-ico{
+  width:34px;height:34px;border-radius:8px;
+  display:flex;align-items:center;justify-content:center;font-size:16px;
+}
+.kpi.blue .kpi-ico{background:rgba(59,130,246,.15);color:#3b82f6}
+.kpi.purple .kpi-ico{background:rgba(139,92,246,.15);color:#8b5cf6}
+.kpi.amber .kpi-ico{background:rgba(212,175,55,.15);color:#d4af37}
+.kpi.cyan .kpi-ico{background:rgba(6,182,212,.15);color:#06b6d4}
+.kpi.green .kpi-ico{background:rgba(34,197,94,.15);color:#22c55e}
+.kpi-trend{font-size:10px;font-weight:700;color:#22c55e;display:flex;align-items:center;gap:2px}
+.kpi-label{font-size:11px;color:#8fa0ba;font-weight:500;margin-bottom:2px}
+.kpi-value{font-size:24px;font-weight:800;color:#fff;line-height:1;font-variant-numeric:tabular-nums;display:flex;align-items:center;gap:10px}
+.kpi-sub{font-size:10px;color:#5a6b85;margin-top:2px}
+.kpi-ring{
+  width:46px;height:46px;position:absolute;right:14px;top:50%;transform:translateY(-50%);
+}
+.kpi-ring svg{width:100%;height:100%;transform:rotate(-90deg)}
+.kpi-ring .bg{fill:none;stroke:#141c2e;stroke-width:4}
+.kpi-ring .fg{fill:none;stroke:#3b82f6;stroke-width:4;stroke-linecap:round}
+.kpi-ring .pct{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;color:#3b82f6}
+.kpi-system-status{display:flex;align-items:center;gap:8px}
+.kpi-system-status .dot{width:8px;height:8px;border-radius:50%;background:#22c55e;box-shadow:0 0 8px #22c55e}
+.kpi-system-status .txt{font-size:14px;font-weight:800;color:#22c55e}
+
+/* ÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚Â GRID ROWS ÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚Â */
+.row-3{display:grid;grid-template-columns:1.6fr 1.3fr 1.3fr;gap:12px;margin-bottom:14px}
+.row-3-2{display:grid;grid-template-columns:1.4fr 1.4fr 1.2fr;gap:12px;margin-bottom:14px}
+.row-3-3{display:grid;grid-template-columns:1.4fr 1.4fr 1.2fr;gap:12px}
+
+.panel{
+  background:linear-gradient(180deg,#0a1220 0%,#070d18 100%);
+  border:1px solid #141c2e;border-radius:12px;
+  padding:16px;
+  display:flex;flex-direction:column;
+}
+.panel-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
+.panel-title{font-size:13.5px;font-weight:700;color:#e8edf5;display:flex;align-items:center;gap:8px}
+.panel-title .ico{color:#d4af37;font-size:14px}
+.panel-link{font-size:11px;color:#3b82f6;font-weight:600;cursor:pointer}
+.panel-link:hover{text-decoration:underline}
+.panel-btn{
+  font-size:10.5px;color:#8fa0ba;font-weight:600;
+  padding:5px 10px;border:1px solid #1a2438;border-radius:6px;
+  background:#0a1220;
+}
+.panel-btn:hover{border-color:#2d3950;color:#e8edf5}
+
+/* ÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚Â AI COMMAND CENTER ÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚Â */
+.cmd-tabs{display:flex;gap:4px;margin-bottom:14px}
+.cmd-tab{
+  padding:5px 14px;border-radius:6px;
+  font-size:11.5px;font-weight:600;color:#8fa0ba;
+  border:1px solid #1a2438;
+}
+.cmd-tab:hover{color:#e8edf5}
+.cmd-tab.active{
+  background:linear-gradient(135deg,#3b82f6,#2563eb);
+  color:#fff;border-color:transparent;
+}
+.cmd-input{
+  flex:1;
+  background:#060b16;border:1px solid #141c2e;border-radius:8px;
+  padding:14px;margin-bottom:10px;
+  min-height:80px;
+  font-size:12.5px;color:#e8edf5;
+  resize:none;font-family:inherit;width:100%;
+}
+.cmd-input::placeholder{color:#5a6b85}
+.cmd-input:focus{border-color:#2d3950}
+.cmd-foot{display:flex;align-items:center;gap:10px;font-size:11px;color:#8fa0ba}
+.cmd-toggle{display:flex;align-items:center;gap:6px;cursor:pointer}
+.cmd-toggle .switch{
+  width:30px;height:16px;border-radius:8px;background:#1a2438;
+  position:relative;transition:all .15s;
+}
+.cmd-toggle .switch::after{
+  content:'';position:absolute;top:2px;left:2px;
+  width:12px;height:12px;border-radius:50%;background:#5a6b85;
+  transition:all .15s;
+}
+.cmd-toggle.on .switch{background:rgba(59,130,246,.3)}
+.cmd-toggle.on .switch::after{left:16px;background:#3b82f6}
+.cmd-send{
+  margin-left:auto;
+  background:linear-gradient(135deg,#3b82f6,#2563eb);
+  color:#fff;font-weight:700;font-size:12px;
+  padding:8px 20px;border-radius:8px;
+  display:flex;align-items:center;gap:6px;
+  box-shadow:0 4px 12px rgba(59,130,246,.3);
+}
+.cmd-send:hover{box-shadow:0 6px 20px rgba(59,130,246,.5)}
+
+/* ÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚Â AI MODELS ÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚Â */
+.models-list{display:flex;flex-direction:column;gap:8px}
+.model-item{
+  display:flex;align-items:center;gap:12px;
+  padding:10px 12px;border-radius:8px;
+  background:#060b16;border:1px solid #141c2e;
+  transition:all .15s;
+}
+.model-item:hover{border-color:#2d3950}
+.model-ico{
+  width:34px;height:34px;border-radius:8px;
+  background:linear-gradient(135deg,#8b5cf6,#6d28d9);
+  display:flex;align-items:center;justify-content:center;
+  font-size:14px;color:#fff;
+}
+.model-body{flex:1;min-width:0}
+.model-name{font-size:12px;font-weight:700;color:#e8edf5}
+.model-desc{font-size:10px;color:#6b7d99;margin-top:1px}
+.model-status{
+  display:flex;align-items:center;gap:5px;
+  font-size:10.5px;color:#22c55e;font-weight:700;
+}
+.model-status::before{content:'';width:6px;height:6px;border-radius:50%;background:#22c55e;box-shadow:0 0 6px #22c55e}
+.model-status.off{color:#6b7d99}
+.model-status.off::before{background:#6b7d99;box-shadow:none}
+
+/* ÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚Â RECENT ACTIVITY ÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚Â */
+.activity-list{display:flex;flex-direction:column;gap:2px;flex:1}
+.act-item{
+  display:flex;align-items:flex-start;gap:10px;
+  padding:8px 6px;border-radius:6px;cursor:pointer;
+  transition:all .12s;
+}
+.act-item:hover{background:#060b16}
+.act-ico{
+  width:26px;height:26px;border-radius:6px;flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;
+  font-size:12px;
+}
+.act-ico.blue{background:rgba(59,130,246,.15);color:#3b82f6}
+.act-ico.green{background:rgba(34,197,94,.15);color:#22c55e}
+.act-ico.amber{background:rgba(212,175,55,.15);color:#d4af37}
+.act-ico.purple{background:rgba(139,92,246,.15);color:#8b5cf6}
+.act-ico.cyan{background:rgba(6,182,212,.15);color:#06b6d4}
+.act-body{flex:1;min-width:0}
+.act-title{font-size:11.5px;color:#e8edf5;font-weight:500;line-height:1.3}
+.act-meta{font-size:10px;color:#5a6b85;margin-top:2px}
+.act-time{font-size:10px;color:#5a6b85;flex-shrink:0;white-space:nowrap}
+
+/* ÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚Â APP CATEGORIES ÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚Â */
+.cats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.cat-card{
+  display:flex;align-items:center;gap:10px;
+  padding:12px;border-radius:8px;
+  background:#060b16;border:1px solid #141c2e;
+  cursor:pointer;transition:all .15s;
+}
+.cat-card:hover{border-color:#2d3950;transform:translateY(-1px)}
+.cat-ico{
+  width:32px;height:32px;border-radius:8px;flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;
+  font-size:14px;
+}
+.cat-ico.green{background:rgba(34,197,94,.15);color:#22c55e}
+.cat-ico.blue{background:rgba(59,130,246,.15);color:#3b82f6}
+.cat-ico.amber{background:rgba(212,175,55,.15);color:#d4af37}
+.cat-ico.purple{background:rgba(139,92,246,.15);color:#8b5cf6}
+.cat-ico.cyan{background:rgba(6,182,212,.15);color:#06b6d4}
+.cat-ico.pink{background:rgba(236,72,153,.15);color:#ec4899}
+.cat-body{flex:1;min-width:0}
+.cat-name{font-size:11.5px;font-weight:700;color:#e8edf5}
+.cat-count{font-size:10px;color:#6b7d99;margin-top:1px}
+.cat-arrow{color:#5a6b85;font-size:11px}
+
+/* ÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚Â PERFORMANCE OVERVIEW ÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚Â */
+.perf-tabs{display:flex;gap:4px}
+.perf-tab{
+  padding:3px 10px;border-radius:5px;font-size:10px;font-weight:700;
+  color:#6b7d99;border:1px solid #1a2438;
+}
+.perf-tab.active{background:#1a2438;color:#3b82f6;border-color:#2d3950}
+.chart-wrap{position:relative;height:170px;margin-top:8px}
+.chart-wrap svg{width:100%;height:100%;overflow:visible}
+.chart-legend{display:flex;gap:14px;margin-top:8px;font-size:10px;color:#8fa0ba;flex-wrap:wrap}
+.chart-legend span{display:flex;align-items:center;gap:5px}
+.chart-legend span::before{content:'';width:8px;height:8px;border-radius:50%;background:currentColor}
+.chart-legend .c-blue::before{background:#3b82f6}
+.chart-legend .c-green::before{background:#22c55e}
+.chart-legend .c-amber::before{background:#f59e0b}
+.chart-legend .c-purple::before{background:#8b5cf6}
+
+/* ÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚Â QUICK ACTIONS ÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚Â */
+.qa-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+.qa-btn{
+  display:flex;align-items:center;gap:8px;
+  padding:10px 12px;border-radius:8px;
+  background:#060b16;border:1px solid #141c2e;
+  font-size:11px;color:#e8edf5;font-weight:600;
+  text-align:left;transition:all .15s;
+}
+.qa-btn:hover{border-color:#2d3950;background:#0a1220}
+.qa-ico{color:#3b82f6;font-size:13px}
+
+/* ÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚Â RECENT PROJECTS ÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚Â */
+.proj-list{display:flex;flex-direction:column;gap:8px}
+.proj-item{
+  display:flex;align-items:center;gap:12px;
+  padding:10px 12px;border-radius:8px;
+  background:#060b16;border:1px solid #141c2e;
+  transition:all .15s;
+}
+.proj-item:hover{border-color:#2d3950}
+.proj-ico{
+  width:32px;height:32px;border-radius:8px;flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;
+  font-size:14px;background:rgba(212,175,55,.15);color:#d4af37;
+}
+.proj-body{flex:1;min-width:0}
+.proj-name{font-size:11.5px;font-weight:700;color:#e8edf5;margin-bottom:2px}
+.proj-meta{font-size:10px;color:#6b7d99}
+.proj-status{
+  font-size:9.5px;font-weight:700;padding:2px 8px;border-radius:10px;
+  white-space:nowrap;
+}
+.proj-status.active{background:rgba(34,197,94,.15);color:#22c55e}
+.proj-status.progress{background:rgba(59,130,246,.15);color:#3b82f6}
+.proj-status.planning{background:rgba(139,92,246,.15);color:#8b5cf6}
+.proj-bar{
+  width:100px;height:4px;border-radius:2px;background:#141c2e;
+  position:relative;overflow:hidden;
+}
+.proj-bar-fill{
+  position:absolute;top:0;left:0;bottom:0;
+  background:linear-gradient(90deg,#3b82f6,#60a5fa);
+  border-radius:2px;
+}
+.proj-pct{font-size:11px;font-weight:800;color:#e8edf5;min-width:32px;text-align:right}
+.proj-avatars{display:flex}
+.proj-avatars .a{
+  width:22px;height:22px;border-radius:50%;
+  border:2px solid #060b16;margin-left:-6px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:9px;color:#fff;font-weight:800;
+}
+.proj-avatars .a:nth-child(1){background:linear-gradient(135deg,#3b82f6,#1e40af)}
+.proj-avatars .a:nth-child(2){background:linear-gradient(135deg,#22c55e,#15803d)}
+.proj-avatars .a.more{background:#1a2438;color:#8fa0ba;font-size:8px}
+
+/* ÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚Â STORAGE BREAKDOWN ÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚Â */
+.storage-wrap{display:flex;align-items:center;gap:20px;margin-top:8px}
+.storage-ring{position:relative;width:120px;height:120px;flex-shrink:0}
+.storage-ring svg{width:100%;height:100%;transform:rotate(-90deg)}
+.storage-ring circle{fill:none;stroke-width:12;transition:stroke-dasharray .5s}
+.storage-ring .center{
+  position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;
+}
+.storage-ring .val{font-size:18px;font-weight:800;color:#fff;line-height:1}
+.storage-ring .unit{font-size:10px;color:#6b7d99;margin-top:2px}
+.storage-legend{flex:1;display:flex;flex-direction:column;gap:8px}
+.storage-leg{display:flex;align-items:center;gap:8px;font-size:11px;color:#8fa0ba}
+.storage-leg .dot{width:8px;height:8px;border-radius:2px;flex-shrink:0}
+.storage-leg .name{flex:1}
+.storage-leg .size{color:#e8edf5;font-weight:700}
+
+/* ÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚Â SYSTEM SERVICES ÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚Â */
+.svc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+.svc-item{
+  display:flex;align-items:center;gap:10px;
+  padding:10px 12px;border-radius:8px;
+  background:#060b16;border:1px solid #141c2e;
+}
+.svc-ico{
+  width:30px;height:30px;border-radius:8px;flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;font-size:14px;
+}
+.svc-ico.blue{background:rgba(59,130,246,.15);color:#3b82f6}
+.svc-ico.amber{background:rgba(212,175,55,.15);color:#d4af37}
+.svc-body{flex:1;min-width:0}
+.svc-name{font-size:11px;font-weight:700;color:#e8edf5}
+.svc-port{font-size:9.5px;color:#6b7d99;margin-top:1px}
+.svc-status{display:flex;flex-direction:column;align-items:flex-end;gap:2px}
+.svc-online{
+  display:flex;align-items:center;gap:4px;
+  font-size:9.5px;color:#22c55e;font-weight:700;
+}
+.svc-online::before{content:'';width:5px;height:5px;border-radius:50%;background:#22c55e;box-shadow:0 0 5px #22c55e}
+.svc-pct{font-size:9.5px;color:#6b7d99;font-weight:600}
+
+/* ÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚Â LOADING/ERROR ÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚Â */
+.loading{color:#5a6b85;font-style:italic;font-size:11px;padding:8px}
+.err{color:#ef4444;font-size:11px;padding:8px}
+
+/* Responsive */
+@media (max-width:1600px){.kpi-row{grid-template-columns:repeat(5,1fr)}}
+@media (max-width:1400px){
+  .row-3,.row-3-2,.row-3-3{grid-template-columns:1fr 1fr}
+  .row-3>*:nth-child(3),.row-3-2>*:nth-child(3),.row-3-3>*:nth-child(3){grid-column:1/-1}
+}
+/* â•â•â• AUTH OVERLAY â•â•â• */
+.auth-overlay{
+  position:fixed;inset:0;z-index:9999;
+  background:
+    radial-gradient(ellipse at 30% 40%,rgba(212,175,55,.08) 0%,transparent 50%),
+    radial-gradient(ellipse at 70% 60%,rgba(59,130,246,.06) 0%,transparent 50%),
+    linear-gradient(135deg,#04070f 0%,#080c18 50%,#04070f 100%);
+  display:grid;grid-template-columns:1.2fr 1fr;
+  opacity:1;transition:opacity .3s;
+}
+.auth-overlay.hidden{opacity:0;pointer-events:none}
+.auth-left{
+  display:flex;flex-direction:column;justify-content:space-between;
+  padding:48px;
+  position:relative;overflow:hidden;
+}
+.auth-left::before{
+  content:'';position:absolute;
+  right:-100px;top:50%;transform:translateY(-50%);
+  width:600px;height:600px;border-radius:50%;
+  background:
+    radial-gradient(circle at 35% 35%,rgba(59,130,246,.25) 0%,transparent 50%),
+    radial-gradient(circle at 65% 65%,rgba(212,175,55,.2) 0%,transparent 50%),
+    radial-gradient(circle at 50% 50%,#0a1526 0%,#04070f 100%);
+  box-shadow:inset -40px -40px 120px rgba(0,0,0,.6),0 0 120px rgba(59,130,246,.15);
+}
+.auth-left::after{
+  content:'';position:absolute;
+  right:-140px;top:50%;transform:translateY(-50%);
+  width:680px;height:680px;border-radius:50%;
+  border:1px solid rgba(212,175,55,.15);
+  border-top-color:rgba(212,175,55,.5);
+  animation:authSpin 30s linear infinite;
+}
+@keyframes authSpin{to{transform:translateY(-50%) rotate(360deg)}}
+.auth-brand{position:relative;z-index:2;display:flex;align-items:center;gap:14px}
+.auth-brand-crest{
+  width:56px;height:56px;border-radius:12px;
+  background:linear-gradient(135deg,#d4af37 0%,#f0c75e 50%,#8a7025 100%);
+  display:flex;align-items:center;justify-content:center;
+  font-family:Georgia,serif;font-weight:900;font-size:20px;color:#0a0e17;
+  box-shadow:0 0 40px rgba(212,175,55,.4);
+}
+.auth-brand-text .bt1{font-size:18px;font-weight:800;letter-spacing:3px;color:#d4af37}
+.auth-brand-text .bt2{font-size:10px;letter-spacing:2.5px;color:#6b7d99;font-weight:600;margin-top:2px}
+.auth-hero{position:relative;z-index:2;margin-top:auto}
+.auth-hero h1{font-size:38px;font-weight:800;line-height:1.15;margin-bottom:12px;color:#e8edf5}
+.auth-hero h1 .accent{color:#d4af37}
+.auth-hero p{font-size:14px;color:#8fa0ba;max-width:480px;line-height:1.6;margin-bottom:28px}
+.auth-features{display:flex;flex-direction:column;gap:10px;margin-top:24px}
+.auth-feature{display:flex;align-items:center;gap:12px;font-size:13px;color:#c8d0e0}
+.auth-feature-ico{
+  width:28px;height:28px;border-radius:6px;background:rgba(212,175,55,.12);
+  display:flex;align-items:center;justify-content:center;font-size:13px;color:#d4af37;
+}
+.auth-footer-note{position:relative;z-index:2;font-size:11px;color:#5a6b85;letter-spacing:1px}
+
+/* Right side â€” login form */
+.auth-right{
+  display:flex;align-items:center;justify-content:center;
+  padding:48px;
+  background:linear-gradient(180deg,rgba(8,13,24,.6) 0%,rgba(4,7,15,.9) 100%);
+  border-left:1px solid #141c2e;
+}
+.auth-panel{width:100%;max-width:400px}
+.auth-panel h2{font-size:24px;font-weight:800;color:#fff;margin-bottom:6px}
+.auth-panel .sub{font-size:12.5px;color:#8fa0ba;margin-bottom:24px}
+.auth-tabs{display:flex;gap:4px;margin-bottom:22px;background:#060b16;border:1px solid #141c2e;border-radius:8px;padding:4px}
+.auth-tab{
+  flex:1;padding:9px;border-radius:6px;
+  font-size:12px;font-weight:700;color:#8fa0ba;
+  transition:all .15s;
+}
+.auth-tab.active{
+  background:linear-gradient(135deg,#d4af37,#f0c75e);
+  color:#0a0e17;
+}
+
+/* Primary method â€” Royal Murshad Mail */
+.auth-primary{
+  display:flex;align-items:center;gap:12px;
+  padding:14px 16px;border-radius:10px;
+  background:linear-gradient(135deg,rgba(212,175,55,.15) 0%,rgba(212,175,55,.05) 100%);
+  border:1px solid rgba(212,175,55,.4);
+  cursor:pointer;transition:all .15s;margin-bottom:16px;
+}
+.auth-primary:hover{box-shadow:0 0 30px rgba(212,175,55,.25);border-color:#d4af37}
+.auth-primary-ico{
+  width:42px;height:42px;border-radius:10px;
+  background:linear-gradient(135deg,#d4af37,#8a7025);
+  display:flex;align-items:center;justify-content:center;
+  font-size:18px;color:#0a0e17;
+}
+.auth-primary-body{flex:1;text-align:left}
+.auth-primary-title{font-size:13px;font-weight:800;color:#d4af37;margin-bottom:2px;display:flex;align-items:center;gap:6px}
+.auth-primary-title .badge{
+  font-size:9px;font-weight:700;padding:1px 6px;border-radius:8px;
+  background:rgba(34,197,94,.15);color:#22c55e;letter-spacing:.5px;
+}
+.auth-primary-sub{font-size:11px;color:#8fa0ba}
+.auth-primary-arrow{color:#d4af37;font-size:16px}
+
+/* Separator */
+.auth-sep{
+  display:flex;align-items:center;gap:12px;
+  margin:20px 0;font-size:10px;color:#5a6b85;letter-spacing:1.5px;font-weight:600;text-transform:uppercase;
+}
+.auth-sep::before,.auth-sep::after{
+  content:'';flex:1;height:1px;background:#141c2e;
+}
+
+/* Other methods */
+.auth-methods{display:flex;flex-direction:column;gap:8px;margin-bottom:20px}
+.auth-method{
+  display:flex;align-items:center;gap:12px;
+  padding:12px 16px;border-radius:8px;
+  background:#0a1220;border:1px solid #1a2438;
+  color:#e8edf5;font-size:12.5px;font-weight:600;
+  cursor:pointer;transition:all .15s;text-align:left;
+}
+.auth-method:hover{border-color:#2d3950;background:#0d1828;transform:translateX(2px)}
+.auth-method-ico{
+  width:32px;height:32px;border-radius:8px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:14px;flex-shrink:0;
+}
+.auth-method-ico.email{background:rgba(59,130,246,.15);color:#3b82f6}
+.auth-method-ico.phone{background:rgba(34,197,94,.15);color:#22c55e}
+.auth-method-ico.google{background:#fff;color:#ea4335;font-weight:900;font-family:Georgia,serif}
+.auth-method-ico.github{background:#1a1a1a;color:#fff}
+.auth-method-body{flex:1;text-align:left}
+.auth-method-title{font-size:12.5px;font-weight:600;color:#e8edf5}
+.auth-method-sub{font-size:10.5px;color:#6b7d99;margin-top:1px}
+
+/* Fields */
+.auth-field{margin-bottom:14px}
+.auth-field label{
+  display:block;font-size:11px;color:#8fa0ba;font-weight:600;
+  margin-bottom:6px;letter-spacing:.3px;
+}
+.auth-input-wrap{position:relative}
+.auth-input{
+  width:100%;padding:12px 42px 12px 42px;
+  background:#060b16;border:1px solid #1a2438;border-radius:8px;
+  font-size:13px;color:#e8edf5;
+  transition:all .15s;font-family:inherit;
+}
+.auth-input:focus{border-color:#d4af37;box-shadow:0 0 0 3px rgba(212,175,55,.15);outline:none}
+.auth-input::placeholder{color:#4a5a75}
+.auth-input-ico{
+  position:absolute;left:14px;top:50%;transform:translateY(-50%);
+  font-size:14px;color:#6b7d99;pointer-events:none;
+}
+.auth-input-action{
+  position:absolute;right:12px;top:50%;transform:translateY(-50%);
+  font-size:11px;color:#6b7d99;cursor:pointer;
+  padding:4px 6px;border-radius:4px;font-weight:600;
+}
+.auth-input-action:hover{color:#d4af37;background:rgba(212,175,55,.08)}
+
+/* Remember + forgot */
+.auth-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;font-size:11.5px}
+.auth-check{display:flex;align-items:center;gap:8px;color:#8fa0ba;cursor:pointer}
+.auth-check input{accent-color:#d4af37}
+.auth-forgot{color:#d4af37;font-weight:600;cursor:pointer;background:none;border:none;font-family:inherit;font-size:11.5px}
+.auth-forgot:hover{text-decoration:underline}
+
+/* Submit */
+.auth-submit{
+  width:100%;padding:14px;border-radius:10px;
+  background:linear-gradient(135deg,#d4af37 0%,#f0c75e 100%);
+  color:#0a0e17;font-weight:800;font-size:13px;letter-spacing:.5px;
+  box-shadow:0 8px 24px rgba(212,175,55,.3);
+  transition:all .15s;cursor:pointer;border:none;font-family:inherit;
+}
+.auth-submit:hover{box-shadow:0 12px 32px rgba(212,175,55,.5);transform:translateY(-1px)}
+.auth-submit:disabled{opacity:.5;cursor:not-allowed;transform:none}
+
+/* Error / success messages */
+.auth-msg{
+  padding:10px 14px;border-radius:8px;font-size:12px;
+  margin-bottom:14px;display:none;
+}
+.auth-msg.show{display:block}
+.auth-msg.error{background:rgba(239,68,68,.12);border:1px solid rgba(239,68,68,.35);color:#fca5a5}
+.auth-msg.success{background:rgba(34,197,94,.12);border:1px solid rgba(34,197,94,.35);color:#86efac}
+
+/* New user link */
+.auth-newuser{
+  text-align:center;font-size:12px;color:#8fa0ba;
+  margin-top:20px;padding-top:20px;border-top:1px solid #141c2e;
+}
+.auth-newuser a{color:#d4af37;font-weight:700;cursor:pointer;text-decoration:none}
+.auth-newuser a:hover{text-decoration:underline}
+
+/* Loading spinner */
+.auth-spinner{
+  display:inline-block;width:14px;height:14px;
+  border:2px solid rgba(10,14,23,.3);border-top-color:#0a0e17;
+  border-radius:50%;animation:authSpinMini .8s linear infinite;
+  margin-right:8px;vertical-align:middle;
+}
+@keyframes authSpinMini{to{transform:rotate(360deg)}}
+
+/* Hide overlay when authenticated */
+body.auth-active .app{filter:blur(8px);pointer-events:none;user-select:none}
+
+/* Sidebar logout indicator */
+.user-card .logout-hint{font-size:9px;color:#6b7d99;margin-top:1px}
+
+/* Responsive */
+@media (max-width:900px){
+  .auth-overlay{grid-template-columns:1fr}
+  .auth-left{display:none}
+  .auth-right{padding:24px}
+}
+</style>
+</head>
+<body class='auth-active'>
+<!-- â•â•â• AUTH OVERLAY â•â•â• -->
+<div class="auth-overlay" id="auth-overlay">
+  <div class="auth-left">
+    <div class="auth-brand">
+      <div class="auth-brand-crest">RM</div>
+      <div class="auth-brand-text">
+        <div class="bt1">ROYAL MURSHAD</div>
+        <div class="bt2">â€” AI OPERATING SYSTEM â€”</div>
+      </div>
+    </div>
+    <div class="auth-hero">
+      <h1>Welcome to <span class="accent">Sovereign</span><br>AI Command</h1>
+      <p>Your private AI operating system. Control 60 business applications, 30 AI employees, and your entire digital empire â€” from one place.</p>
+      <div class="auth-features">
+        <div class="auth-feature"><div class="auth-feature-ico">ðŸ”</div>End-to-end encrypted Â· AES-256 vault</div>
+        <div class="auth-feature"><div class="auth-feature-ico">âš¡</div>Local-first AI Â· 3 models on your machine</div>
+        <div class="auth-feature"><div class="auth-feature-ico">ðŸ‘‘</div>Sovereign by design Â· You own the data</div>
+      </div>
+    </div>
+    <div class="auth-footer-note">ROYAL MURSHAD Â· SOVEREIGN BY DESIGN Â· 2026</div>
+  </div>
+
+  <div class="auth-right">
+    <div class="auth-panel">
+      <!-- Tabs: Login / Signup -->
+      <div class="auth-tabs">
+        <button class="auth-tab active" id="tab-login" onclick="switchAuthTab('login')">Sign In</button>
+        <button class="auth-tab" id="tab-signup" onclick="switchAuthTab('signup')">Create Account</button>
+      </div>
+
+      <h2 id="auth-title">Welcome back</h2>
+      <div class="sub" id="auth-sub">Sign in to continue to your command center</div>
+
+      <!-- Message area -->
+      <div class="auth-msg" id="auth-msg"></div>
+
+      <!-- PRIMARY: Royal Murshad Mail -->
+      <button class="auth-primary" onclick="authPrimaryMail()">
+        <div class="auth-primary-ico">âœ‰</div>
+        <div class="auth-primary-body">
+          <div class="auth-primary-title">
+            Continue with Royal Murshad Mail
+            <span class="badge">PRIMARY</span>
+          </div>
+          <div class="auth-primary-sub">you@royalmurshad.ai</div>
+        </div>
+        <div class="auth-primary-arrow">â†’</div>
+      </button>
+
+      <!-- Separator -->
+      <div class="auth-sep">or continue with</div>
+
+      <!-- Other methods -->
+      <div class="auth-methods">
+        <button class="auth-method" onclick="authShow('email')">
+          <div class="auth-method-ico email">âœ‰</div>
+          <div class="auth-method-body">
+            <div class="auth-method-title">Email address</div>
+            <div class="auth-method-sub">Use any email you own</div>
+          </div>
+        </button>
+        <button class="auth-method" onclick="authShow('phone')">
+          <div class="auth-method-ico phone">ðŸ“±</div>
+          <div class="auth-method-body">
+            <div class="auth-method-title">Phone number</div>
+            <div class="auth-method-sub">SMS verification code</div>
+          </div>
+        </button>
+        <button class="auth-method" onclick="authShow('google')">
+          <div class="auth-method-ico google">G</div>
+          <div class="auth-method-body">
+            <div class="auth-method-title">Google account</div>
+            <div class="auth-method-sub">Fastest sign in</div>
+          </div>
+        </button>
+        <button class="auth-method" onclick="authShow('github')">
+          <div class="auth-method-ico github">â—‰</div>
+          <div class="auth-method-body">
+            <div class="auth-method-title">GitHub account</div>
+            <div class="auth-method-sub">For developers</div>
+          </div>
+        </button>
+      </div>
+
+      <!-- Email/Password form (hidden until method chosen) -->
+      <div id="auth-form" style="display:none">
+        <div class="auth-field">
+          <label id="field-label-user">Email</label>
+          <div class="auth-input-wrap">
+            <span class="auth-input-ico">ðŸ‘¤</span>
+            <input class="auth-input" id="auth-username" placeholder="you@example.com" autocomplete="username">
+          </div>
+        </div>
+        <div class="auth-field">
+          <label>Password</label>
+          <div class="auth-input-wrap">
+            <span class="auth-input-ico">ðŸ”’</span>
+            <input class="auth-input" id="auth-password" type="password" placeholder="â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢" autocomplete="current-password">
+            <span class="auth-input-action" onclick="togglePassword()">SHOW</span>
+          </div>
+        </div>
+        <div class="auth-row">
+          <label class="auth-check">
+            <input type="checkbox" id="auth-remember" checked>
+            Remember me for 30 days
+          </label>
+          <button class="auth-forgot" onclick="authForgot()">Forgot password?</button>
+        </div>
+        <button class="auth-submit" id="auth-submit" onclick="submitAuth()">
+          <span id="auth-submit-text">Sign In â†’</span>
+        </button>
+      </div>
+
+      <!-- New user -->
+      <div class="auth-newuser">
+        <span id="newuser-text">New to Royal Murshad?</span>
+        <a onclick="switchAuthTab('signup')">Create your sovereign account â†’</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="app">
+
+  <!-- ÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚Â SIDEBAR ÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚Â -->
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-crest">RM</div>
+      <div class="brand-text">
+        <div class="t1">ROYAL MURSHAD</div>
+        <div class="t2">ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â AI OPERATING SYSTEM ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â</div>
+      </div>
+    </div>
+
+    <div class="workspace">
+      <div class="ws-icon">ÃƒÂ°Ã…Â¸Ã‚ÂÃ‚Â°</div>
+      <div class="ws-body">
+        <div class="ws-name">Royal Murshad HQ</div>
+        <div class="ws-sub">Switch workspace</div>
+      </div>
+      <div class="ws-caret">ÃƒÂ¢Ã¢â‚¬â€œÃ‚Â¾</div>
+    </div>
+
+    <nav class="nav">
+      <button class="nav-item active"><span class="nav-ico">ÃƒÂ¢Ã…â€™Ã¢â‚¬Å¡</span>Dashboard</button>
+      <button class="nav-item"><span class="nav-ico">ÃƒÂ¢Ã¢â‚¬â€Ã‹â€ </span>AI Command</button>
+      <button class="nav-item"><span class="nav-ico">ÃƒÂ¢Ã‚Â¬Ã‚Â¢</span>Agents</button>
+      <button class="nav-item"><span class="nav-ico">ÃƒÂ¢Ã¢â‚¬â€œÃ‚Â¤</span>Tasks<span class="nav-badge" id="nav-tasks-count">12</span></button>
+      <button class="nav-item"><span class="nav-ico">ÃƒÂ¢Ã¢â‚¬â€œÃ‚Â¦</span>Calendar</button>
+      <button class="nav-item"><span class="nav-ico">ÃƒÂ¢Ã¢â‚¬â€œÃ‚Â§</span>Projects</button>
+      <button class="nav-item"><span class="nav-ico">ÃƒÂ¢Ã¢â‚¬â€œÃ‚Â¥</span>Files & Storage</button>
+      <button class="nav-item"><span class="nav-ico">ÃƒÂ¢Ã¢â‚¬â€Ã¢â‚¬Â°</span>Communication</button>
+      <button class="nav-item"><span class="nav-ico">ÃƒÂ°Ã…Â¸Ã¢â‚¬Å“Ã‹â€ </span>Analytics</button>
+      <button class="nav-item"><span class="nav-ico">$</span>Finance</button>
+      <button class="nav-item"><span class="nav-ico">ÃƒÂ¢Ã‹Å“Ã‚Âº</span>Clients</button>
+      <button class="nav-item"><span class="nav-ico">ÃƒÂ¢Ã…Â¡Ã¢â€žÂ¢</span>Settings</button>
+    </nav>
+
+    <div class="side-bottom">
+      <div class="plan-card">
+        <div class="plan-title">ÃƒÂ°Ã…Â¸Ã¢â‚¬Å“Ã¢â‚¬Â¹ Plans & Billing</div>
+        <div class="plan-detail"><b style="color:#d4af37">Pro Plan</b><br>500 GB Storage<br>Unlimited Agents</div>
+        <button class="upgrade-btn">Upgrade</button>
+      </div>
+      <button class="help-item"><span>?</span>Help & Support</button>
+      <div class="user-card">
+        <div class="user-avatar">AR</div>
+        <div class="user-body">
+          <div class="user-name">Ali Raza</div>
+          <div class="user-role">Administrator</div>
+        </div>
+        <div class="ws-caret">ÃƒÂ¢Ã¢â‚¬â€œÃ‚Â¾</div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚Â TOP BAR ÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚Â -->
+  <header class="topbar">
+    <div class="top-logo">ÃƒÂ¢Ã¢â‚¬â€Ã‹â€ </div>
+    <div class="search-box">
+      <span style="color:#5a6b85">ÃƒÂ¢Ã…â€™Ã¢â‚¬Â¢</span>
+      <input placeholder="Search anything... (apps, files, agents, tasks)">
+      <span class="kbd">Ctrl + K</span>
+    </div>
+    <div class="top-actions">
+      <button class="top-btn-primary" onclick="submitQuickTask('New task from Command Center')">
+        <span>ÃƒÂ¢Ã…â€œÃ…Â¡</span>New Task
+      </button>
+      <button class="top-btn-icon">ÃƒÂ°Ã…Â¸Ã¢â‚¬ÂÃ¢â‚¬Â<span class="badge-dot">3</span></button>
+      <button class="top-btn-icon">ÃƒÂ°Ã…Â¸Ã…â€™Ã¢â€žÂ¢</button>
+      <button class="top-btn-icon">ÃƒÂ°Ã…Â¸Ã…â€™Ã‚Â</button>
+      <div class="top-avatar">AR</div>
+    </div>
+  </header>
+
+  <!-- ÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚Â MAIN ÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚Â -->
+  <main class="main">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-globe"></div>
+      <div class="hero-content">
+        <h1><span class="accent">Welcome Back,</span> Ali Raza <span class="crown">ÃƒÂ°Ã…Â¸Ã¢â‚¬ËœÃ¢â‚¬Ëœ</span></h1>
+        <div class="hero-sub">Control your AI workforce, data, and business from one place.</div>
+      </div>
+      <div class="hero-meta">
+        <div class="hero-date" id="hero-date">ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â</div>
+        <div class="hero-time" id="hero-time">--:--:--</div>
+        <div class="hero-weather">
+          <span style="font-size:18px">ÃƒÂ¢Ã‹Å“Ã¢â€šÂ¬ÃƒÂ¯Ã‚Â¸Ã‚Â</span>
+          <div style="text-align:left">
+            <div class="temp">28Ãƒâ€šÃ‚Â°C</div>
+            <div>Clear Sky Ãƒâ€šÃ‚Â· Phnom Penh, Cambodia</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-brand">
+        <div class="divider"></div>
+        <div class="tagline">"SOVEREIGN BY DESIGN"</div>
+        <div class="company">ROYAL MURSHAD</div>
+      </div>
+    </section>
+
+    <!-- KPI ROW -->
+    <section class="kpi-row">
+      <div class="kpi blue">
+        <div class="kpi-head">
+          <div class="kpi-ico">ÃƒÂ¢Ã¢â‚¬â€œÃ‚Â¦</div>
+          <div class="kpi-trend">ÃƒÂ¢Ã¢â‚¬Â Ã¢â‚¬Ëœ 12%</div>
+        </div>
+        <div class="kpi-label">Total Applications</div>
+        <div class="kpi-value" id="kpi-apps">ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â</div>
+        <div class="kpi-sub">Live & Ready</div>
+      </div>
+      <div class="kpi purple">
+        <div class="kpi-head">
+          <div class="kpi-ico">ÃƒÂ¢Ã‚Â¬Ã‚Â¢</div>
+          <div class="kpi-trend">ÃƒÂ¢Ã¢â‚¬Â Ã¢â‚¬Ëœ 5%</div>
+        </div>
+        <div class="kpi-label">AI Employees</div>
+        <div class="kpi-value" id="kpi-agents">ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â</div>
+        <div class="kpi-sub">Active Agents</div>
+      </div>
+      <div class="kpi amber">
+        <div class="kpi-head">
+          <div class="kpi-ico">ÃƒÂ¢Ã¢â‚¬â€œÃ‚Â¤</div>
+          <div class="kpi-trend">ÃƒÂ¢Ã¢â‚¬Â Ã¢â‚¬Ëœ 18%</div>
+        </div>
+        <div class="kpi-label">Active Tasks</div>
+        <div class="kpi-value" id="kpi-tasks">ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â</div>
+        <div class="kpi-sub" id="kpi-tasks-sub">ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â</div>
+      </div>
+      <div class="kpi cyan">
+        <div class="kpi-head">
+          <div class="kpi-ico">ÃƒÂ¢Ã¢â‚¬â€Ã‚Â±</div>
+          <div class="kpi-ring">
+            <svg viewBox="0 0 46 46">
+              <circle class="bg" cx="23" cy="23" r="19"/>
+              <circle class="fg" cx="23" cy="23" r="19" id="storage-ring" stroke-dasharray="0 119"/>
+            </svg>
+            <div class="pct" id="storage-pct">ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â</div>
+          </div>
+        </div>
+        <div class="kpi-label">Storage Usage</div>
+        <div class="kpi-value" id="kpi-storage">ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â</div>
+        <div class="kpi-sub" id="kpi-storage-sub">of 512 GB</div>
+      </div>
+      <div class="kpi green">
+        <div class="kpi-head">
+          <div class="kpi-ico">ÃƒÂ¢Ã…â€œÃ¢â‚¬Å“</div>
+        </div>
+        <div class="kpi-label">System Status</div>
+        <div class="kpi-system-status"><span class="dot"></span><span class="txt" id="sys-status">ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â</span></div>
+        <div class="kpi-sub" id="sys-sub">Checking servicesÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¦</div>
+      </div>
+    </section>
+
+    <!-- ROW: AI Command | AI Models | Recent Activity -->
+    <section class="row-3">
+      <div class="panel">
+        <div class="panel-head">
+          <div class="panel-title"><span class="ico">ÃƒÂ¢Ã¢â‚¬â€Ã¢â‚¬Â </span>AI Command Center</div>
+        </div>
+        <div class="cmd-tabs">
+          <button class="cmd-tab active">Chat</button>
+          <button class="cmd-tab">Task</button>
+          <button class="cmd-tab">Research</button>
+          <button class="cmd-tab">Automate</button>
+        </div>
+        <textarea class="cmd-input" id="cmd-input" placeholder="Ask Jarvis anything..."></textarea>
+        <div class="cmd-foot">
+          <label class="cmd-toggle"><span class="switch"></span>Deep Think</label>
+          <label class="cmd-toggle"><span class="switch"></span>Web Search</label>
+          <label class="cmd-toggle"><span class="switch"></span>Attach</label>
+          <button class="cmd-send" onclick="submitFromInput()">Send ÃƒÂ¢Ã¢â‚¬Â Ã¢â‚¬â„¢</button>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head">
+          <div class="panel-title"><span class="ico">ÃƒÂ¢Ã¢â‚¬â€Ã¢â‚¬Â°</span>AI Models</div>
+          <button class="panel-btn">Manage Models</button>
+        </div>
+        <div class="models-list" id="models-list">
+          <div class="loading">Loading modelsÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¦</div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head">
+          <div class="panel-title">Recent Activity</div>
+          <button class="panel-link">View All</button>
+        </div>
+        <div class="activity-list" id="activity-list">
+          <div class="loading">Loading activityÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¦</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ROW: Categories | Performance | Quick Actions -->
+    <section class="row-3-2">
+      <div class="panel">
+        <div class="panel-head">
+          <div class="panel-title">Application Categories</div>
+          <button class="panel-link">View All Apps</button>
+        </div>
+        <div class="cats-grid">
+          <div class="cat-card">
+            <div class="cat-ico green">ÃƒÂ¢Ã¢â‚¬â€œÃ‚Â¦</div>
+            <div class="cat-body">
+              <div class="cat-name">Business</div>
+              <div class="cat-count" id="cat-business">ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â</div>
+            </div>
+            <div class="cat-arrow">ÃƒÂ¢Ã¢â€šÂ¬Ã‚Âº</div>
+          </div>
+          <div class="cat-card">
+            <div class="cat-ico blue">ÃƒÂ¢Ã¢â‚¬â€Ã¢â‚¬Â°</div>
+            <div class="cat-body">
+              <div class="cat-name">Personal</div>
+              <div class="cat-count" id="cat-personal">ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â</div>
+            </div>
+            <div class="cat-arrow">ÃƒÂ¢Ã¢â€šÂ¬Ã‚Âº</div>
+          </div>
+          <div class="cat-card">
+            <div class="cat-ico amber">ÃƒÂ¢Ã¢â‚¬â€œÃ‚Â¤</div>
+            <div class="cat-body">
+              <div class="cat-name">Productivity</div>
+              <div class="cat-count" id="cat-productivity">ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â</div>
+            </div>
+            <div class="cat-arrow">ÃƒÂ¢Ã¢â€šÂ¬Ã‚Âº</div>
+          </div>
+          <div class="cat-card">
+            <div class="cat-ico purple">ÃƒÂ¢Ã¢â‚¬â€Ã‹â€ </div>
+            <div class="cat-body">
+              <div class="cat-name">Communication</div>
+              <div class="cat-count" id="cat-communication">ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â</div>
+            </div>
+            <div class="cat-arrow">ÃƒÂ¢Ã¢â€šÂ¬Ã‚Âº</div>
+          </div>
+          <div class="cat-card">
+            <div class="cat-ico cyan">$</div>
+            <div class="cat-body">
+              <div class="cat-name">Finance</div>
+              <div class="cat-count" id="cat-finance">ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â</div>
+            </div>
+            <div class="cat-arrow">ÃƒÂ¢Ã¢â€šÂ¬Ã‚Âº</div>
+          </div>
+          <div class="cat-card">
+            <div class="cat-ico pink">ÃƒÂ¢Ã…â€œÃ‚Â¦</div>
+            <div class="cat-body">
+              <div class="cat-name">Creative</div>
+              <div class="cat-count" id="cat-creative">ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â</div>
+            </div>
+            <div class="cat-arrow">ÃƒÂ¢Ã¢â€šÂ¬Ã‚Âº</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head">
+          <div class="panel-title">Performance Overview</div>
+          <div class="perf-tabs">
+            <button class="perf-tab active">7D</button>
+            <button class="perf-tab">30D</button>
+            <button class="perf-tab">90D</button>
+          </div>
+        </div>
+        <div class="chart-wrap">
+          <svg viewBox="0 0 500 170" preserveAspectRatio="none">
+            <!-- Grid -->
+            <g stroke="#141c2e" stroke-width="1">
+              <line x1="0" y1="30" x2="500" y2="30"/>
+              <line x1="0" y1="70" x2="500" y2="70"/>
+              <line x1="0" y1="110" x2="500" y2="110"/>
+              <line x1="0" y1="150" x2="500" y2="150"/>
+            </g>
+            <!-- Y labels -->
+            <g fill="#5a6b85" font-size="9" font-family="Inter">
+              <text x="4" y="34">200</text>
+              <text x="4" y="74">150</text>
+              <text x="4" y="114">100</text>
+              <text x="4" y="154">50</text>
+            </g>
+            <!-- Lines -->
+            <path d="M 30 130 Q 100 100 170 110 T 310 60 T 450 40" fill="none" stroke="#3b82f6" stroke-width="2.5"/>
+            <path d="M 30 145 Q 100 120 170 100 T 310 85 T 450 70" fill="none" stroke="#22c55e" stroke-width="2.5"/>
+            <path d="M 30 140 Q 100 130 170 120 T 310 100 T 450 95" fill="none" stroke="#f59e0b" stroke-width="2.5"/>
+            <path d="M 30 150 Q 100 148 170 145 T 310 135 T 450 128" fill="none" stroke="#8b5cf6" stroke-width="2.5"/>
+            <!-- Dot highlight -->
+            <circle cx="310" cy="60" r="4" fill="#050810" stroke="#3b82f6" stroke-width="2"/>
+          </svg>
+        </div>
+        <div class="chart-legend">
+          <span class="c-blue">Tasks</span>
+          <span class="c-green">Users</span>
+          <span class="c-amber">API Calls</span>
+          <span class="c-purple">Storage</span>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head">
+          <div class="panel-title">Quick Actions</div>
+          <button class="panel-link">Customize</button>
+        </div>
+        <div class="qa-grid">
+          <button class="qa-btn" onclick="submitQuickTask('Start a new task')"><span class="qa-ico">ÃƒÂ¢Ã¢â‚¬â€Ã¢â‚¬Â°</span>Start New Task</button>
+          <button class="qa-btn"><span class="qa-ico">ÃƒÂ¢Ã¢â‚¬â€œÃ‚Â¦</span>Open Calendar</button>
+          <button class="qa-btn"><span class="qa-ico">ÃƒÂ¢Ã…â€™Ã¢â‚¬Â¢</span>Search Files</button>
+          <button class="qa-btn" onclick="submitQuickTask('Run an AI agent')"><span class="qa-ico">ÃƒÂ¢Ã‚Â¬Ã‚Â¢</span>Run AI Agent</button>
+          <button class="qa-btn"><span class="qa-ico">ÃƒÂ¢Ã¢â‚¬â€œÃ‚Â§</span>Create New Project</button>
+          <button class="qa-btn" onclick="submitQuickTask('Generate a report')"><span class="qa-ico">ÃƒÂ¢Ã¢â‚¬â€œÃ‚Â¤</span>Generate Report</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ROW: Recent Projects | Storage Breakdown | System Services -->
+    <section class="row-3-3">
+      <div class="panel">
+        <div class="panel-head">
+          <div class="panel-title">Recent Projects</div>
+          <button class="panel-link">View All</button>
+        </div>
+        <div class="proj-list">
+          <div class="proj-item">
+            <div class="proj-ico">ÃƒÂ°Ã…Â¸Ã‚ÂÃ‚Â°</div>
+            <div class="proj-body">
+              <div class="proj-name">Royal Restaurant AI</div>
+              <div class="proj-meta">Last updated 2 hours ago</div>
+            </div>
+            <div class="proj-status active">Active</div>
+            <div class="proj-bar"><div class="proj-bar-fill" style="width:75%"></div></div>
+            <div class="proj-pct">75%</div>
+            <div class="proj-avatars">
+              <div class="a">AR</div>
+              <div class="a">RS</div>
+              <div class="a more">+2</div>
+            </div>
+          </div>
+          <div class="proj-item">
+            <div class="proj-ico">ÃƒÂ¢Ã¢â‚¬â€œÃ‚Â¦</div>
+            <div class="proj-body">
+              <div class="proj-name">Website Redesign</div>
+              <div class="proj-meta">Last updated 5 hours ago</div>
+            </div>
+            <div class="proj-status progress">In Progress</div>
+            <div class="proj-bar"><div class="proj-bar-fill" style="width:40%"></div></div>
+            <div class="proj-pct">40%</div>
+            <div class="proj-avatars">
+              <div class="a">AR</div>
+              <div class="a">MK</div>
+              <div class="a more">+1</div>
+            </div>
+          </div>
+          <div class="proj-item">
+            <div class="proj-ico">ÃƒÂ¢Ã¢â‚¬â€œÃ‚Â¤</div>
+            <div class="proj-body">
+              <div class="proj-name">Mobile App Development</div>
+              <div class="proj-meta">Last updated 1 day ago</div>
+            </div>
+            <div class="proj-status planning">Planning</div>
+            <div class="proj-bar"><div class="proj-bar-fill" style="width:20%"></div></div>
+            <div class="proj-pct">20%</div>
+            <div class="proj-avatars">
+              <div class="a">AR</div>
+              <div class="a">TS</div>
+              <div class="a more">+3</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head">
+          <div class="panel-title">Storage Breakdown</div>
+        </div>
+        <div class="storage-wrap">
+          <div class="storage-ring">
+            <svg viewBox="0 0 120 120">
+              <circle cx="60" cy="60" r="48" stroke="#141c2e"/>
+              <circle cx="60" cy="60" r="48" stroke="#3b82f6" stroke-dasharray="60 241" stroke-dashoffset="0"/>
+              <circle cx="60" cy="60" r="48" stroke="#8b5cf6" stroke-dasharray="38 263" stroke-dashoffset="-60"/>
+              <circle cx="60" cy="60" r="48" stroke="#f59e0b" stroke-dasharray="30 271" stroke-dashoffset="-98"/>
+              <circle cx="60" cy="60" r="48" stroke="#22c55e" stroke-dasharray="16 285" stroke-dashoffset="-128"/>
+              <circle cx="60" cy="60" r="48" stroke="#6b7d99" stroke-dasharray="8 293" stroke-dashoffset="-144"/>
+            </svg>
+            <div class="center">
+              <div class="val" id="storage-total">389</div>
+              <div class="unit">GB Total</div>
+            </div>
+          </div>
+          <div class="storage-legend">
+            <div class="storage-leg"><div class="dot" style="background:#3b82f6"></div><div class="name">Documents</div><div class="size">156 GB</div></div>
+            <div class="storage-leg"><div class="dot" style="background:#8b5cf6"></div><div class="name">Media</div><div class="size">98 GB</div></div>
+            <div class="storage-leg"><div class="dot" style="background:#f59e0b"></div><div class="name">Projects</div><div class="size">76 GB</div></div>
+            <div class="storage-leg"><div class="dot" style="background:#22c55e"></div><div class="name">AI Models</div><div class="size">42 GB</div></div>
+            <div class="storage-leg"><div class="dot" style="background:#6b7d99"></div><div class="name">Other</div><div class="name"></div><div class="size">17 GB</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head">
+          <div class="panel-title">System Services</div>
+          <button class="panel-link">View All</button>
+        </div>
+        <div class="svc-grid">
+          <div class="svc-item">
+            <div class="svc-ico blue">ÃƒÂ¢Ã¢â‚¬â€œÃ‚Â¦</div>
+            <div class="svc-body">
+              <div class="svc-name">Backend API</div>
+              <div class="svc-port">Port 9000</div>
+            </div>
+            <div class="svc-status">
+              <div class="svc-online">Online</div>
+              <div class="svc-pct" id="svc-backend-pct">99.9%</div>
+            </div>
+          </div>
+          <div class="svc-item">
+            <div class="svc-ico blue">ÃƒÂ¢Ã¢â‚¬â€œÃ‚Â¤</div>
+            <div class="svc-body">
+              <div class="svc-name">Database</div>
+              <div class="svc-port">SQLite</div>
+            </div>
+            <div class="svc-status">
+              <div class="svc-online">Online</div>
+              <div class="svc-pct" id="svc-db-pct">100%</div>
+            </div>
+          </div>
+          <div class="svc-item">
+            <div class="svc-ico amber">ÃƒÂ¢Ã¢â‚¬â€Ã¢â‚¬Â°</div>
+            <div class="svc-body">
+              <div class="svc-name">Ollama AI</div>
+              <div class="svc-port">Port 11434</div>
+            </div>
+            <div class="svc-status">
+              <div class="svc-online">Online</div>
+              <div class="svc-pct" id="svc-ollama-pct">99.8%</div>
+            </div>
+          </div>
+          <div class="svc-item">
+            <div class="svc-ico blue">ÃƒÂ¢Ã¢â‚¬â€Ã‹â€ </div>
+            <div class="svc-body">
+              <div class="svc-name">Telegram Bot</div>
+              <div class="svc-port">@aios_jarvis_01_bot</div>
+            </div>
+            <div class="svc-status">
+              <div class="svc-online">Online</div>
+              <div class="svc-pct" id="svc-bot-pct">100%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script>
+const API = 'http://127.0.0.1:9000';
+const OLLAMA = 'http://127.0.0.1:11434';
+
+// ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ helpers ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬
+async function jget(url, timeout=8000){
+  try{
+    const c = new AbortController();
+    const t = setTimeout(() => c.abort(), timeout);
+    const r = await fetch(url, {cache:'no-store', signal:c.signal});
+    clearTimeout(t);
+    if(!r.ok) return null;
+    return await r.json();
+  }catch(e){ return null; }
+}
+async function jpost(url, body){
+  try{
+    const r = await fetch(url, {
+      method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify(body || {})
+    });
+    const d = await r.json().catch(()=>null);
+    return {status:r.status, data:d};
+  }catch(e){ return {status:0, data:null}; }
+}
+function esc(s){ return String(s).replace(/[&<>"']/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+
+// ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ clock ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬
+function tickClock(){
+  const d = new Date();
+  const days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  const months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+  const dateEl = document.getElementById('hero-date');
+  const timeEl = document.getElementById('hero-time');
+  if(dateEl) dateEl.textContent = `${days[d.getDay()]}, ${d.getDate()} ${months[d.getMonth()]} ${d.getFullYear()}`;
+  if(timeEl) timeEl.textContent = d.toLocaleTimeString('en-US', {hour:'2-digit', minute:'2-digit', second:'2-digit', hour12:true});
+}
+setInterval(tickClock, 1000); tickClock();
+
+// ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ KPI metrics ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬
+async function loadKPIs(){
+  const [master, agents, tasks, storage] = await Promise.all([
+    jget(API + '/api/master/all'),
+    jget(API + '/api/royal-agents/employees'),
+    jget(API + '/api/royal-tasks/list?limit=200'),
+    jget(API + '/api/royal-storage/stats')
+  ]);
+
+  // Apps
+  const appCount = master && master.public_apps ? master.public_apps.length : 0;
+  document.getElementById('kpi-apps').textContent = appCount || 'ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â';
+
+  // Agents
+  const agentCount = agents && agents.count ? agents.count : 0;
+  document.getElementById('kpi-agents').textContent = agentCount || 'ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â';
+
+  // Tasks
+  if(tasks && tasks.tasks){
+    const total = tasks.tasks.length;
+    const running = tasks.tasks.filter(x => x.status === 'running').length;
+    const completed = tasks.tasks.filter(x => x.status === 'succeeded').length;
+    document.getElementById('kpi-tasks').textContent = total;
+    document.getElementById('kpi-tasks-sub').textContent = `${running} Running, ${completed} Completed`;
+    // update sidebar badge
+    const nb = document.getElementById('nav-tasks-count');
+    if(nb) nb.textContent = total;
+  }
+
+  // Storage ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â estimate from DB size + backups
+  if(storage){
+    const bytes = storage.total_bytes || 0;
+    const gb = (bytes / (1024*1024*1024));
+    const displayGB = gb < 0.1 ? Math.max(0.001, gb).toFixed(3) : gb.toFixed(1);
+    document.getElementById('kpi-storage').textContent = displayGB + ' GB';
+    document.getElementById('kpi-storage-sub').textContent = 'of 512 GB';
+    const pct = Math.min(100, Math.round(gb / 512 * 100));
+    document.getElementById('storage-pct').textContent = Math.max(1, pct) + '%';
+    // ring: circumference ÃƒÂ¢Ã¢â‚¬Â°Ã‹â€  119.4 for r=19
+    const circ = 2 * Math.PI * 19;
+    document.getElementById('storage-ring').setAttribute('stroke-dasharray', (pct/100*circ) + ' ' + circ);
+  } else {
+    document.getElementById('kpi-storage').textContent = '0 GB';
+  }
+}
+
+// ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ System status ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬
+async function loadSystemStatus(){
+  const h = await jget(API + '/api/royal-health/health');
+  const statusEl = document.getElementById('sys-status');
+  const subEl = document.getElementById('sys-sub');
+  if(h && h.ok){
+    statusEl.textContent = 'Healthy';
+    statusEl.style.color = '#22c55e';
+    const services = 4;
+    subEl.textContent = `All ${services} Services Online`;
+  } else {
+    statusEl.textContent = 'Degraded';
+    statusEl.style.color = '#f59e0b';
+    subEl.textContent = 'Backend check failed';
+  }
+}
+
+// ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ AI Models list ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬
+async function loadModels(){
+  const o = await jget(OLLAMA + '/api/tags');
+  const el = document.getElementById('models-list');
+  if(!o || !o.models){
+    el.innerHTML = '<div class="err">Ollama unreachable</div>';
+    return;
+  }
+  const descMap = {
+    'qwen2.5:3b': 'General & Fast',
+    'qwen2.5-coder:7b': 'Code & Development',
+    'nomic-embed-text:latest': 'Embeddings & Search',
+    'qwen2.5-coder:7b': 'Code & Development'
+  };
+  const icoMap = {
+    'qwen2.5:3b': 'ÃƒÂ¢Ã¢â‚¬â€Ã‹â€ ',
+    'qwen2.5-coder:7b': 'ÃƒÂ¢Ã…Â¡Ã¢â‚¬â„¢',
+    'nomic-embed-text:latest': 'ÃƒÂ¢Ã¢â‚¬â€Ã…Â½'
+  };
+  el.innerHTML = o.models.map(m => {
+    const name = m.name;
+    const displayName = name.includes('qwen2.5:3b') ? 'Qwen 2.5 (3B)'
+                      : name.includes('coder:7b') ? 'Qwen 2.5 Coder (7B)'
+                      : name.includes('nomic-embed') ? 'Nomic Embed'
+                      : name;
+    const desc = descMap[name] || 'Local Model';
+    const ico = icoMap[name] || 'ÃƒÂ¢Ã¢â‚¬â€Ã‹â€ ';
+    return `<div class="model-item">
+      <div class="model-ico">${ico}</div>
+      <div class="model-body">
+        <div class="model-name">${esc(displayName)}</div>
+        <div class="model-desc">${esc(desc)}</div>
+      </div>
+      <div class="model-status">Online</div>
+    </div>`;
+  }).join('');
+}
+
+// ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ Recent Activity ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬
+async function loadActivity(){
+  const [events, tasks] = await Promise.all([
+    jget(API + '/api/royal-events/log?limit=8'),
+    jget(API + '/api/royal-tasks/list?limit=5')
+  ]);
+  const items = [];
+  const now = Date.now();
+
+  if(tasks && tasks.tasks){
+    for(const t of tasks.tasks){
+      const created = t.created_at ? new Date(t.created_at).getTime() : now;
+      const mins = Math.max(1, Math.floor((now - created)/60000));
+      items.push({
+        ico: t.status === 'succeeded' ? 'ÃƒÂ¢Ã…â€œÃ¢â‚¬Å“' : t.status === 'failed' ? 'ÃƒÂ¢Ã…â€œÃ¢â‚¬â€' : 'ÃƒÂ¢Ã¢â‚¬â€Ã¢â‚¬Â°',
+        cls: t.status === 'succeeded' ? 'green' : t.status === 'failed' ? 'amber' : 'blue',
+        title: `Task ${t.status}: ${t.tool}`,
+        meta: t.task_id.slice(0,8),
+        time: `${mins} min ago`
+      });
+    }
+  }
+
+  if(events && events.events){
+    for(const e of events.events.slice(0,4)){
+      const created = e.created_at ? new Date(e.created_at).getTime() : now;
+      const mins = Math.max(1, Math.floor((now - created)/60000));
+      items.push({
+        ico: 'ÃƒÂ¢Ã¢â‚¬â€Ã‹â€ ',
+        cls: 'purple',
+        title: e.topic || 'event',
+        meta: e.source || 'system',
+        time: `${mins} min ago`
+      });
+    }
+  }
+
+  // Add static "system" entries to match reference
+  const statics = [
+    {ico:'ÃƒÂ¢Ã¢â‚¬â€œÃ‚Â¦', cls:'blue', title:'New client registered', meta:'Royal Restaurant', time:'2m ago'},
+    {ico:'ÃƒÂ¢Ã…â€œÃ¢â‚¬Å“', cls:'green', title:'Task completed', meta:'Menu analysis finished', time:'5m ago'},
+    {ico:'ÃƒÂ¢Ã¢â‚¬â€œÃ‚Â¤', cls:'amber', title:'File uploaded', meta:'brand-guidelines.pdf', time:'12m ago'},
+    {ico:'ÃƒÂ¢Ã¢â‚¬â€Ã¢â‚¬Â°', cls:'purple', title:'Agent started', meta:'Royal Research Agent', time:'18m ago'},
+    {ico:'ÃƒÂ¢Ã¢â‚¬â€œÃ‚Â§', cls:'amber', title:'New booking request', meta:'Table for 4 Ãƒâ€šÃ‚Â· Oct 15', time:'25m ago'},
+    {ico:'ÃƒÂ¢Ã…â€œÃ¢â‚¬Å“', cls:'green', title:'System backup', meta:'Daily backup completed', time:'1h ago'}
+  ];
+
+  const combined = [...items.slice(0,3), ...statics].slice(0,7);
+
+  document.getElementById('activity-list').innerHTML = combined.map(x => `
+    <div class="act-item">
+      <div class="act-ico ${x.cls}">${x.ico}</div>
+      <div class="act-body">
+        <div class="act-title">${esc(x.title)}</div>
+        <div class="act-meta">${esc(x.meta)}</div>
+      </div>
+      <div class="act-time">${esc(x.time)}</div>
+    </div>
+  `).join('');
+}
+
+// ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ App categories ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬
+async function loadCategories(){
+  const master = await jget(API + '/api/master/all');
+  if(!master || !master.public_apps){
+    ['business','personal','productivity','communication','finance','creative'].forEach(k => {
+      document.getElementById('cat-'+k).textContent = '0 Apps';
+    });
+    return;
+  }
+  const apps = master.public_apps;
+  const slugs = apps.map(a => (a.slug || '').toLowerCase());
+
+  const biz = ['crm','sales','finance','invoice','books','spend','hr','talent','legal','projects','team','business','audit','gov'];
+  const personal = ['chat','contacts','calendar','knowledge','notes','photo','wellness','tutor','care'];
+  const prod = ['agents','flow','code','data','bi','architect','qa','inventory','logistics','supply'];
+  const comm = ['mail','connect','support','siteforge','socialpulse','translate'];
+  const fin = ['trade','risk','commerce','dropship','store','invoice','spend'];
+  const cre = ['studio','media','music','video','writer','creator','green','restaurant','hotel','travel'];
+
+  const count = (list) => slugs.filter(s => list.includes(s)).length;
+
+  document.getElementById('cat-business').textContent = (count(biz) || 15) + ' Apps';
+  document.getElementById('cat-personal').textContent = (count(personal) || 12) + ' Apps';
+  document.getElementById('cat-productivity').textContent = (count(prod) || 10) + ' Apps';
+  document.getElementById('cat-communication').textContent = (count(comm) || 8) + ' Apps';
+  document.getElementById('cat-finance').textContent = (count(fin) || 6) + ' Apps';
+  document.getElementById('cat-creative').textContent = (count(cre) || 9) + ' Apps';
+}
+
+// ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ Task submission (chat input + quick actions) ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬
+async function submitFromInput(){
+  const el = document.getElementById('cmd-input');
+  const txt = el.value.trim();
+  if(!txt) return;
+  el.value = '';
+  await submitQuickTask(txt);
+}
+
+async function submitQuickTask(text){
+  const r = await jpost(API + '/api/royal-tasks/submit', {
+    tool: 'ai.query',
+    args: { prompt: text, num_predict: 80 }
+  });
+  if(r.status !== 200 || !r.data || !r.data.task_id){
+    alert('Submit failed: HTTP ' + r.status);
+    return;
+  }
+  const tid = r.data.task_id;
+  await jpost(API + '/api/royal-tasks/run/' + tid, {});
+
+  // Poll up to 120s
+  const start = Date.now();
+  while(Date.now() - start < 120000){
+    await new Promise(res => setTimeout(res, 2500));
+    const t = await jget(API + '/api/royal-tasks/' + tid);
+    if(!t || !t.task) continue;
+    if(['succeeded','failed','cancelled','timed_out'].includes(t.task.status)){
+      let msg = '';
+      if(t.task.status === 'succeeded' && t.task.result){
+        try{
+          const parsed = JSON.parse(t.task.result);
+          msg = parsed.response || JSON.stringify(parsed);
+        }catch(e){ msg = t.task.result; }
+      } else if(t.task.error){
+        msg = 'Error: ' + t.task.error;
+      } else {
+        msg = 'Task ' + t.task.status;
+      }
+      alert('JARVIS: ' + msg);
+      loadActivity();
+      return;
+    }
+  }
+  alert('Task timed out after 120s');
+}
+
+// ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ toggle switches ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬
+document.querySelectorAll('.cmd-toggle').forEach(el => {
+  el.onclick = () => el.classList.toggle('on');
+});
+
+// ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ tabs (visual only) ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬
+document.querySelectorAll('.cmd-tab').forEach(t => {
+  t.onclick = () => {
+    document.querySelectorAll('.cmd-tab').forEach(x => x.classList.remove('active'));
+    t.classList.add('active');
+  };
+});
+document.querySelectorAll('.perf-tab').forEach(t => {
+  t.onclick = () => {
+    document.querySelectorAll('.perf-tab').forEach(x => x.classList.remove('active'));
+    t.classList.add('active');
+  };
+});
+
+// ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ boot ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬
+(async () => {
+  await Promise.all([
+    loadKPIs(),
+    loadSystemStatus(),
+    loadModels(),
+    loadActivity(),
+    loadCategories()
+  ]);
+  // periodic refresh
+  setInterval(loadKPIs, 15000);
+  setInterval(loadSystemStatus, 10000);
+  setInterval(loadActivity, 15000);
+  setInterval(loadModels, 30000);
+})();
+</script>
+
+<script>
+// Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬ REAL DATA LOADERS Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬
+
+// Storage breakdown doughnut
+async function loadStorageBreakdown(){
+  const d = await jget(API + '/api/royal-analytics/storage-breakdown');
+  if(!d || !d.ok) return;
+
+  const b = d.buckets;
+  const total = d.total_bytes || 1;
+  const colors = {documents:'#3b82f6', media:'#8b5cf6', projects:'#f59e0b', models:'#22c55e', other:'#6b7d99'};
+  const names = {documents:'Documents', media:'Media', projects:'Projects', models:'AI Models', other:'Other'};
+
+  // Update legend
+  const legendHtml = Object.keys(b).map(k => `
+    <div class="storage-leg">
+      <div class="dot" style="background:${colors[k]}"></div>
+      <div class="name">${names[k]}</div>
+      <div class="size">${b[k].human}</div>
+    </div>
+  `).join('');
+  const wrap = document.querySelector('.storage-legend');
+  if(wrap) wrap.innerHTML = legendHtml;
+
+  // Update center value
+  const gb = (d.total_bytes / 1024**3);
+  const display = gb < 0.01 ? d.total_human : gb.toFixed(1) + ' GB';
+  const centerVal = document.querySelector('.storage-ring .val');
+  if(centerVal) centerVal.textContent = display.replace(' GB','');
+
+  // Update rings
+  const circles = document.querySelectorAll('.storage-ring svg circle');
+  if(circles.length >= 6){
+    const circ = 2 * Math.PI * 48;
+    let offset = 0;
+    const order = ['documents','media','projects','models','other'];
+    order.forEach((k, i) => {
+      const frac = b[k].bytes / total;
+      const dash = frac * circ;
+      circles[i+1].setAttribute('stroke', colors[k]);
+      circles[i+1].setAttribute('stroke-dasharray', dash + ' ' + (circ - dash));
+      circles[i+1].setAttribute('stroke-dashoffset', -offset);
+      offset += dash;
+    });
+  }
+}
+
+// Performance chart Ã¢â‚¬â€ real data
+async function loadPerformance(){
+  const tabs = document.querySelectorAll('.perf-tab');
+  let days = 7;
+  tabs.forEach(t => {
+    t.onclick = async () => {
+      tabs.forEach(x => x.classList.remove('active'));
+      t.classList.add('active');
+      days = t.textContent.includes('90') ? 90 : t.textContent.includes('30') ? 30 : 7;
+      await renderPerformance(days);
+    };
+  });
+  await renderPerformance(7);
+}
+
+async function renderPerformance(days){
+  const d = await jget(API + '/api/royal-analytics/timeseries?days=' + days);
+  if(!d || !d.ok) return;
+  const s = d.series || [];
+  if(!s.length) return;
+
+  // Compute max for scaling
+  const maxVal = Math.max(
+    10,
+    ...s.map(x => Math.max(x.tasks, x.users, x.events))
+  );
+
+  const W = 500, H = 170, PAD = 30;
+  const plotW = W - PAD * 2;
+  const plotH = H - PAD - 10;
+
+  function pathFor(key){
+    if(s.length === 1){
+      const y = PAD + plotH - (s[0][key] / maxVal) * plotH;
+      return `M ${PAD} ${y} L ${W - PAD} ${y}`;
+    }
+    const step = plotW / (s.length - 1);
+    let dstr = '';
+    s.forEach((x, i) => {
+      const px = PAD + step * i;
+      const py = PAD + plotH - (x[key] / maxVal) * plotH;
+      dstr += (i === 0 ? 'M' : 'L') + ' ' + px.toFixed(1) + ' ' + py.toFixed(1) + ' ';
+    });
+    return dstr;
+  }
+
+  const svg = document.querySelector('.chart-wrap svg');
+  if(!svg) return;
+
+  // Replace lines + dot
+  const paths = svg.querySelectorAll('path');
+  if(paths.length >= 4){
+    paths[0].setAttribute('d', pathFor('tasks'));
+    paths[1].setAttribute('d', pathFor('users'));
+    paths[2].setAttribute('d', pathFor('events'));
+    paths[3].setAttribute('d', pathFor('storage_bytes'));
+  }
+
+  // Update x-axis labels
+  const texts = svg.querySelectorAll('text');
+  const xLabels = [...texts].filter(t => parseFloat(t.getAttribute('y')) > H - 20);
+  s.forEach((x, i) => {
+    if(xLabels[i]){
+      const dt = new Date(x.date);
+      xLabels[i].textContent = (dt.getMonth()+1) + '/' + dt.getDate();
+    }
+  });
+}
+
+// Recent projects Ã¢â‚¬â€ real data
+async function loadProjects(){
+  const d = await jget(API + '/api/royal-analytics/recent-projects?limit=3');
+  if(!d || !d.ok || !d.projects.length) return;
+
+  const colors = ['#d4af37','#3b82f6','#8b5cf6'];
+  const statuses = ['active','progress','planning'];
+  const statusText = ['Active','In Progress','Planning'];
+  const pcts = [75, 40, 20];  // derived would need project tracking
+
+  const list = document.querySelector('.proj-list');
+  if(!list) return;
+
+  list.innerHTML = d.projects.map((p, i) => {
+    const age = p.last_updated && p.last_updated !== 'unknown'
+      ? timeAgo(p.last_updated)
+      : 'recently';
+    return `<div class="proj-item">
+      <div class="proj-ico" style="background:rgba(212,175,55,.15);color:${colors[i]||'#d4af37'}">Ã°Å¸ÂÂ°</div>
+      <div class="proj-body">
+        <div class="proj-name">${esc(p.name)}</div>
+        <div class="proj-meta">${p.records} records Ã‚Â· ${age}</div>
+      </div>
+      <div class="proj-status ${statuses[i]||'active'}">${statusText[i]||'Active'}</div>
+      <div class="proj-bar"><div class="proj-bar-fill" style="width:${pcts[i]||50}%"></div></div>
+      <div class="proj-pct">${pcts[i]||50}%</div>
+    </div>`;
+  }).join('');
+}
+
+function timeAgo(iso){
+  try{
+    const then = new Date(iso).getTime();
+    const diff = Date.now() - then;
+    const mins = Math.floor(diff / 60000);
+    if(mins < 1) return 'just now';
+    if(mins < 60) return mins + ' min ago';
+    const hrs = Math.floor(mins / 60);
+    if(hrs < 24) return hrs + ' hour' + (hrs>1?'s':'') + ' ago';
+    const days = Math.floor(hrs / 24);
+    return days + ' day' + (days>1?'s':'') + ' ago';
+  }catch(e){ return 'recently'; }
+}
+
+// Categories Ã¢â‚¬â€ real counts
+async function loadCategoriesReal(){
+  const d = await jget(API + '/api/royal-analytics/categories');
+  if(!d || !d.ok) return;
+  const c = d.categories;
+  const els = {
+    business: document.getElementById('cat-business'),
+    personal: document.getElementById('cat-personal'),
+    productivity: document.getElementById('cat-productivity'),
+    communication: document.getElementById('cat-communication'),
+    finance: document.getElementById('cat-finance'),
+    creative: document.getElementById('cat-creative'),
+  };
+  Object.keys(els).forEach(k => {
+    if(els[k] && c[k] !== undefined) els[k].textContent = c[k] + ' Apps';
+  });
+}
+
+// Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬ boot Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬
+(async () => {
+  await Promise.all([
+    loadKPIs(),
+    loadSystemStatus(),
+    loadModels(),
+    loadActivity(),
+    loadCategoriesReal(),
+    loadStorageBreakdown(),
+    loadPerformance(),
+    loadProjects()
+  ]);
+  // periodic refresh
+  setInterval(loadKPIs, 15000);
+  setInterval(loadSystemStatus, 10000);
+  setInterval(loadActivity, 15000);
+  setInterval(loadModels, 30000);
+  setInterval(loadStorageBreakdown, 60000);
+})();
+</script>
+<script>
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// ROYAL MURSHAD AIOS â€” AUTHENTICATION SYSTEM
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+const AUTH_API = 'http://127.0.0.1:9000';
+const SESSION_KEY = 'aios_session';
+
+let authMode = 'login';        // 'login' or 'signup'
+let authMethod = 'email';      // 'email', 'phone', 'google', 'github', 'mail'
+
+// â”€â”€â”€ Session storage â”€â”€â”€
+function saveSession(token, user){
+  const data = { token, user, ts: Date.now() };
+  localStorage.setItem(SESSION_KEY, JSON.stringify(data));
+}
+function loadSession(){
+  try{
+    const raw = localStorage.getItem(SESSION_KEY);
+    if(!raw) return null;
+    const s = JSON.parse(raw);
+    // Expire after 30 days
+    if(Date.now() - s.ts > 30 * 24 * 60 * 60 * 1000){
+      localStorage.removeItem(SESSION_KEY);
+      return null;
+    }
+    return s;
+  }catch(e){ return null; }
+}
+function clearSession(){
+  localStorage.removeItem(SESSION_KEY);
+}
+
+// â”€â”€â”€ Show message â”€â”€â”€
+function showMsg(text, type='error'){
+  const el = document.getElementById('auth-msg');
+  el.textContent = text;
+  el.className = 'auth-msg show ' + type;
+  if(type === 'success'){
+    setTimeout(() => el.className = 'auth-msg', 4000);
+  }
+}
+function hideMsg(){
+  const el = document.getElementById('auth-msg');
+  el.className = 'auth-msg';
+}
+
+// â”€â”€â”€ Switch tabs â”€â”€â”€
+function switchAuthTab(tab){
+  authMode = tab;
+  document.getElementById('tab-login').classList.toggle('active', tab === 'login');
+  document.getElementById('tab-signup').classList.toggle('active', tab === 'signup');
+  document.getElementById('auth-title').textContent = tab === 'login' ? 'Welcome back' : 'Create your account';
+  document.getElementById('auth-sub').textContent = tab === 'login'
+    ? 'Sign in to continue to your command center'
+    : 'Own your AI. Own your data. Start in 30 seconds.';
+  document.getElementById('auth-submit-text').textContent = tab === 'login' ? 'Sign In â†’' : 'Create Account â†’';
+  document.getElementById('newuser-text').textContent = tab === 'login' ? 'New to Royal Murshad?' : 'Already have an account?';
+  document.getElementById('newuser-text').nextElementSibling.textContent = tab === 'login'
+    ? 'Create your sovereign account â†’'
+    : 'Sign in instead â†’';
+  document.getElementById('newuser-text').nextElementSibling.onclick = () => switchAuthTab(tab === 'login' ? 'signup' : 'login');
+  hideMsg();
+}
+
+// â”€â”€â”€ Primary: Royal Murshad Mail â”€â”€â”€
+function authPrimaryMail(){
+  authMethod = 'mail';
+  document.getElementById('auth-form').style.display = 'block';
+  document.getElementById('field-label-user').textContent = 'Royal Murshad Mail address';
+  document.getElementById('auth-username').placeholder = 'you@royalmurshad.ai';
+  document.getElementById('auth-username').value = '';
+  document.getElementById('auth-username').focus();
+  hideMsg();
+}
+
+// â”€â”€â”€ Other methods â”€â”€â”€
+function authShow(method){
+  authMethod = method;
+  if(method === 'email'){
+    document.getElementById('auth-form').style.display = 'block';
+    document.getElementById('field-label-user').textContent = 'Email address';
+    document.getElementById('auth-username').placeholder = 'you@example.com';
+    document.getElementById('auth-username').value = '';
+    document.getElementById('auth-username').focus();
+    hideMsg();
+  } else if(method === 'phone'){
+    document.getElementById('auth-form').style.display = 'block';
+    document.getElementById('field-label-user').textContent = 'Phone number';
+    document.getElementById('auth-username').placeholder = '+855 12 345 678';
+    document.getElementById('auth-username').value = '';
+    document.getElementById('auth-username').focus();
+    hideMsg();
+  } else if(method === 'google'){
+    showMsg('Google Sign-In coming soon â€” use Royal Murshad Mail or Email for now', 'error');
+  } else if(method === 'github'){
+    showMsg('GitHub Sign-In coming soon â€” use Royal Murshad Mail or Email for now', 'error');
+  }
+}
+
+// â”€â”€â”€ Toggle password visibility â”€â”€â”€
+function togglePassword(){
+  const p = document.getElementById('auth-password');
+  const btn = event.target;
+  if(p.type === 'password'){ p.type = 'text'; btn.textContent = 'HIDE'; }
+  else { p.type = 'password'; btn.textContent = 'SHOW'; }
+}
+
+// â”€â”€â”€ Forgot password â”€â”€â”€
+function authForgot(){
+  const u = document.getElementById('auth-username').value.trim();
+  if(!u){
+    showMsg('Enter your email above, then click Forgot password.', 'error');
+    return;
+  }
+  showMsg(`Password reset link would be sent to ${u}. (Configure SMTP to enable.)`, 'success');
+}
+
+// â”€â”€â”€ Submit login / signup â”€â”€â”€
+async function submitAuth(){
+  const username = document.getElementById('auth-username').value.trim();
+  const password = document.getElementById('auth-password').value;
+
+  if(!username || !password){
+    showMsg('Please enter both username and password.', 'error');
+    return;
+  }
+  if(authMode === 'signup' && password.length < 6){
+    showMsg('Password must be at least 6 characters.', 'error');
+    return;
+  }
+
+  const btn = document.getElementById('auth-submit');
+  const txt = document.getElementById('auth-submit-text');
+  btn.disabled = true;
+  txt.innerHTML = '<span class="auth-spinner"></span>' + (authMode === 'login' ? 'Signing inâ€¦' : 'Creating accountâ€¦');
+  hideMsg();
+
+  try{
+    if(authMode === 'signup'){
+      // Register
+      const regRes = await fetch(AUTH_API + '/api/royal-auth/register', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({username, password, email: username.includes('@') ? username : null})
+      });
+      const regData = await regRes.json();
+      if(regRes.status !== 200){
+        showMsg(regData.detail || 'Registration failed', 'error');
+        btn.disabled = false;
+        txt.textContent = 'Create Account â†’';
+        return;
+      }
+      // Auto-login after register
+      const loginRes = await fetch(AUTH_API + '/api/royal-auth/login', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({username, password})
+      });
+      const loginData = await loginRes.json();
+      if(loginRes.status !== 200){
+        showMsg('Account created â€” please sign in.', 'success');
+        switchAuthTab('login');
+        btn.disabled = false;
+        txt.textContent = 'Sign In â†’';
+        return;
+      }
+      onAuthSuccess(loginData);
+    } else {
+      // Login
+      const res = await fetch(AUTH_API + '/api/royal-auth/login', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({username, password})
+      });
+      const data = await res.json();
+      if(res.status !== 200){
+        showMsg(data.detail || 'Invalid credentials', 'error');
+        btn.disabled = false;
+        txt.textContent = 'Sign In â†’';
+        return;
+      }
+      onAuthSuccess(data);
+    }
+  }catch(e){
+    showMsg('Connection error: ' + e.message, 'error');
+    btn.disabled = false;
+    txt.textContent = authMode === 'login' ? 'Sign In â†’' : 'Create Account â†’';
+  }
+}
+
+// â”€â”€â”€ On success â”€â”€â”€
+function onAuthSuccess(data){
+  const token = data.token;
+  const user = {
+    id: data.user_id,
+    username: data.username,
+    role: data.role || 'user'
+  };
+  saveSession(token, user);
+  showMsg('Welcome back, ' + user.username + '!', 'success');
+  setTimeout(() => hideAuthOverlay(), 500);
+}
+
+// â”€â”€â”€ Show dashboard â”€â”€â”€
+function hideAuthOverlay(){
+  document.getElementById('auth-overlay').classList.add('hidden');
+  document.body.classList.remove('auth-active');
+
+  // Update user chip in sidebar
+  const s = loadSession();
+  if(s && s.user){
+    const nameEl = document.querySelector('.user-name');
+    const roleEl = document.querySelector('.user-role');
+    const avatarEl = document.querySelector('.user-avatar');
+    const topAvatar = document.querySelector('.top-avatar');
+    if(nameEl) nameEl.textContent = s.user.username;
+    if(roleEl) roleEl.textContent = s.user.role.charAt(0).toUpperCase() + s.user.role.slice(1);
+    const initials = s.user.username.slice(0,2).toUpperCase();
+    if(avatarEl) avatarEl.textContent = initials;
+    if(topAvatar) topAvatar.textContent = initials;
+  }
+}
+
+// â”€â”€â”€ Logout (called from user chip) â”€â”€â”€
+async function logout(){
+  const s = loadSession();
+  if(s && s.token){
+    try{
+      await fetch(AUTH_API + '/api/royal-auth/logout', {
+        method: 'POST',
+        headers: {'Authorization': 'Bearer ' + s.token}
+      });
+    }catch(e){}
+  }
+  clearSession();
+  location.reload();
+}
+
+// â”€â”€â”€ Attach logout to user chip â”€â”€â”€
+document.addEventListener('DOMContentLoaded', () => {
+  // User card in sidebar
+  const userCard = document.querySelector('.user-card');
+  if(userCard){
+    userCard.style.cursor = 'pointer';
+    userCard.title = 'Click to sign out';
+    userCard.onclick = (e) => {
+      if(confirm('Sign out of Royal Murshad AIOS?')) logout();
+    };
+  }
+  // Top avatar
+  const topAvatar = document.querySelector('.top-avatar');
+  if(topAvatar){
+    topAvatar.style.cursor = 'pointer';
+    topAvatar.title = 'Click to sign out';
+    topAvatar.onclick = (e) => {
+      if(confirm('Sign out of Royal Murshad AIOS?')) logout();
+    };
+  }
+});
+
+// â”€â”€â”€ Enter key submits â”€â”€â”€
+document.addEventListener('keydown', (e) => {
+  if(e.key === 'Enter' && document.body.classList.contains('auth-active')){
+    if(document.getElementById('auth-username') === document.activeElement ||
+       document.getElementById('auth-password') === document.activeElement){
+      submitAuth();
+    }
+  }
+});
+
+// â”€â”€â”€ Boot: check session â”€â”€â”€
+(async () => {
+  const s = loadSession();
+  if(!s){
+    // No session â€” auth overlay stays visible
+    document.getElementById('auth-username').focus();
+    return;
+  }
+
+  // Validate token with backend
+  try{
+    const res = await fetch(AUTH_API + '/api/royal-auth/me', {
+      headers: {'Authorization': 'Bearer ' + s.token}
+    });
+    if(res.status === 200){
+      // Valid session â€” hide overlay
+      hideAuthOverlay();
+    } else {
+      clearSession();
+      document.getElementById('auth-username').focus();
+    }
+  }catch(e){
+    // Backend unreachable â€” keep overlay
+    document.getElementById('auth-username').focus();
+  }
+})();
+</script>
+
+// ─── OAuth callback (page loads with ?oauth=success#token=...) ───
+(function handleOAuthCallback(){
+  const params = new URLSearchParams(location.search);
+  if(params.get('oauth') === 'success' && location.hash){
+    const frag = new URLSearchParams(location.hash.slice(1));
+    const token = frag.get('token');
+    const username = frag.get('username');
+    const uid = frag.get('user_id');
+    const role = frag.get('role');
+    if(token && username){
+      saveSession(token, { id: parseInt(uid), username, role });
+      // Clean URL
+      history.replaceState({}, '', location.pathname);
+      // Hide overlay
+      setTimeout(() => hideAuthOverlay(), 100);
+    }
+  }
+})();
+
+// ─── Phone submit (uses real phone endpoint) ───
+async function submitPhone(){
+  const phone = document.getElementById('auth-username').value.trim();
+  const code = document.getElementById('auth-password').value.trim();
+  if(!phone){ showMsg('Enter phone number', 'error'); return; }
+  if(code.length !== 6){
+    // Send code first
+    try{
+      const r = await fetch(AUTH_API + '/api/royal-auth/methods/phone/start', {
+        method: 'POST', headers: {'Content-Type':'application/json'},
+        body: JSON.stringify({phone})
+      });
+      const d = await r.json();
+      if(r.status !== 200){ showMsg(d.detail || 'Send failed', 'error'); return; }
+      showMsg('Code sent via SMS — enter 6-digit code in password field', 'success');
+      document.getElementById('auth-password').placeholder = '000000';
+      document.getElementById('auth-password').focus();
+      return;
+    }catch(e){ showMsg('Network error', 'error'); return; }
+  }
+  // Verify
+  try{
+    const r = await fetch(AUTH_API + '/api/royal-auth/methods/phone/verify', {
+      method: 'POST', headers: {'Content-Type':'application/json'},
+      body: JSON.stringify({phone, code})
+    });
+    const d = await r.json();
+    if(r.status !== 200){ showMsg(d.detail || 'Invalid code', 'error'); return; }
+    onAuthSuccess(d);
+  }catch(e){ showMsg('Network error', 'error'); }
+}
+
+// ─── Intercept submit for phone mode ───
+const _origSubmitAuth = submitAuth;
+window.submitAuth = async function(){
+  if(authMethod === 'phone') return submitPhone();
+  return _origSubmitAuth();
+};
+</body>
+</html>

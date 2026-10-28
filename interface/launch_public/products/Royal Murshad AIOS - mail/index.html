@@ -1,0 +1,57 @@
+<!DOCTYPE html><html><head><meta charset='utf-8'><title>Royal Mail</title>
+<style>
+body{background:#0a0e17;color:#e6edf3;font-family:system-ui;padding:24px;max-width:1100px;margin:auto}
+h1{color:#58a6ff;border-bottom:2px solid #30363d;padding-bottom:12px}
+h2{color:#f0883e;margin-top:24px}
+button{background:#1f6feb;color:#fff;border:none;padding:8px 16px;border-radius:6px;cursor:pointer;font-weight:600}
+button:hover{background:#388bfd}
+pre{background:#0d1117;border:1px solid #21262d;padding:12px;border-radius:6px;overflow:auto;max-height:400px;font-size:12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px;margin-top:12px}
+.card{background:#0d1117;border:1px solid #21262d;border-radius:6px;padding:12px}
+.card a{color:#79c0ff;text-decoration:none}
+.card a:hover{text-decoration:underline}
+.status{padding:2px 8px;border-radius:10px;font-size:11px;margin-left:8px}
+.ok{background:#238636}
+.bad{background:#da3633}
+</style></head><body>
+<h1>🎯 Royal Mail <span class='status ok' id='status'>loading...</span></h1>
+<p style='color:#8b949e'>API base: <code>/api/inbox</code> · Port: 8950</p>
+
+<h2>── Endpoints ──</h2>
+<div class='grid'>
+<button onclick='call("/api/inbox")'>Try /api/inbox</button>
+<button onclick='call("/api/inbox/stats")' id='statsBtn'>Stats</button>
+<button onclick='call("/api/inbox/list")'>List</button>
+</div>
+
+<h2>── Response ──</h2>
+<pre id='out'>Click a button above...</pre>
+
+<h2>── Master Control ──</h2>
+<div class='grid'>
+<div class='card'><a href='http://127.0.0.1:9000/docs' target='_blank'>📖 Swagger API</a></div>
+<div class='card'><a href='http://127.0.0.1:9000/api/master/all' target='_blank'>🗺️ Master Registry</a></div>
+<div class='card'><a href='http://127.0.0.1:9000/api/business/health' target='_blank'>💼 Business Layer</a></div>
+</div>
+
+<script>
+const API='http://127.0.0.1:9000';
+async function call(path){
+  document.getElementById('out').textContent='Loading '+path+'...';
+  try{
+    const r=await fetch(API+path,{timeout:10000});
+    const txt=await r.text();
+    try{document.getElementById('out').textContent=JSON.stringify(JSON.parse(txt),null,2)}
+    catch(e){document.getElementById('out').textContent=txt}
+  }catch(e){document.getElementById('out').textContent='ERROR: '+e.message}
+}
+async function ping(){
+  try{
+    const r=await fetch(API+'/openapi.json');
+    document.getElementById('status').textContent=r.ok?'API LIVE':'API DOWN';
+    document.getElementById('status').className='status '+(r.ok?'ok':'bad');
+  }catch(e){document.getElementById('status').textContent='API DOWN';document.getElementById('status').className='status bad'}
+}
+ping();
+</script>
+</body></html>
