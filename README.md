@@ -4,7 +4,7 @@
 
 > One Kingdom. Every Kind of Mind. A Place for everyone.
 
-Status: vision and architecture published. v0.1 code releasing soon.
+Status: **Alpha Source Code Published.**
 
 ## What this is
 
@@ -32,4 +32,5 @@ See docs/roadmap.md. Next: v0.2 - first runnable vertical slice.
 ## License
 
 Apache-2.0 (see LICENSE). Name, logo, identity reserved (see TRADEMARK.md).
+
 
